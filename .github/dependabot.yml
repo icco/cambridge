@@ -13,6 +13,10 @@ updates:
       prefix-development: chore(deps-dev)
     cooldown:
       default-days: 7
+    ignore:
+      - dependency-name: typescript
+        versions:
+          - ">=7"
   - package-ecosystem: docker
     directory: /
     schedule:
