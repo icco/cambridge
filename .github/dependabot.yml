@@ -7,12 +7,16 @@ updates:
     groups:
       npm:
         patterns:
-          - "*"
+          - '*'
     commit-message:
       prefix: chore(deps)
       prefix-development: chore(deps-dev)
     cooldown:
       default-days: 7
+    ignore:
+      - dependency-name: typescript
+        versions:
+          - '>=7'
   - package-ecosystem: docker
     directory: /
     schedule:
@@ -24,7 +28,7 @@ updates:
     groups:
       docker:
         patterns:
-          - "*"
+          - '*'
   - package-ecosystem: github-actions
     directory: /
     schedule:
@@ -36,4 +40,4 @@ updates:
     groups:
       github-actions:
         patterns:
-          - "*"
+          - '*'
