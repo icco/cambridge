@@ -1,0 +1,50 @@
+.frame {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-items: center;
+  padding: 10cqh 9cqw;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9em;
+  font-size: 9cqw;
+}
+
+.quote {
+  margin: 0;
+  line-height: 1.3;
+  text-wrap: pretty;
+}
+
+.time {
+  padding: 0 0.1em;
+  background: linear-gradient(transparent 55%, #c9a46a99 55%);
+  box-decoration-break: clone;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.rule {
+  width: 30%;
+  height: 1px;
+  border: 0;
+  margin: 0;
+  background: #a88a5e;
+}
+
+.cite {
+  color: #6b5236;
+  font-size: 0.55em;
+  font-style: normal;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+
+.title {
+  display: block;
+  font-weight: 600;
+}

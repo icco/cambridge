@@ -46,3 +46,7 @@ export function handAngles({ hours, minutes, seconds }: ClockTime): HandAngles {
 export function msUntilNextSecond(now: number): number {
   return 1000 - (now % 1000)
 }
+
+export function msUntilNextMinute(now: number): number {
+  return 60_000 - (now % 60_000)
+}

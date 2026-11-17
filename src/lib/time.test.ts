@@ -4,6 +4,7 @@ import { describe, it } from "node:test"
 import {
   handAngles,
   isoDate,
+  msUntilNextMinute,
   msUntilNextSecond,
   writtenDate,
   zonedTime,
@@ -105,5 +106,16 @@ describe("msUntilNextSecond", () => {
   it("waits for the next whole second", () => {
     assert.equal(msUntilNextSecond(1_000_250), 750)
     assert.equal(msUntilNextSecond(1_000_000), 1000)
+  })
+})
+
+describe("msUntilNextMinute", () => {
+  it("waits a full minute on the boundary", () => {
+    assert.equal(msUntilNextMinute(0), 60_000)
+  })
+
+  it("waits for the rest of the minute", () => {
+    assert.equal(msUntilNextMinute(59_500), 500)
+    assert.equal(msUntilNextMinute(60_001), 59_999)
   })
 })
