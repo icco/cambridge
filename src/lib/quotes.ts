@@ -128,3 +128,25 @@ export function quoteFor(hours: number, minutes: number): Quote {
   const template = TEMPLATES[(hours * 60 + minutes) % TEMPLATES.length]
   return { ...template, time: timePhrase(hours, minutes) }
 }
+
+export type StoredQuote = {
+  b: string
+  t: string
+  a: string
+  title: string
+  author: string
+}
+
+export type HourQuotes = Record<string, StoredQuote[]>
+
+export function quoteAt(
+  hourQuotes: HourQuotes | undefined,
+  hours: number,
+  minutes: number,
+  day: number
+): Quote {
+  const options = hourQuotes?.[String(minutes).padStart(2, "0")]
+  if (!options?.length) return quoteFor(hours, minutes)
+  const { b, t, a, title, author } = options[day % options.length]
+  return { before: b, time: t, after: a, title, author }
+}
