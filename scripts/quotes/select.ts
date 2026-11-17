@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs"
+import { mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs"
 
 const [dir, outDir, perArg] = process.argv.slice(2)
 const PER = Number(perArg ?? 8)
@@ -18,7 +18,8 @@ type Hit = {
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "")
 const hash = (s: string) => {
   let h = 2166136261
-  for (let i = 0; i < s.length; i++) h = Math.imul(h ^ s.charCodeAt(i), 16777619)
+  for (let i = 0; i < s.length; i++)
+    h = Math.imul(h ^ s.charCodeAt(i), 16777619)
   return (h >>> 0) / 2 ** 32
 }
 
@@ -56,7 +57,9 @@ for (let hour = 0; hour < 24; hour++) {
   const obj: Record<string, unknown[]> = {}
   for (let min = 0; min < 60; min++) {
     const minute = hour * 60 + min
-    const sorted = byMinute[minute].sort((a, b) => score(b, minute) - score(a, minute))
+    const sorted = byMinute[minute].sort(
+      (a, b) => score(b, minute) - score(a, minute)
+    )
     const books = new Set<string>()
     const authors = new Map<string, number>()
     const chosen: Hit[] = []
@@ -74,7 +77,10 @@ for (let hour = 0; hour < 24; hour++) {
     if (chosen.length === 0) hist.zero++
     else if (chosen.length < 5) hist.low++
     else hist.ok++
-    if (chosen.length < 5) short.push(`${String(hour).padStart(2, "0")}:${String(min).padStart(2, "0")}=${chosen.length}`)
+    if (chosen.length < 5)
+      short.push(
+        `${String(hour).padStart(2, "0")}:${String(min).padStart(2, "0")}=${chosen.length}`
+      )
     if (chosen.length) {
       obj[String(min).padStart(2, "0")] = chosen.map((h) => ({
         b: h.before,
@@ -85,7 +91,10 @@ for (let hour = 0; hour < 24; hour++) {
       }))
     }
   }
-  writeFileSync(`${outDir}/${String(hour).padStart(2, "0")}.json`, JSON.stringify(obj))
+  writeFileSync(
+    `${outDir}/${String(hour).padStart(2, "0")}.json`,
+    JSON.stringify(obj)
+  )
 }
 console.log(JSON.stringify({ uniqueHits: total, picked, ...hist }))
 writeFileSync(`${dir}/coverage.txt`, short.join("\n") + "\n")

@@ -1,5 +1,6 @@
-import { readFileSync, appendFileSync, existsSync } from "node:fs"
+import { appendFileSync, existsSync, readFileSync } from "node:fs"
 import { posix } from "node:path"
+
 import { unzipSync } from "fflate"
 import { Parser } from "htmlparser2"
 
@@ -13,9 +14,29 @@ const HN = `(?:${HW}|noon|midnight|midday)`
 const ONES = "one|two|three|four|five|six|seven|eight|nine"
 const MINW = `(?:(?:twenty|thirty|forty|fifty)(?:[- ](?:${ONES}))?|nineteen|eighteen|seventeen|sixteen|fifteen|fourteen|thirteen|twelve|eleven|ten|${ONES})`
 const NUM: Record<string, number> = {
-  one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10,
-  eleven: 11, twelve: 12, thirteen: 13, fourteen: 14, fifteen: 15, sixteen: 16, seventeen: 17,
-  eighteen: 18, nineteen: 19, twenty: 20, thirty: 30, forty: 40, fifty: 50,
+  one: 1,
+  two: 2,
+  three: 3,
+  four: 4,
+  five: 5,
+  six: 6,
+  seven: 7,
+  eight: 8,
+  nine: 9,
+  ten: 10,
+  eleven: 11,
+  twelve: 12,
+  thirteen: 13,
+  fourteen: 14,
+  fifteen: 15,
+  sixteen: 16,
+  seventeen: 17,
+  eighteen: 18,
+  nineteen: 19,
+  twenty: 20,
+  thirty: 30,
+  forty: 40,
+  fifty: 50,
 }
 const AMPM = "(?:a\\.?\\s?m\\.?|p\\.?\\s?m\\.?)"
 const NOUN_BAD =
@@ -44,21 +65,32 @@ type Raw = {
   ampm?: "am" | "pm"
 }
 
-const patterns: { re: RegExp; fn: (m: RegExpExecArray, text: string) => Raw | null; txtOk: boolean }[] = [
+const patterns: {
+  re: RegExp
+  fn: (m: RegExpExecArray, text: string) => Raw | null
+  txtOk: boolean
+}[] = [
   {
-    re: new RegExp(`(?<![\\w’'-])(?<T>(?<h>\\d{1,2}|${HW})[\\s-]?o[’'‘\`]?\\s?clock)\\b(?!\\s+shadow)`, "gid"),
+    re: new RegExp(
+      `(?<![\\w’'-])(?<T>(?<h>\\d{1,2}|${HW})[\\s-]?o[’'‘\`]?\\s?clock)\\b(?!\\s+shadow)`,
+      "gid"
+    ),
     txtOk: true,
     fn: (m) => {
       const h = m.groups!.h
       const n = /^\d/.test(h) ? Number(h) : NUM[h.toLowerCase()]
       if (!(n >= 1 && n <= 24)) return null
       const T = m.indices!.groups!.T
-      if (n > 12) return { T, hour: "h24", h24: n === 24 ? 0 : n, min: 0, strong: true }
+      if (n > 12)
+        return { T, hour: "h24", h24: n === 24 ? 0 : n, min: 0, strong: true }
       return { T, hour: n, min: 0, strong: true }
     },
   },
   {
-    re: new RegExp(`(?<![\\d:.,$\\w])(?<T>(?<h>\\d{1,2}):(?<mm>[0-5]\\d)(?![:\\d])(?:\\s?(?<ap>${AMPM}))?)`, "gid"),
+    re: new RegExp(
+      `(?<![\\d:.,$\\w])(?<T>(?<h>\\d{1,2}):(?<mm>[0-5]\\d)(?![:\\d])(?:\\s?(?<ap>${AMPM}))?)`,
+      "gid"
+    ),
     txtOk: false,
     fn: (m, text) => {
       const h = Number(m.groups!.h)
@@ -67,25 +99,45 @@ const patterns: { re: RegExp; fn: (m: RegExpExecArray, text: string) => Raw | nu
       const ap = m.groups!.ap
       if (ap) {
         if (h < 1 || h > 12) return null
-        return { T, hour: h, min, strong: true, ampm: /^a/i.test(ap) ? "am" : "pm" }
+        return {
+          T,
+          hour: h,
+          min,
+          strong: true,
+          ampm: /^a/i.test(ap) ? "am" : "pm",
+        }
       }
       if (h > 23) return null
-      if (!GATE.test(text.slice(Math.max(0, m.index - 30), m.index))) return null
-      if (h === 0 || h >= 13) return { T, hour: "h24", h24: h, min, strong: true }
+      if (!GATE.test(text.slice(Math.max(0, m.index - 30), m.index)))
+        return null
+      if (h === 0 || h >= 13)
+        return { T, hour: "h24", h24: h, min, strong: true }
       return { T, hour: h, min, strong: false }
     },
   },
   {
-    re: new RegExp(`(?<![\\d:.,$\\w])(?<T>(?<h>\\d{1,2})\\s?(?<ap>${AMPM}))(?![\\w])`, "gid"),
+    re: new RegExp(
+      `(?<![\\d:.,$\\w])(?<T>(?<h>\\d{1,2})\\s?(?<ap>${AMPM}))(?![\\w])`,
+      "gid"
+    ),
     txtOk: false,
     fn: (m) => {
       const h = Number(m.groups!.h)
       if (h < 1 || h > 12) return null
-      return { T: m.indices!.groups!.T, hour: h, min: 0, strong: true, ampm: /^a/i.test(m.groups!.ap) ? "am" : "pm" }
+      return {
+        T: m.indices!.groups!.T,
+        hour: h,
+        min: 0,
+        strong: true,
+        ampm: /^a/i.test(m.groups!.ap) ? "am" : "pm",
+      }
     },
   },
   {
-    re: new RegExp(`\\b(?:a\\s+)?(?<T>(?<q>quarter|half)\\s+(?<p>past|after|to|till|before|of)\\s+(?<h>${HN}))\\b${NOUN_BAD}`, "gid"),
+    re: new RegExp(
+      `\\b(?:a\\s+)?(?<T>(?<q>quarter|half)\\s+(?<p>past|after|to|till|before|of)\\s+(?<h>${HN}))\\b${NOUN_BAD}`,
+      "gid"
+    ),
     txtOk: true,
     fn: (m) => {
       const q = m.groups!.q.toLowerCase()
@@ -97,11 +149,16 @@ const patterns: { re: RegExp; fn: (m: RegExpExecArray, text: string) => Raw | nu
         return { T, hour, min: 30, strong: true }
       }
       const past = p === "past" || p === "after"
-      return past ? { T, hour, min: 15, strong: true } : { T, hour, min: 45, strong: true, to: true }
+      return past
+        ? { T, hour, min: 15, strong: true }
+        : { T, hour, min: 45, strong: true, to: true }
     },
   },
   {
-    re: new RegExp(`\\b(?<T>(?<n>${MINW})(?<mins>\\s+minutes?)?\\s+(?<p>past|after|to|till|before|of)\\s+(?<h>${HN}))\\b${NOUN_BAD}`, "gid"),
+    re: new RegExp(
+      `\\b(?<T>(?<n>${MINW})(?<mins>\\s+minutes?)?\\s+(?<p>past|after|to|till|before|of)\\s+(?<h>${HN}))\\b${NOUN_BAD}`,
+      "gid"
+    ),
     txtOk: true,
     fn: (m, text) => {
       const n = wordNum(m.groups!.n)
@@ -110,8 +167,14 @@ const patterns: { re: RegExp; fn: (m: RegExpExecArray, text: string) => Raw | nu
       const hour = hourFromWord(m.groups!.h)
       const past = p === "past" || p === "after"
       const gated = GATE.test(text.slice(Math.max(0, m.index - 30), m.index))
-      const after = text.slice(m.index + m[0].length, m.index + m[0].length + 12)
-      const punct = /^\s*(?:[.,;:!?—–)”’"]|o[’']clock|in the|when|that|and then)/i.test(after)
+      const after = text.slice(
+        m.index + m[0].length,
+        m.index + m[0].length + 12
+      )
+      const punct =
+        /^\s*(?:[.,;:!?—–)”’"]|o[’']clock|in the|when|that|and then)/i.test(
+          after
+        )
       if (!m.groups!.mins) {
         if (![5, 10, 20, 25, 15].includes(n)) return null
         if (!(gated || (punct && (p === "past" || p === "to")))) return null
@@ -128,7 +191,7 @@ const patterns: { re: RegExp; fn: (m: RegExpExecArray, text: string) => Raw | nu
   {
     re: new RegExp(
       `(?<=\\b(?:at|by|until|till|since|before|after|was|is|it’s|it's|exactly|precisely|time|near|nearly|almost|just)\\s+)(?<T>(?<h>${HW})[\\s-](?<mm>(?:(?:twenty|thirty|forty|fifty)(?:[- ](?:${ONES}))?|nineteen|eighteen|seventeen|sixteen|fifteen|fourteen|thirteen|o[h]?[- ](?:${ONES}))))\\b(?![\\s-]+(?:years?|year-old|days?|months?|miles?|feet|dollars?|percent|times|people|men|women|of|pounds?|minutes?|seconds?|hours?|points|cents|thousand|hundred|million|kids|children|years)|-)`,
-      "gid",
+      "gid"
     ),
     txtOk: false,
     fn: (m) => {
@@ -141,15 +204,20 @@ const patterns: { re: RegExp; fn: (m: RegExpExecArray, text: string) => Raw | nu
     },
   },
   {
-    re: /(?<=\b(?:at|by|until|till|before|after|near|since|around|about|past|toward|towards|of)\s+)(?<T>noon|midnight|midday)\b/gid,
+    re: /(?<=\b(?:at|by|until|till|before|after|near|since|around|about|past|toward|towards|of)\s+)(?<T>noon|midnight|midday)\b/dgi,
     txtOk: true,
     fn: (m) => {
       const w = m.groups!.T.toLowerCase()
-      return { T: m.indices!.groups!.T, hour: w === "midnight" ? "midnight" : "noon", min: 0, strong: true }
+      return {
+        T: m.indices!.groups!.T,
+        hour: w === "midnight" ? "midnight" : "noon",
+        min: 0,
+        strong: true,
+      }
     },
   },
   {
-    re: /(?<![\d\w])(?<T>(?<hh>[01]\d|2[0-3])(?<mm>[0-5]\d)\s+hours)\b/gid,
+    re: /(?<![\d\w])(?<T>(?<hh>[01]\d|2[0-3])(?<mm>[0-5]\d)\s+hours)\b/dgi,
     txtOk: true,
     fn: (m) => ({
       T: m.indices!.groups!.T,
@@ -161,17 +229,25 @@ const patterns: { re: RegExp; fn: (m: RegExpExecArray, text: string) => Raw | nu
   },
 ]
 
-const AM_W = /\b(?:morning|dawn|sunrise|breakfast|daybreak|cockcrow|sunup|dew|rooster|first light)\b/gi
-const PM_W = /\b(?:afternoon|evening|dinner|supper|dusk|sunset|tonight|night|lunch|twilight|bedtime|midnight|dark|lamp|stars?|moon)\b/gi
+const AM_W =
+  /\b(?:morning|dawn|sunrise|breakfast|daybreak|cockcrow|sunup|dew|rooster|first light)\b/gi
+const PM_W =
+  /\b(?:afternoon|evening|dinner|supper|dusk|sunset|tonight|night|lunch|twilight|bedtime|midnight|dark|lamp|stars?|moon)\b/gi
 
-function resolve(raw: Raw, excerpt: string, tOff: number): { minutes: number[]; conf: number } | null {
+function resolve(
+  raw: Raw,
+  excerpt: string,
+  tOff: number
+): { minutes: number[]; conf: number } | null {
   const { min } = raw
   if (raw.hour === "h24") {
     if (raw.min === undefined) return null
     return { minutes: [raw.h24! * 60 + min], conf: 2 }
   }
-  if (raw.hour === "midnight") return { minutes: [(raw.to ? 23 * 60 : 0) + min], conf: 2 }
-  if (raw.hour === "noon") return { minutes: [(raw.to ? 11 : 12) * 60 + min], conf: 2 }
+  if (raw.hour === "midnight")
+    return { minutes: [(raw.to ? 23 * 60 : 0) + min], conf: 2 }
+  if (raw.hour === "noon")
+    return { minutes: [(raw.to ? 11 : 12) * 60 + min], conf: 2 }
   const h = raw.hour as number
   if (h < 1 || h > 12) return null
   let hourAdj = h
@@ -186,13 +262,25 @@ function resolve(raw: Raw, excerpt: string, tOff: number): { minutes: number[]; 
   if (raw.ampm) {
     pm = raw.ampm === "pm"
     conf = 2
-  } else if (/^[^.]{0,12}\b(?:in the morning|of the morning|at dawn|in the early morning)\b/i.test(near.slice(0)) ) {
+  } else if (
+    /^[^.]{0,12}\b(?:in the morning|of the morning|at dawn|in the early morning)\b/i.test(
+      near.slice(0)
+    )
+  ) {
     pm = false
     conf = 2
-  } else if (/^[^.]{0,12}\b(?:in the afternoon|in the evening|of the evening|of the afternoon|this evening|tonight)\b/i.test(near)) {
+  } else if (
+    /^[^.]{0,12}\b(?:in the afternoon|in the evening|of the evening|of the afternoon|this evening|tonight)\b/i.test(
+      near
+    )
+  ) {
     pm = true
     conf = 2
-  } else if (/^[^.]{0,12}\b(?:at night|in the night|of the night|in the middle of the night|in the dead of night)\b/i.test(near)) {
+  } else if (
+    /^[^.]{0,12}\b(?:at night|in the night|of the night|in the middle of the night|in the dead of night)\b/i.test(
+      near
+    )
+  ) {
     if (hourAdj >= 6 && hourAdj <= 11) pm = true
     else if (hourAdj === 12 || (hourAdj >= 1 && hourAdj <= 5)) pm = false
     if (pm !== undefined) conf = 2
@@ -204,7 +292,12 @@ function resolve(raw: Raw, excerpt: string, tOff: number): { minutes: number[]; 
       pm = false
       conf = 1
     } else if (pmN > 0 && am === 0) {
-      if (/\b(?:night|midnight|dark|lamp|stars?|moon)\b/i.test(excerpt) && hourAdj >= 1 && hourAdj <= 5) pm = false
+      if (
+        /\b(?:night|midnight|dark|lamp|stars?|moon)\b/i.test(excerpt) &&
+        hourAdj >= 1 &&
+        hourAdj <= 5
+      )
+        pm = false
       else if (hourAdj === 12 && /midnight|night/i.test(excerpt)) pm = false
       else pm = true
       conf = 1
@@ -217,16 +310,32 @@ function resolve(raw: Raw, excerpt: string, tOff: number): { minutes: number[]; 
 
 const seg = new Intl.Segmenter("en", { granularity: "sentence" })
 
-function excerptFor(text: string, ms: number, me: number): { before: string; time: string; after: string } | null {
+function excerptFor(
+  text: string,
+  ms: number,
+  me: number
+): { before: string; time: string; after: string } | null {
   const segs = [...seg.segment(text)]
-  let i = segs.findIndex((s) => ms >= s.index && ms < s.index + s.segment.length)
+  const i = segs.findIndex(
+    (s) => ms >= s.index && ms < s.index + s.segment.length
+  )
   if (i < 0) return null
   let a = i
   let b = i
   const len = () => segs[b].index + segs[b].segment.length - segs[a].index
   if (len() > 330) return null
-  if (len() < 110 && a > 0 && segs[b].index + segs[b].segment.length - segs[a - 1].index <= 290) a--
-  if (len() < 90 && b < segs.length - 1 && segs[b + 1].index + segs[b + 1].segment.length - segs[a].index <= 290) b++
+  if (
+    len() < 110 &&
+    a > 0 &&
+    segs[b].index + segs[b].segment.length - segs[a - 1].index <= 290
+  )
+    a--
+  if (
+    len() < 90 &&
+    b < segs.length - 1 &&
+    segs[b + 1].index + segs[b + 1].segment.length - segs[a].index <= 290
+  )
+    b++
   const start = segs[a].index
   const end = segs[b].index + segs[b].segment.length
   if (me > end) return null
@@ -249,10 +358,19 @@ type Hit = {
   fmt: string
 }
 
-function scanParagraph(para: string, meta: { title: string; author: string; src: string; fmt: string }, out: Hit[]) {
+function scanParagraph(
+  para: string,
+  meta: { title: string; author: string; src: string; fmt: string },
+  out: Hit[]
+) {
   const text = para.replace(/[ \s]+/g, " ").trim()
   if (text.length < 40 || text.length > 6000) return
-  if (!/\d|clock|past|to |quarter|half|noon|midnight|midday|till|after|before|of /i.test(text)) return
+  if (
+    !/\d|clock|past|to |quarter|half|noon|midnight|midday|till|after|before|of /i.test(
+      text
+    )
+  )
+    return
   const txt = meta.fmt === "txt" || meta.fmt === "pdf"
   for (const p of patterns) {
     if (txt && !p.txtOk) continue
@@ -267,13 +385,46 @@ function scanParagraph(para: string, meta: { title: string; author: string; src:
       const exText = ex.before + ex.time + ex.after
       const r = resolve(raw, exText, ex.before.length + ex.time.length)
       if (!r) continue
-      out.push({ m: r.minutes, conf: r.conf, strong: raw.strong, ...ex, ...meta })
+      out.push({
+        m: r.minutes,
+        conf: r.conf,
+        strong: raw.strong,
+        ...ex,
+        ...meta,
+      })
     }
   }
 }
 
-const BLOCK = new Set(["p", "div", "br", "li", "blockquote", "section", "article", "tr", "td", "dd", "dt", "pre"])
-const HEAD = new Set(["h1", "h2", "h3", "h4", "h5", "h6", "title", "script", "style", "head", "nav", "figcaption", "table"])
+const BLOCK = new Set([
+  "p",
+  "div",
+  "br",
+  "li",
+  "blockquote",
+  "section",
+  "article",
+  "tr",
+  "td",
+  "dd",
+  "dt",
+  "pre",
+])
+const HEAD = new Set([
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "title",
+  "script",
+  "style",
+  "head",
+  "nav",
+  "figcaption",
+  "table",
+])
 
 function htmlParas(html: string): string[] {
   const paras: string[] = []
@@ -304,7 +455,7 @@ function htmlParas(html: string): string[] {
         if (skip === 0) cur += t
       },
     },
-    { decodeEntities: true, recognizeSelfClosing: true },
+    { decodeEntities: true, recognizeSelfClosing: true }
   )
   parser.write(html)
   parser.end()
@@ -312,10 +463,18 @@ function htmlParas(html: string): string[] {
   return paras
 }
 
-const attr = (tag: string, name: string) => new RegExp(`${name}\\s*=\\s*["']([^"']*)["']`, "i").exec(tag)?.[1]
+const attr = (tag: string, name: string) =>
+  new RegExp(`${name}\\s*=\\s*["']([^"']*)["']`, "i").exec(tag)?.[1]
 
-const XML_ENTITIES: Record<string, string> = { amp: "&", apos: "'", quot: '"', lt: "<", gt: ">" }
-const unescapeXml = (s: string) => s.replace(/&(amp|apos|quot|lt|gt);/g, (_, e: string) => XML_ENTITIES[e])
+const XML_ENTITIES: Record<string, string> = {
+  amp: "&",
+  apos: "'",
+  quot: '"',
+  lt: "<",
+  gt: ">",
+}
+const unescapeXml = (s: string) =>
+  s.replace(/&(amp|apos|quot|lt|gt);/g, (_, e: string) => XML_ENTITIES[e])
 
 function decode(s: string) {
   try {
@@ -333,7 +492,11 @@ function cleanAuthor(a: string | undefined, fallback: string) {
   return s || fallback
 }
 
-function readEpub(path: string, meta: { title: string; author: string; src: string; fmt: string }, out: Hit[]) {
+function readEpub(
+  path: string,
+  meta: { title: string; author: string; src: string; fmt: string },
+  out: Hit[]
+) {
   const buf = readFileSync(path)
   if (buf[0] !== 0x50 || buf[1] !== 0x4b) throw new Error("not a zip")
   const files = unzipSync(new Uint8Array(buf), {
@@ -346,12 +509,21 @@ function readEpub(path: string, meta: { title: string; author: string; src: stri
   const enc = get("META-INF/encryption.xml")
   if (enc) {
     const algos = [...enc.matchAll(/Algorithm="([^"]+)"/g)].map((x) => x[1])
-    if (algos.some((a) => !/idpf\.org\/2008\/embedding|adobe\.com\/pdf\/enc#RC|w3\.org\/2001\/04\/xmlenc#(?:aes|kw)/i.test(a) || /xmlenc/.test(a))) {
+    if (
+      algos.some(
+        (a) =>
+          !/idpf\.org\/2008\/embedding|adobe\.com\/pdf\/enc#RC|w3\.org\/2001\/04\/xmlenc#(?:aes|kw)/i.test(
+            a
+          ) || /xmlenc/.test(a)
+      )
+    ) {
       throw new Error("drm")
     }
   }
   const container = get("META-INF/container.xml")
-  const opfPath = container ? attr(/<rootfile\b[^>]*>/i.exec(container)?.[0] ?? "", "full-path") : undefined
+  const opfPath = container
+    ? attr(/<rootfile\b[^>]*>/i.exec(container)?.[0] ?? "", "full-path")
+    : undefined
   const opf = opfPath ? get(opfPath) : undefined
   let order: string[] = []
   if (opf && opfPath) {
@@ -364,7 +536,8 @@ function readEpub(path: string, meta: { title: string; author: string; src: stri
     for (const it of opf.match(/<item\b[^>]*>/gi) ?? []) {
       const id = attr(it, "id")
       const href = attr(it, "href")
-      if (id && href) items.set(id, posix.normalize(posix.join(dir, href.split("#")[0])))
+      if (id && href)
+        items.set(id, posix.normalize(posix.join(dir, href.split("#")[0])))
     }
     for (const ir of opf.match(/<itemref\b[^>]*>/gi) ?? []) {
       const idref = attr(ir, "idref")
@@ -372,7 +545,10 @@ function readEpub(path: string, meta: { title: string; author: string; src: stri
       if (p) order.push(p)
     }
   }
-  if (order.length === 0) order = Object.keys(files).filter((n) => /\.x?html?$/i.test(n)).sort()
+  if (order.length === 0)
+    order = Object.keys(files)
+      .filter((n) => /\.x?html?$/i.test(n))
+      .sort()
   for (const name of order) {
     const html = get(name)
     if (!html) continue
@@ -380,14 +556,27 @@ function readEpub(path: string, meta: { title: string; author: string; src: stri
   }
 }
 
-function readTxt(path: string, meta: { title: string; author: string; src: string; fmt: string }, out: Hit[]) {
+function readTxt(
+  path: string,
+  meta: { title: string; author: string; src: string; fmt: string },
+  out: Hit[]
+) {
   const s = readFileSync(path, "utf8")
   for (const para of s.split(/\r?\n\s*\r?\n/)) scanParagraph(para, meta, out)
 }
 
-async function readPdf(path: string, meta: { title: string; author: string; src: string; fmt: string }, out: Hit[]) {
+async function readPdf(
+  path: string,
+  meta: { title: string; author: string; src: string; fmt: string },
+  out: Hit[]
+) {
   const { getDocument } = await import("pdfjs-dist/legacy/build/pdf.mjs")
-  const doc = await getDocument({ data: new Uint8Array(readFileSync(path)), useSystemFonts: false, verbosity: 0, isEvalSupported: false }).promise
+  const doc = await getDocument({
+    data: new Uint8Array(readFileSync(path)),
+    useSystemFonts: false,
+    verbosity: 0,
+    isEvalSupported: false,
+  }).promise
   for (let n = 1; n <= doc.numPages; n++) {
     const page = await doc.getPage(n)
     const tc = await page.getTextContent()
@@ -395,7 +584,8 @@ async function readPdf(path: string, meta: { title: string; author: string; src:
     for (const it of tc.items as { str: string; hasEOL?: boolean }[]) {
       s += it.str + (it.hasEOL ? "\n" : " ")
     }
-    for (const para of s.split(/\n\s*\n/)) scanParagraph(para.replace(/\s*\n\s*/g, " "), meta, out)
+    for (const para of s.split(/\n\s*\n/))
+      scanParagraph(para.replace(/\s*\n\s*/g, " "), meta, out)
     page.cleanup()
   }
   await doc.destroy()
@@ -404,7 +594,9 @@ async function readPdf(path: string, meta: { title: string; author: string; src:
 const files = readFileSync(listFile, "utf8").split("\n").filter(Boolean)
 const mine = files.filter((_, i) => i % shards === shard)
 const doneFile = `${outDir}/shard-${shard}.done`
-const done = new Set(existsSync(doneFile) ? readFileSync(doneFile, "utf8").split("\n") : [])
+const done = new Set(
+  existsSync(doneFile) ? readFileSync(doneFile, "utf8").split("\n") : []
+)
 let n = 0
 for (const rel of mine) {
   if (done.has(rel)) continue
@@ -412,20 +604,33 @@ for (const rel of mine) {
   const ext = rel.split(".").pop()!.toLowerCase()
   const parts = rel.split("/")
   const meta = {
-    title: (parts.length > 2 ? parts[parts.length - 2] : parts[parts.length - 1].replace(/\.[^.]+$/, "")),
+    title:
+      parts.length > 2
+        ? parts[parts.length - 2]
+        : parts[parts.length - 1].replace(/\.[^.]+$/, ""),
     author: parts[0],
     src: rel,
     fmt: ext,
   }
   const out: Hit[] = []
   try {
-    const timeout = new Promise<never>((_, rej) => setTimeout(() => rej(new Error("timeout")), 120000).unref())
+    const timeout = new Promise<never>((_, rej) =>
+      setTimeout(() => rej(new Error("timeout")), 120000).unref()
+    )
     if (ext === "epub") readEpub(full, meta, out)
     else if (ext === "txt") readTxt(full, meta, out)
-    else if (ext === "pdf") await Promise.race([readPdf(full, meta, out), timeout])
-    if (out.length) appendFileSync(`${outDir}/shard-${shard}.jsonl`, out.map((h) => JSON.stringify(h)).join("\n") + "\n")
+    else if (ext === "pdf")
+      await Promise.race([readPdf(full, meta, out), timeout])
+    if (out.length)
+      appendFileSync(
+        `${outDir}/shard-${shard}.jsonl`,
+        out.map((h) => JSON.stringify(h)).join("\n") + "\n"
+      )
   } catch (e) {
-    appendFileSync(`${outDir}/shard-${shard}.err`, `${rel}\t${(e as Error).message}\n`)
+    appendFileSync(
+      `${outDir}/shard-${shard}.err`,
+      `${rel}\t${(e as Error).message}\n`
+    )
   }
   appendFileSync(doneFile, rel + "\n")
   if (++n % 200 === 0) console.log(`shard ${shard}: ${n}/${mine.length}`)
