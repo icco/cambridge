@@ -46,18 +46,30 @@ export function AuthorClock() {
     const box = frame.current
     const text = content.current
     if (!box || !text) return
-    const style = getComputedStyle(box)
-    const available =
-      box.clientHeight -
-      parseFloat(style.paddingTop) -
-      parseFloat(style.paddingBottom)
-    let size = START_CQW
-    text.style.fontSize = `${size}cqw`
-    while (text.scrollHeight > available && size > MIN_CQW) {
-      size -= STEP_CQW
+    let active = true
+    const refit = () => {
+      if (!active) return
+      const style = getComputedStyle(box)
+      const available =
+        box.clientHeight -
+        parseFloat(style.paddingTop) -
+        parseFloat(style.paddingBottom)
+      let size = START_CQW
       text.style.fontSize = `${size}cqw`
+      while (text.scrollHeight > available && size > MIN_CQW) {
+        size -= STEP_CQW
+        text.style.fontSize = `${size}cqw`
+      }
     }
-  }, [quote?.before, quote?.time])
+    refit()
+    // The web font can arrive after the first fit and change line breaks.
+    document.fonts.ready.then(refit, (error: unknown) => {
+      console.error("Font loading failed", error)
+    })
+    return () => {
+      active = false
+    }
+  }, [quote?.before, quote?.time, quote?.after, quote?.title, quote?.author])
 
   return (
     <div ref={frame} className={styles.frame}>
