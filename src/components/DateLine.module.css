@@ -26,15 +26,56 @@
   line-height: 1.05;
 }
 
-.weather {
-  margin-top: 0.9cqw;
-  font-size: 3.3cqw;
+.hours {
+  display: flex;
+  gap: 2.6cqw;
+  justify-content: center;
+  margin: 0.6cqw 0 0;
+  padding: 0;
+  font-variant-numeric: tabular-nums;
+  list-style: none;
+}
+
+.hour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4cqw;
+  opacity: 0.72;
+}
+
+.hour:first-child {
+  opacity: 1;
+}
+
+.hourLabel {
+  font-size: 2cqw;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  opacity: 0.85;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.hour:first-child .hourLabel {
+  font-weight: 700;
+}
+
+.reading {
+  display: flex;
+  align-items: center;
+  gap: 0.5cqw;
+  font-size: 3.2cqw;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.glyph {
+  width: 3.4cqw;
+  height: 3.4cqw;
 }
 
 .celsius {
-  font-size: 0.65em;
+  margin-left: 0.5cqw;
+  font-size: 0.6em;
+  font-weight: 500;
   opacity: 0.8;
 }

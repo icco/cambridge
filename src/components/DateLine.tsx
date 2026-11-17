@@ -5,11 +5,45 @@ import { useEffect, useState } from "react"
 import { cambridge, home } from "@/lib/cities"
 import { dayFactor } from "@/lib/daylight"
 import { writtenDate } from "@/lib/time"
-import { celsius, type Weather, weatherLine } from "@/lib/weather"
+import {
+  celsius,
+  describeWeather,
+  type Hour,
+  hourLabel,
+  nextHours,
+  type Weather,
+  weatherIcon,
+} from "@/lib/weather"
 
 import styles from "./DateLine.module.css"
+import { WeatherGlyph } from "./WeatherGlyph"
 
 const WEATHER_MS = 15 * 60 * 1000
+const HOURS_AHEAD = 5
+
+function HourCell({
+  hour,
+  label,
+  children,
+}: {
+  hour: Hour
+  label: string
+  children?: React.ReactNode
+}) {
+  return (
+    <li className={styles.hour}>
+      <span className={styles.hourLabel}>{label}</span>
+      <span className={styles.reading}>
+        <WeatherGlyph
+          icon={weatherIcon(hour.code, hour.day)}
+          label={describeWeather(hour.code)}
+          className={styles.glyph}
+        />
+        {Math.round(hour.temperature)}°{children}
+      </span>
+    </li>
+  )
+}
 
 export function DateLine({ now }: { now: Date }) {
   const [weather, setWeather] = useState<Weather | null>(null)
@@ -48,10 +82,20 @@ export function DateLine({ now }: { now: Date }) {
       <div className={styles.weekday}>{weekday}</div>
       <div className={styles.day}>{date}</div>
       {weather && (
-        <div className={styles.weather}>
-          {weatherLine(weather)}{" "}
-          <span className={styles.celsius}>{celsius(weather.temperature)}</span>
-        </div>
+        <ol className={styles.hours}>
+          <HourCell hour={weather} label="Now">
+            <span className={styles.celsius}>
+              {celsius(weather.temperature)}
+            </span>
+          </HourCell>
+          {nextHours(weather.hours, now.getTime(), HOURS_AHEAD).map((hour) => (
+            <HourCell
+              key={hour.time}
+              hour={hour}
+              label={hourLabel(hour.time, home.timeZone)}
+            />
+          ))}
+        </ol>
       )}
     </div>
   )
