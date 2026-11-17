@@ -26,28 +26,22 @@
   line-height: 1.05;
 }
 
-.weather {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.9cqw;
-  margin-top: 1.4cqw;
-  font-variant-numeric: tabular-nums;
-}
-
 .hours {
-  display: grid;
-  grid-template-columns: repeat(6, 10.5cqw);
-  margin: 0;
+  display: flex;
+  gap: 2.6cqw;
+  justify-content: center;
+  margin: 0.6cqw 0 0;
   padding: 0;
+  font-variant-numeric: tabular-nums;
   list-style: none;
 }
 
 .hour {
-  display: grid;
-  justify-items: center;
-  gap: 0.6cqw;
-  opacity: 0.75;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4cqw;
+  opacity: 0.72;
 }
 
 .hour:first-child {
@@ -55,28 +49,33 @@
 }
 
 .hourLabel {
-  font-size: 2.2cqw;
+  font-size: 2cqw;
   font-weight: 500;
   letter-spacing: 0.04em;
+  line-height: 1.1;
 }
 
 .hour:first-child .hourLabel {
   font-weight: 700;
 }
 
-.glyph {
-  width: 4.6cqw;
-  height: 4.6cqw;
-}
-
-.temperature {
-  font-size: 3.3cqw;
+.reading {
+  display: flex;
+  align-items: center;
+  gap: 0.5cqw;
+  font-size: 3.2cqw;
   font-weight: 600;
+  line-height: 1;
 }
 
-.summary {
-  font-size: 2.3cqw;
+.glyph {
+  width: 3.4cqw;
+  height: 3.4cqw;
+}
+
+.celsius {
+  margin-left: 0.5cqw;
+  font-size: 0.6em;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  opacity: 0.75;
+  opacity: 0.8;
 }

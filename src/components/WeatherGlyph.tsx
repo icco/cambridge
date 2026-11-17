@@ -72,9 +72,11 @@ const glyphs: Record<WeatherIcon, React.ReactNode> = {
 
 export function WeatherGlyph({
   icon,
+  label,
   className,
 }: {
   icon: WeatherIcon
+  label: string
   className?: string
 }) {
   return (
@@ -86,7 +88,8 @@ export function WeatherGlyph({
       strokeWidth="1.7"
       strokeLinecap="round"
       strokeLinejoin="round"
-      aria-hidden="true"
+      role="img"
+      aria-label={label}
     >
       {glyphs[icon]}
     </svg>
