@@ -10,7 +10,7 @@ describe("timePhrase", () => {
     [23, 45, "quarter to midnight"],
     [11, 40, "twenty to noon"],
     [13, 5, "five past one"],
-    [4, 0, "four o'clock"],
+    [4, 0, "four o’clock"],
     [4, 15, "quarter past four"],
     [4, 20, "twenty past four"],
     [4, 30, "half past four"],

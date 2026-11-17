@@ -31,10 +31,12 @@
 ### Task 1: Quote generator
 
 **Files:**
+
 - Create: `src/lib/quotes.ts`
 - Test: `src/lib/quotes.test.ts`
 
 **Interfaces:**
+
 - Produces: `type Quote = { before: string; time: string; after: string; title: string; author: string }`, `timePhrase(hours: number, minutes: number): string`, `quoteFor(hours: number, minutes: number): Quote`
 
 - [ ] **Step 1: Write failing tests**: `timePhrase` cases from Review Focus plus `(4, 20)` -> "twenty past four", `(4, 15)` -> "quarter past four", `(4, 30)` -> "half past four", `(4, 0)` -> "four o'clock", `(11, 40)` -> "twenty to noon". `quoteFor` for all 1440 minutes returns non-empty fields and `time === timePhrase(h, m)`; two adjacent minutes may share a template but not the whole quote text.
@@ -46,10 +48,12 @@
 ### Task 2: Minute alignment
 
 **Files:**
+
 - Modify: `src/lib/time.ts`
 - Test: `src/lib/time.test.ts`
 
 **Interfaces:**
+
 - Produces: `msUntilNextMinute(now: number): number`
 
 - [ ] **Step 1: Test**: `msUntilNextMinute(0) === 60000`, `msUntilNextMinute(59_500) === 500`, `msUntilNextMinute(60_001) === 59_999`.
@@ -58,10 +62,12 @@
 ### Task 3: Page
 
 **Files:**
+
 - Create: `src/app/author/page.tsx`, `src/app/author/page.module.css`, `src/components/AuthorClock.tsx`, `src/components/AuthorClock.module.css`
 - Modify: `src/app/sitemap.ts`, `scripts/smoke.mjs`
 
 **Interfaces:**
+
 - Consumes: `quoteFor`, `msUntilNextMinute`
 
 - [ ] **Step 1: Smoke test**: `/author` returns 200, has one `main`, and its title is `Author Clock | Cambridge Clock`; the sitemap lists `/author`.

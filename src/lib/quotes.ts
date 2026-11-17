@@ -54,7 +54,7 @@ function minuteWord(minutes: number): string {
 export function timePhrase(hours: number, minutes: number): string {
   if (minutes === 0) {
     const hour = hourWord(hours)
-    return hours % 12 === 0 ? hour : `${hour} o'clock`
+    return hours % 12 === 0 ? hour : `${hour} o’clock`
   }
   if (minutes <= 30) return `${minuteWord(minutes)} past ${hourWord(hours)}`
   return `${minuteWord(60 - minutes)} to ${hourWord(hours + 1)}`
@@ -72,7 +72,7 @@ const TEMPLATES: Template[] = [
     before: "It was ",
     after:
       " when the last lamp came on in the reading room, and she had not yet turned a page.",
-    title: "The Lamplighter's Index",
+    title: "The Lamplighter’s Index",
     author: "Margaret Ellery",
   },
   {
@@ -91,7 +91,7 @@ const TEMPLATES: Template[] = [
     before:
       "There is a particular kind of silence that settles over a house when everyone in it has given up pretending to sleep, and it was in that silence, at ",
     after:
-      ", that Alice finally heard the letterbox clatter, and knew, before she had even reached the stairs, that the envelope would carry her mother's handwriting and that nothing in the house would be quite the same again.",
+      ", that Alice finally heard the letterbox clatter, and knew, before she had even reached the stairs, that the envelope would carry her mother’s handwriting and that nothing in the house would be quite the same again.",
     title: "Letters from Hollow Lane",
     author: "Beatrice Morland",
   },
