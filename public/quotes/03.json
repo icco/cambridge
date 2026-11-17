@@ -50,11 +50,11 @@
       "author": "Raymond Feist"
     },
     {
-      "b": "At ",
-      "t": "ten past three",
-      "a": " in the morning Rita shifted her weight uneasily from one knee to the other.",
-      "title": "Empire Games Series, Book 1",
-      "author": "Charles Stross"
+      "b": "On the anniversary of her birthday, which was upon the nineteenth of July (‘at ",
+      "t": "ten minutes past three",
+      "a": " o’clock in the morning,’ thought Mrs.",
+      "title": "Nicholas Nickleby",
+      "author": "Charles Dickens"
     }
   ],
   "11": [
@@ -226,11 +226,11 @@
       "author": "James Ellroy"
     },
     {
-      "b": "It could be 11:14 PM. It could be ",
-      "t": "3:14 AM",
-      "a": ", or 6:14, with another day ready for waking.",
-      "title": "The Eden Experiment",
-      "author": "Sean Platt"
+      "b": "“Note that Cavanaugh entered Soulminder at precisely twelve fifty-one last Monday morning, and was transferred back at ",
+      "t": "three-fourteen",
+      "a": ".”",
+      "title": "Soulminder",
+      "author": "Timothy Zahn"
     }
   ],
   "15": [
@@ -622,6 +622,13 @@
       "a": "”—in diary-like fashion as if to catch the very movement of fragmented consciousness through time.",
       "title": "Absence of the Hero",
       "author": "Charles Bukowski"
+    },
+    {
+      "b": "Last call’s at two a.m. It was ",
+      "t": "three twenty-four",
+      "a": " a.m. when you called nine-one-one. What were you guys doing for over an hour?”",
+      "title": "Dark Currents",
+      "author": "Jacqueline Carey"
     }
   ],
   "25": [
@@ -654,6 +661,13 @@
       "author": "J G Ballard"
     },
     {
+      "b": "“About four o’clock, I reckon, or a little after. Say I got to the caravan at ",
+      "t": "twenty-five past three",
+      "a": " and away by twenty-five to four.",
+      "title": "Devices and Desires",
+      "author": "P. D. James"
+    },
+    {
       "b": "Nyquist checked his watch. Was it really ",
       "t": "twenty-five past three",
       "a": "? If so, which timeline was he on?",
@@ -673,13 +687,6 @@
       "a": ". Being lordly sixth graders, Kim and Bennie let everyone rush past to the bike racks before claiming their own and slowly riding out after the majority of the horde had departed.",
       "title": "We Do Not Welcome Our Ten-Year-Old Overlord",
       "author": "Garth Nix"
-    },
-    {
-      "b": "Thornhill glances at his wristwatch. It is ",
-      "t": "3:25",
-      "a": ".",
-      "title": "Which Lie Did I Tell?",
-      "author": "William Goldman"
     }
   ],
   "26": [
@@ -1010,7 +1017,7 @@
       "author": "Jean Edward Smith"
     },
     {
-      "b": "After many late nights and brutal mornings, though, I realized that most amazing, magical women don’t walk into a bar at ",
+      "b": "At one point I was the hopeful romantic who would stay out till 4:00 A.M. every morning, worried that if I went home, I’d miss that magical, amazing woman who showed up at the bar at ",
       "t": "3:35 A.M.",
       "a": "",
       "title": "Modern Romance",
@@ -1066,6 +1073,13 @@
       "a": ", ship’s time.",
       "title": "The Android’s Dream",
       "author": "John Scalzi"
+    },
+    {
+      "b": "On her lap she balanced a dossier, which she now opened. Adjusting her glasses, she read, “The Paris blast occurred at ",
+      "t": "three thirty-six",
+      "a": " local time.",
+      "title": "State of Terror",
+      "author": "Hillary Rodham Clinton and Louise Penny"
     },
     {
       "b": "He looked at his Mickey Mouse wristwatch. The time was just about ",
@@ -1253,6 +1267,13 @@
       "a": "",
       "title": "The Martian",
       "author": "Andy Weir"
+    },
+    {
+      "b": "“Younes arrived at the Roblin block at ",
+      "t": "three-forty-two",
+      "a": " this morning.”",
+      "title": "Exodus",
+      "author": "Peter F. Hamilton"
     }
   ],
   "43": [
@@ -1310,6 +1331,13 @@
       "author": "Roberto Bolaño"
     },
     {
+      "b": "Dogar wore a white shirt, open at the throat. The old man climbed into a taxi at about 2:00 A.M.; he returned to his house, in another taxi, at ",
+      "t": "3:45 A.M.",
+      "a": "",
+      "title": "A Son of the Circus",
+      "author": "John Irving"
+    },
+    {
       "b": "She glanced at the clock on the night table. It was ",
       "t": "quarter of four",
       "a": " in the morning. The Hour of the Secret Police, she thought.",
@@ -1343,13 +1371,6 @@
       "a": " in the morning the President-elect returned to his house in Georgetown from a supper given him downtown by his father after the Gala.”",
       "title": "The Uncollected Essays of Elizabeth Hardwick",
       "author": "Elizabeth Hardwick"
-    },
-    {
-      "b": "Vincent hospital at ",
-      "t": "3:45 A.M.",
-      "a": " into a frigid night with a little over five hundred dollars in cash from my time with Kara.",
-      "title": "Upgrade",
-      "author": "Blake Crouch;"
     }
   ],
   "46": [
@@ -1456,11 +1477,27 @@
       "author": "Dave Eggers"
     },
     {
+      "b": "“Cancel seven ought seven point eight. Add seven ought eight point one at ",
+      "t": "three forty-eight",
+      "a": " bits.”",
+      "title": "Revolution's Shore",
+      "author": "Kate Elliott"
+    },
+    {
       "b": "Tom checked his watch. It was ",
       "t": "3:48",
       "a": ". Less than half an hour to save the President’s life.",
       "title": "J.A. Konrath / Jack Kilborn Trilogy - Three Scary Thriller Novels (Origin, The List, Haunted House)",
       "author": "J.A. Konrath"
+    }
+  ],
+  "49": [
+    {
+      "b": "Slow right down. Holly looks at her watch at 4:20, at ",
+      "t": "3:49",
+      "a": ", and again at 3:17 before Ed came along.",
+      "title": "The Bone Clocks",
+      "author": "David Mitchell"
     }
   ],
   "50": [
@@ -1486,6 +1523,20 @@
       "author": "Evan Thomas"
     },
     {
+      "b": "Among the others aroused by Nixon’s late-night telephoning: Bob Haldeman (seven times), Norman Vincent Peale, Billy Graham, Rose Mary Woods (four times), Bebe Rebozo (twice), reporter Helen Thomas of UPI (at 1:22 A.M. and ",
+      "t": "3:50 A.M.",
+      "a": "), Nelson Rockefeller (at one A.M.), and Thomas Dewey (at one-thirty A.M.).",
+      "title": "Kissinger",
+      "author": "Walter Isaacson"
+    },
+    {
+      "b": "It was a live recording of the Pepper Adams Quintet, with Donald Byrd on trumpet, recorded in New York at the Five Spot jazz club. ‘10 to 4’, of course, meant ",
+      "t": "ten minutes to four",
+      "a": " o’clock, meaning that they played such a hot set they went on till dawn.",
+      "title": "Blind Willow, Sleeping Woman",
+      "author": "Haruki Murakami"
+    },
+    {
       "b": "The sign informed us that the garden closed at four thirty and that tickets were not sold after four. It was ",
       "t": "ten minutes till four",
       "a": ".",
@@ -1505,20 +1556,6 @@
       "a": ".)",
       "title": "The Curse of Lono",
       "author": "Hunter S. Thompson"
-    },
-    {
-      "b": "By ",
-      "t": "ten minutes to four",
-      "a": ", Eric was, somehow, showered, shaved, and dressed, with his raincoat and his rain cap on.",
-      "title": "Another Country",
-      "author": "James Baldwin"
-    },
-    {
-      "b": "At ",
-      "t": "ten minutes to four",
-      "a": ", Luis Rinaldini of Lazard reluctantly led a team of investment bankers downstairs to begin discussing the management group’s securities.",
-      "title": "Barbarians at the Gate",
-      "author": "Bryan Burrough"
     }
   ],
   "51": [
@@ -1569,6 +1606,13 @@
       "a": ", but she allowed herself a moment of nostalgia to contemplate the herons that glided in stillness over the steamy torpor of the lagoon.",
       "title": "Until August",
       "author": "Anne McLean"
+    },
+    {
+      "b": "At ",
+      "t": "three fifty-four",
+      "a": ", when the bus was well and truly gone, she whirled on Poppy.",
+      "title": "Doll Bones",
+      "author": "Holly Black"
     }
   ],
   "55": [
@@ -1592,6 +1636,13 @@
       "a": " to hear the news from the prophet of our religion.",
       "title": "Chaos Monkeys",
       "author": "Antonio Garcia Martinez"
+    },
+    {
+      "b": "“At ",
+      "t": "five minutes to four",
+      "a": " bells,” he said, “I went on deck to put my sweater and gear ready for going on the lookout at two o’clock.",
+      "title": "Dead Wake",
+      "author": "Erik Larson"
     },
     {
       "b": "He came back indoors. It was ",
@@ -1620,16 +1671,16 @@
       "a": " when dawn arrived. His e-butler had woken him up at regular intervals through the night so he could check the tent.",
       "title": "Pandora's star",
       "author": "Peter F. Hamilton"
-    },
-    {
-      "b": "I arrived ",
-      "t": "five minutes to four",
-      "a": " and saw my boss, Marilyn, waiting on the beach, her arms crossed hard over her chest.",
-      "title": "Mermaids Never Drown",
-      "author": "Zoraida Córdova"
     }
   ],
   "56": [
+    {
+      "b": "AT ",
+      "t": "FOUR MINUTES to four",
+      "a": " o’clock, Jacob presses blotting paper over the page on his desk in Warehouse Eik.",
+      "title": "The Thousand Autumns of Jacob De Zoet",
+      "author": "David Mitchell"
+    },
     {
       "b": "Rulofson “talked against time,” hoping to delay him, but Muybridge frequently checked his watch. Rulofson’s own watch, “set to city time,” showed that it was ",
       "t": "four minutes to four",
@@ -1716,6 +1767,13 @@
       "author": "Katee Robert"
     },
     {
+      "b": "Eric is running an experiment at Halsey from 8:00 p.m. until almost ",
+      "t": "3:00 a.m.",
+      "a": " and he needs a tech, so I won’t go out to Halsey until later.",
+      "title": "China Mountain Zhang",
+      "author": "Maureen F McHugh"
+    },
+    {
       "b": "Drummond announced their arrival with the cry of ‘ENT vs The KLF This … is Freedom Television’. As the two bands launched into a hardcore thrash version of ‘",
       "t": "3 a.m.",
       "a": "",
@@ -1735,13 +1793,6 @@
       "a": " in the morning as I descended the echoing metal staircase into the bar proper.",
       "title": "Agents of Light and Darkness",
       "author": "Simon R. Green"
-    },
-    {
-      "b": "It was a testament to Cate’s exhaustion that she didn’t hear me sneaking out of the apartment at ",
-      "t": "three o’clock",
-      "a": " in the morning.",
-      "title": "The Darkest Legacy (Darkest Minds Novel, A)",
-      "author": "Alexandra Bracken"
     }
   ],
   "01": [
@@ -1751,6 +1802,13 @@
       "a": " My curtains are closed, but I can see a glow from Olly’s room.",
       "title": "Everything, Everything",
       "author": "Nicola Yoon"
+    },
+    {
+      "b": "“THERE’LL BE TWENTY pallets’ worth by three o’clock tomorrow, see,” comes a man’s voice from the office down the hall, “and if your truck isn’t here at ",
+      "t": "one minute past three",
+      "a": ", then the lot’ll be going to the Fine Fare depot in Aylesford.”",
+      "title": "The Bone Clocks",
+      "author": "David Mitchell"
     },
     {
       "b": "Numbered doors mark both sides. Radcliff stops at ",
@@ -1822,6 +1880,13 @@
       "author": "Ronen Bergman"
     },
     {
+      "b": "At the very least, it introduces you to a shadow world, one made of endless doctor’s visits and of 3:00 a.m. phone calls followed by lonely ",
+      "t": "3:05 a.m.",
+      "a": " drives to the hospital.",
+      "title": "Instructions for Dancing",
+      "author": "Nicola Yoon"
+    },
+    {
       "b": "I knew the clock was digital, but for some reason, I was glad it had been given a face, a big hand and a little hand and a second-hand sweep, all of which said it was ",
       "t": "3:05 a.m.",
       "a": ", Pacific Standard Time.",
@@ -1862,13 +1927,6 @@
       "a": "",
       "title": "Surrender to Me",
       "author": "K.A. Tucker"
-    },
-    {
-      "b": "But at ",
-      "t": "five minutes past three",
-      "a": " on Friday morning, the telephone beside his bed went off, shooting him from sound sleep to pure panic in a second flat.",
-      "title": "Touchstone",
-      "author": "Laurie R. King"
     }
   ],
   "06": [
@@ -1924,6 +1982,13 @@
       "author": "Michael Reaves"
     },
     {
+      "b": "Ralph enjoyed the experiment—the comb honey was so sweetly powerful it seemed to suffuse his whole being—but he still woke at 3:10 after the first dosage, at 3:08 after the second, and at ",
+      "t": "3:07",
+      "a": " after the third.",
+      "title": "Insomnia",
+      "author": "Stephen King"
+    },
+    {
       "b": "Blomkvist’s taxi got to Central Station at ",
       "t": "3:07",
       "a": ". He walked rapidly into the ticket hall, but he could see neither Teleborian nor anyone looking like he might be Jonas.",
@@ -1966,6 +2031,13 @@
       "a": ", the two wingmen in the accompanying aeroplanes made radio contact with the control tower to say they had been in tight pursuit of the object, but it had outflanked them.",
       "title": "Beautiful Star",
       "author": "Yukio Mishima"
+    },
+    {
+      "b": "Ralph enjoyed the experiment—the comb honey was so sweetly powerful it seemed to suffuse his whole being—but he still woke at 3:10 after the first dosage, at ",
+      "t": "3:08",
+      "a": " after the second, and at 3:07 after the third.",
+      "title": "Insomnia",
+      "author": "Stephen King"
     },
     {
       "b": "“It’s not after ",

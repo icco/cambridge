@@ -1,9 +1,9 @@
 {
   "10": [
     {
-      "b": "At ",
+      "b": "At 1:10 p.m.: The time of the broadcast is given as ",
       "t": "1:10 p.m.",
-      "a": ": The time of the broadcast is given as 1:10 p.m. in Voznyak and Troitsky, Chernobyl: It Was Like This, 223.",
+      "a": " in Voznyak and Troitsky, Chernobyl: It Was Like This, 223.",
       "title": "Midnight in Chernobyl: The Untold Story of the World's Greatest Nuclear Disaster",
       "author": "Adam Higginbotham"
     },
@@ -58,6 +58,13 @@
     }
   ],
   "11": [
+    {
+      "b": "His solution would require; Anderson, Ribicoff, Hartke telephone calls: Transcripts, “1:05 P.M. to Clinton Anderson,” “",
+      "t": "1:11 P.M.",
+      "a": " to Vance Hartke,” “1:14 P.M. to Abraham Ribicoff,” all Jan.",
+      "title": "The Passage of Power",
+      "author": "Robert A. Caro"
+    },
     {
       "b": "At ",
       "t": "1:11 p.m.",
@@ -212,6 +219,13 @@
       "author": "Elizabeth Greenwood"
     },
     {
+      "b": "His solution would require; Anderson, Ribicoff, Hartke telephone calls: Transcripts, “1:05 P.M. to Clinton Anderson,” “1:11 P.M. to Vance Hartke,” “",
+      "t": "1:14 P.M.",
+      "a": " to Abraham Ribicoff,” all Jan.",
+      "title": "The Passage of Power",
+      "author": "Robert A. Caro"
+    },
+    {
       "b": "“You are exactly right”: Email, David Petraeus to Conrad Crane, “Counterinsurgency Field Manual for the Senate,” November 3, 2006, ",
       "t": "1:14 p.m.",
       "a": "",
@@ -238,13 +252,6 @@
       "a": " EST.",
       "title": "Active Measures",
       "author": "Thomas Rid"
-    },
-    {
-      "b": "He squinted at the radium dial of his watch. It was ",
-      "t": "fourteen minutes past one",
-      "a": "; he started running back up the path.",
-      "title": "The Bourne Identity",
-      "author": "Robert Ludlum"
     }
   ],
   "15": [
@@ -312,6 +319,13 @@
       "a": " today. No origin number, but it’s the pay phone outside the Bank of America at 14229 West Pico, Los Angeles.”",
       "title": "The Cold Six Thousand",
       "author": "James Ellroy"
+    },
+    {
+      "b": "And I had been looking at my watch since the train had started at 12:59 p.m. And the first stop had been at ",
+      "t": "1:16 p.m.",
+      "a": ", which was 17 minutes later.",
+      "title": "The Curious Incident of the Dog in the Night-Time",
+      "author": "Mark Haddon"
     },
     {
       "b": "AT THE HOSPITAL: ",
@@ -386,6 +400,13 @@
       "author": "Omar El Akkad"
     },
     {
+      "b": "The clock on the wall read six minutes to eleven. And his wristwatch read ",
+      "t": "seventeen minutes past one",
+      "a": ", or twenty past.",
+      "title": "A Man of Shadows",
+      "author": "Jeff Noon"
+    },
+    {
       "b": "It was ",
       "t": "seventeen minutes after one",
       "a": " when the diffuse glow of distant headlights appeared among the trees to the north.",
@@ -405,13 +426,6 @@
       "a": ". Less than forty-five minutes, he thought, and he remembered that old Cagney movie about George M.",
       "title": "Aces High",
       "author": "George R. R. Martin"
-    },
-    {
-      "b": "There was the cul-de-sac he was parked in, false-lit with IR from the cameras. The timestamp was ",
-      "t": "1:17",
-      "a": ".",
-      "title": "The Lost Cause",
-      "author": "Cory Doctorow"
     }
   ],
   "18": [
@@ -442,6 +456,13 @@
       "a": "]: You think this is funny? Tina spent all morning getting her hair done.",
       "title": "One to Watch",
       "author": "Kate Stayman-London"
+    },
+    {
+      "b": "Underwood spoke up. “They’re right up yonder in the Colored balcony—been there since precisely ",
+      "t": "one-eighteen",
+      "a": " P.M.”",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee"
     },
     {
       "b": "A Boeing 707 with thirty-eight passengers, twelve of them Israelis, and ten Israeli crew members, the aircraft was scheduled to land in Tel Aviv at ",
@@ -486,6 +507,13 @@
       "a": " as a freshman and one forty in his senior year, when he was honorable mention All-Met, winning Mount Madness in his weight class and placing at the seriously loaded Beast of the East tournament in Delaware.",
       "title": "The Martini Shot",
       "author": "George Pelecanos"
+    },
+    {
+      "b": "Hickock, 33 years old, died first, at 12:41 A.M.; Smith, 36, died at ",
+      "t": "1:19",
+      "a": ". . .”",
+      "title": "In Cold Blood",
+      "author": "Truman Capote"
     }
   ],
   "20": [
@@ -724,6 +752,13 @@
       "author": "Lonely Planet"
     },
     {
+      "b": "However, Tye did identify Cestus Odgers, who had gone in at twelve-thirty carrying a hessian tote bag and then out again at ",
+      "t": "one twenty-five",
+      "a": ", sans bag.",
+      "title": "The Saints of Salvation",
+      "author": "Peter F. Hamilton"
+    },
+    {
       "b": "Good maps for walkers are Mapa topográfico de Sierra Tejeda and Mapa topográfico de Sierra Almijara by Miguel Ángel Torres Delgado, both at ",
       "t": "1:25",
       "a": ",000.",
@@ -731,18 +766,18 @@
       "author": "Lonely Planet"
     },
     {
+      "b": "Bad day in the markets is a thousand. Kid’s recital is ",
+      "t": "one twenty-five",
+      "a": " an hour. Church is one fifty.",
+      "title": "Sorry Please Thank You",
+      "author": "Charles Yu"
+    },
+    {
       "b": "The functional range of expansion is ",
       "t": "1:25",
       "a": " to 1:200, with a heavier inoculation rate always resulting in faster growth.",
       "title": "Growing Gourmet and Medicinal Mushrooms",
       "author": "Paul Stamets"
-    },
-    {
-      "b": "Concentrating on his own physiology to bring his control back to normal, he calculated his heartbeat at ",
-      "t": "one twenty-five",
-      "a": " and his blood pressure as stratospheric.",
-      "title": "Because the Night",
-      "author": "James Ellroy"
     }
   ],
   "26": [
@@ -840,6 +875,13 @@
       "a": " and jumping down to one, halving as they go, so one twenty-eight to sixty-four to thirty-two, and so on.",
       "title": "Dead or Alive",
       "author": "Tom Clancy"
+    },
+    {
+      "b": "U.S. Steel went from 49½ at 11:40 to 52⅜ at ",
+      "t": "1:28",
+      "a": ". I.B.M. was, in its way, the most dramatic case of the lot.",
+      "title": "Business Adventures",
+      "author": "John Brooks"
     }
   ],
   "29": [
@@ -902,11 +944,11 @@
       "author": "Umberto Eco"
     },
     {
-      "b": "From ",
-      "t": "1330 hours",
-      "a": " to 1630 hours he would weld some more ears and letter Ps and then Shift C would clock out and march out of the factory to meet Shift A marching in.",
-      "title": "Desolation Road",
-      "author": "Ian McDonald"
+      "b": "She has a meeting with the stable master at 11:30 a.m., which is in an hour’s time, and then she’s expected in Ravencourt’s parlor at ",
+      "t": "1:30 p.m.",
+      "a": "",
+      "title": "The 7½ Deaths of Evelyn Hardcastle",
+      "author": "Stuart Turton"
     }
   ],
   "31": [
@@ -1003,6 +1045,13 @@
       "author": "Erik Larson"
     },
     {
+      "b": "Now, Agnes says Chariots of Fire starts at ",
+      "t": "twenty-five to two",
+      "a": ", so grab yourself a sausage roll or something for lunch, and get back to the gallery by…’ Mum checked her watch. ‘…a quarter past one.’",
+      "title": "Black Swan Green",
+      "author": "David Mitchell"
+    },
+    {
       "b": "At ",
       "t": "1:35",
       "a": " on the afternoon of Monday, June 13, 1994, Los Angeles Police Department detective Phil Vannatter switched on the tape recorder.",
@@ -1029,13 +1078,6 @@
       "a": ", when he climbed the 110 steps to his room, he was already calculating the minutes until he could come back downstairs for a drink.",
       "title": "A Gentleman in Moscow",
       "author": "Amor Towles"
-    },
-    {
-      "b": "After he stopped growing, he was five-eight, but only if he stood on his toes—and he competed better at ",
-      "t": "one-thirty-five",
-      "a": " than he did at one-forty.",
-      "title": "(2005) Until I Find You",
-      "author": "John Irving"
     }
   ],
   "37": [
@@ -1070,11 +1112,25 @@
       "author": "Arthur Nersesian"
     },
     {
+      "b": "\"That's better,\" he said, looking at the EKG readout. \"Heart rate stabilized at ",
+      "t": "one thirty-eight",
+      "a": ", a normal but accelerated sinus rhythm.",
+      "title": "Jack Ryan [03] - The Cardinal of the Kremlin",
+      "author": "Tom Clancy"
+    },
+    {
       "b": "Seabiscuit had worked a mile in 1:36. The track record was ",
       "t": "1:38",
       "a": ". At that speed, Seabiscuit would have trounced the track record holder by more than a dozen lengths.2",
       "title": "Seabiscuit: an American legend",
       "author": "Laura Hillenbrand"
+    },
+    {
+      "b": "Having broken through the 100 barrier, Telephone leaped wildly upward: at 12:18, it was traded at 101¼; at 12:41, at 103½; and at 1:05, at 106¼. General Motors went from 45½ at 11:46 to 50 at ",
+      "t": "1:38",
+      "a": ".",
+      "title": "Business Adventures",
+      "author": "John Brooks"
     }
   ],
   "39": [
@@ -1087,6 +1143,13 @@
     }
   ],
   "40": [
+    {
+      "b": "Then, at ",
+      "t": "1340 hours",
+      "a": "/1:40 PM, as the flight crew lined up on the field, the loadmasters opened the rear ramp, and executed the training drop precisely on the planned target.",
+      "title": "Tom Clancy NF [05] - Airborne",
+      "author": "Tom Clancy"
+    },
     {
       "b": "At ",
       "t": "1:40 P.M.",
@@ -1107,13 +1170,6 @@
       "a": " MacArthur ordered General Miles to assemble his forces on the Ellipse, immediately south of the White House.",
       "title": "Eisenhower in War and Peace",
       "author": "Jean Edward Smith"
-    },
-    {
-      "b": "Then, at 1340 hours/",
-      "t": "1:40 PM",
-      "a": ", as the flight crew lined up on the field, the loadmasters opened the rear ramp, and executed the training drop precisely on the planned target.",
-      "title": "Tom Clancy NF [05] - Airborne",
-      "author": "Tom Clancy"
     },
     {
       "b": "Kate glanced at her watch. It was ",
@@ -1278,6 +1334,13 @@
       "a": ", 2:04 p.m., 2:17 p.m. A rattled-lens run—note the blurred foot-traffic pix.",
       "title": "Perfidia",
       "author": "James Ellroy"
+    },
+    {
+      "b": "The Yawning Angel topped out at ",
+      "t": "one forty-six",
+      "a": ".",
+      "title": "Excession",
+      "author": "Iain M. Banks"
     }
   ],
   "47": [
@@ -1486,6 +1549,13 @@
       "a": "]: What do you see? Spare no detail!",
       "title": "Fang Fiction",
       "author": "Kate Stayman-London"
+    },
+    {
+      "b": "Thus his strike was clocked in at 12:45 P.M. local time; at Washington, D.C., at 2:47; Cheyenne, Wyoming, at ",
+      "t": "1:53",
+      "a": "; at Virginia City, Nevada, at 12:30; at San Francisco at 11:46 or 11:44, depending on which source one selected.",
+      "title": "River of Shadows",
+      "author": "Rebecca Solnit"
     }
   ],
   "54": [
@@ -1749,6 +1819,15 @@
       "author": "Philip Roth"
     }
   ],
+  "02": [
+    {
+      "b": "“Wait, I lost count. Is ",
+      "t": "one oh two",
+      "a": " ten or eleven?” I could count in binary when I was angry, but counting in ternary—base three—took too much concentration.",
+      "title": "Homeland",
+      "author": "Cory Doctorow"
+    }
+  ],
   "04": [
     {
       "b": "Waking to the patter of rain against the roof, Gabriel looks groggily at the clock, which blinks “",
@@ -1837,11 +1916,11 @@
       "author": "Tom Clancy"
     },
     {
-      "b": "At ",
-      "t": "01:05",
-      "a": " Captain Hara of the Auriga Imperator, a car carrier bound from Yokohama for Santiago in Chile, reported a distress beacon.",
-      "title": "Hopeland",
-      "author": "Ian McDonald"
+      "b": "She tells us that she left her cousin’s bedroom at about ",
+      "t": "five minutes past one",
+      "a": ", went straight to the library and stayed there until half past two when she went up to her room.",
+      "title": "The Skull Beneath the Skin",
+      "author": "P. D. James"
     }
   ],
   "06": [
@@ -1886,6 +1965,13 @@
       "a": " on the clock.",
       "title": "Fear and Loathing at Rolling Stone",
       "author": "Hunter S. Thompson"
+    },
+    {
+      "b": "“What did we bid, Henry? I think it was ",
+      "t": "one-oh-six",
+      "a": ". Is that right?”",
+      "title": "Barbarians at the Gate",
+      "author": "Bryan Burrough"
     }
   ],
   "07": [
@@ -1946,6 +2032,13 @@
       "a": ", she thought, stepping on the accelerator pedal.",
       "title": "All Clear",
       "author": "Connie Willis"
+    },
+    {
+      "b": "“The management team just went across the tape with a new bid. They’re at ",
+      "t": "one-oh-eight",
+      "a": ".”",
+      "title": "Barbarians at the Gate",
+      "author": "Bryan Burrough"
     }
   ],
   "09": [
