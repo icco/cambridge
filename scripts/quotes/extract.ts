@@ -314,6 +314,9 @@ function htmlParas(html: string): string[] {
 
 const attr = (tag: string, name: string) => new RegExp(`${name}\\s*=\\s*["']([^"']*)["']`, "i").exec(tag)?.[1]
 
+const XML_ENTITIES: Record<string, string> = { amp: "&", apos: "'", quot: '"', lt: "<", gt: ">" }
+const unescapeXml = (s: string) => s.replace(/&(amp|apos|quot|lt|gt);/g, (_, e: string) => XML_ENTITIES[e])
+
 function decode(s: string) {
   try {
     return decodeURIComponent(s)
@@ -324,7 +327,7 @@ function decode(s: string) {
 
 function cleanAuthor(a: string | undefined, fallback: string) {
   if (!a) return fallback
-  let s = a.replace(/&amp;/g, "&").replace(/\s+/g, " ").trim()
+  let s = unescapeXml(a).replace(/\s+/g, " ").trim()
   const comma = /^([^,]+),\s*([^,]+)$/.exec(s)
   if (comma) s = `${comma[2]} ${comma[1]}`
   return s || fallback
@@ -355,7 +358,7 @@ function readEpub(path: string, meta: { title: string; author: string; src: stri
     const dir = posix.dirname(opfPath)
     const t = /<dc:title[^>]*>([^<]+)</i.exec(opf)?.[1]
     const c = /<dc:creator[^>]*>([^<]+)</i.exec(opf)?.[1]
-    if (t) meta.title = t.replace(/&amp;/g, "&").replace(/&apos;/g, "'").trim()
+    if (t) meta.title = unescapeXml(t).trim()
     meta.author = cleanAuthor(c, meta.author)
     const items = new Map<string, string>()
     for (const it of opf.match(/<item\b[^>]*>/gi) ?? []) {

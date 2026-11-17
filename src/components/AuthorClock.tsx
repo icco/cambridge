@@ -81,7 +81,9 @@ export function AuthorClock() {
 
   const hourQuotes = hour === undefined ? undefined : hourCache.get(hour)
   const day = now
-    ? Math.floor((now.getTime() - now.getTimezoneOffset() * 60_000) / 86_400_000)
+    ? Math.floor(
+        (now.getTime() - now.getTimezoneOffset() * 60_000) / 86_400_000
+      )
     : 0
   const quote =
     now && hourQuotes
