@@ -17,5 +17,11 @@ export default defineConfig([
       "simple-import-sort/exports": "error",
     },
   },
-  globalIgnores([".next/**", "out/**", "coverage/**", "next-env.d.ts"]),
+  globalIgnores([
+    ".next/**",
+    "out/**",
+    "coverage/**",
+    "next-env.d.ts",
+    "scripts/quotes/**",
+  ]),
 ])

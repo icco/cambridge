@@ -1,0 +1,11 @@
+{
+  "name": "cambridge-quotes",
+  "private": true,
+  "type": "module",
+  "description": "Offline extractor that mines time-of-day quotes from a local ebook library",
+  "dependencies": {
+    "fflate": "^0.8.3",
+    "htmlparser2": "^12.0.0",
+    "pdfjs-dist": "^4.10.38"
+  }
+}
