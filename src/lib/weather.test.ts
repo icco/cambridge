@@ -1,7 +1,7 @@
 import assert from "node:assert/strict"
 import { describe, it } from "node:test"
 
-import { describeWeather, weatherLine } from "./weather.ts"
+import { celsius, describeWeather, weatherLine } from "./weather.ts"
 
 describe("describeWeather", () => {
   it("names WMO codes", () => {
@@ -20,5 +20,12 @@ describe("weatherLine", () => {
       weatherLine({ temperature: 45.7, description: "Partly cloudy" }),
       "Partly cloudy · 46°F"
     )
+  })
+})
+
+describe("celsius", () => {
+  it("converts and rounds to whole degrees Celsius", () => {
+    assert.equal(celsius(45.7), "8°C")
+    assert.equal(celsius(-40), "-40°C")
   })
 })

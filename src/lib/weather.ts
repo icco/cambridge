@@ -46,6 +46,10 @@ export function weatherLine({ temperature, description }: Weather): string {
   return `${description} · ${Math.round(temperature)}°F`
 }
 
+export function celsius(fahrenheit: number): string {
+  return `${Math.round(((fahrenheit - 32) * 5) / 9)}°C`
+}
+
 export async function fetchWeather(
   latitude: number,
   longitude: number

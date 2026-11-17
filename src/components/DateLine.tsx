@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import { cambridge, home } from "@/lib/cities"
 import { dayFactor } from "@/lib/daylight"
 import { writtenDate } from "@/lib/time"
-import { type Weather, weatherLine } from "@/lib/weather"
+import { celsius, type Weather, weatherLine } from "@/lib/weather"
 
 import styles from "./DateLine.module.css"
 
@@ -47,7 +47,12 @@ export function DateLine({ now }: { now: Date }) {
     <div className={`${styles.date} ${night ? styles.night : ""}`}>
       <div className={styles.weekday}>{weekday}</div>
       <div className={styles.day}>{date}</div>
-      {weather && <div className={styles.weather}>{weatherLine(weather)}</div>}
+      {weather && (
+        <div className={styles.weather}>
+          {weatherLine(weather)}{" "}
+          <span className={styles.celsius}>{celsius(weather.temperature)}</span>
+        </div>
+      )}
     </div>
   )
 }
