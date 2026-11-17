@@ -16,8 +16,8 @@ describe("describeWeather", () => {
     assert.equal(describeWeather(63), "Rain")
   })
 
-  it("rejects unknown codes", () => {
-    assert.throws(() => describeWeather(42), /unknown WMO weather code 42/)
+  it("calls unknown codes unknown", () => {
+    assert.equal(describeWeather(42), "Unknown")
   })
 })
 
@@ -40,8 +40,9 @@ describe("weatherIcon", () => {
     assert.equal(weatherIcon(95, true), "storm")
   })
 
-  it("rejects unknown codes", () => {
-    assert.throws(() => weatherIcon(42, true), /unknown WMO weather code 42/)
+  it("falls back to a cloud for unknown codes", () => {
+    assert.equal(weatherIcon(42, true), "cloud")
+    assert.equal(weatherIcon(42, false), "cloud")
   })
 })
 
@@ -102,9 +103,13 @@ describe("toWeather", () => {
     ])
   })
 
-  it("rejects unknown hourly codes", () => {
-    assert.throws(
-      () => toWeather(response([3, 42, 0])),
+  it("logs unknown codes and keeps the forecast", (t) => {
+    const error = t.mock.method(console, "error", () => {})
+    const weather = toWeather(response([3, 42, 0]))
+    assert.equal(weather.hours[1].code, 42)
+    assert.equal(error.mock.callCount(), 1)
+    assert.match(
+      String(error.mock.calls[0].arguments[0]),
       /unknown WMO weather code 42/
     )
   })
