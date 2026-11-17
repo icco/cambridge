@@ -5,11 +5,35 @@ import { useEffect, useState } from "react"
 import { cambridge, home } from "@/lib/cities"
 import { dayFactor } from "@/lib/daylight"
 import { writtenDate } from "@/lib/time"
-import { celsius, type Weather, weatherLine } from "@/lib/weather"
+import {
+  celsius,
+  type Hour,
+  hourLabel,
+  nextHours,
+  type Weather,
+  weatherIcon,
+} from "@/lib/weather"
 
 import styles from "./DateLine.module.css"
+import { WeatherGlyph } from "./WeatherGlyph"
 
 const WEATHER_MS = 15 * 60 * 1000
+const HOURS_AHEAD = 5
+
+function HourCell({ hour, label }: { hour: Hour; label: string }) {
+  return (
+    <li className={styles.hour}>
+      <span className={styles.hourLabel}>{label}</span>
+      <WeatherGlyph
+        icon={weatherIcon(hour.code, hour.day)}
+        className={styles.glyph}
+      />
+      <span className={styles.temperature}>
+        {Math.round(hour.temperature)}°
+      </span>
+    </li>
+  )
+}
 
 export function DateLine({ now }: { now: Date }) {
   const [weather, setWeather] = useState<Weather | null>(null)
@@ -49,8 +73,21 @@ export function DateLine({ now }: { now: Date }) {
       <div className={styles.day}>{date}</div>
       {weather && (
         <div className={styles.weather}>
-          {weatherLine(weather)}{" "}
-          <span className={styles.celsius}>{celsius(weather.temperature)}</span>
+          <ol className={styles.hours}>
+            <HourCell hour={weather} label="Now" />
+            {nextHours(weather.hours, now.getTime(), HOURS_AHEAD).map(
+              (hour) => (
+                <HourCell
+                  key={hour.time}
+                  hour={hour}
+                  label={hourLabel(hour.time, home.timeZone)}
+                />
+              )
+            )}
+          </ol>
+          <div className={styles.summary}>
+            {weather.description} · {celsius(weather.temperature)}
+          </div>
         </div>
       )}
     </div>
