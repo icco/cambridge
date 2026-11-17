@@ -57,15 +57,11 @@ const descriptions: Record<number, string> = {
 }
 
 export function describeWeather(code: number): string {
-  const description = descriptions[code]
-  if (!description) {
-    throw new Error(`unknown WMO weather code ${code}`)
-  }
-  return description
+  return descriptions[code] ?? "Unknown"
 }
 
 export function weatherIcon(code: number, day: boolean): WeatherIcon {
-  describeWeather(code)
+  if (!descriptions[code]) return "cloud"
   if (code === 0) return day ? "sun" : "moon"
   if (code <= 2) return day ? "partly-day" : "partly-night"
   if (code === 3) return "cloud"
@@ -122,16 +118,21 @@ export function toWeather(response: ForecastResponse): Weather {
   const codes = values(hourly, 1)
   const days = values(hourly, 2)
   const start = Number(hourly.time())
-  const hours = Array.from(temperatures, (temperature, i) => {
-    describeWeather(codes[i])
-    return {
-      time: (start + i * hourly.interval()) * 1000,
-      temperature,
-      code: codes[i],
-      day: days[i] === 1,
-    }
-  })
+  const hours = Array.from(temperatures, (temperature, i) => ({
+    time: (start + i * hourly.interval()) * 1000,
+    temperature,
+    code: codes[i],
+    day: days[i] === 1,
+  }))
   const code = current.variables(1)!.value()
+  const unknown = new Set(
+    [code, ...hours.map((hour) => hour.code)].filter(
+      (value) => !descriptions[value]
+    )
+  )
+  for (const value of unknown) {
+    console.error(`unknown WMO weather code ${value}`)
+  }
   return {
     time: Number(current.time()) * 1000,
     temperature: current.variables(0)!.value(),
