@@ -30,7 +30,12 @@ for (const f of readdirSync(dir).filter((x) => x.endsWith(".jsonl"))) {
   for (const line of readFileSync(`${dir}/${f}`, "utf8").split("\n")) {
     if (!line) continue
     const h: Hit = JSON.parse(line)
-    const key = norm(h.before + h.time + h.after)
+    const key = [
+      norm(h.before),
+      norm(h.time),
+      norm(h.after),
+      h.m.join(","),
+    ].join("|")
     if (seen.has(key)) continue
     seen.add(key)
     total++

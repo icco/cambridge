@@ -358,6 +358,16 @@ type Hit = {
   fmt: string
 }
 
+const HAS_TIME_WORD = new RegExp(
+  `\\d|\\b(?:${HW}|noon|midnight|midday|quarter|half)\\b`,
+  "i"
+)
+
+// Longer relative expressions win over the hour-only or noon matches they contain.
+const PRIORITY = [1, 2, 1, 3, 3, 2, 0, 2]
+
+type Candidate = { raw: Raw; priority: number }
+
 function scanParagraph(
   para: string,
   meta: { title: string; author: string; src: string; fmt: string },
@@ -365,34 +375,44 @@ function scanParagraph(
 ) {
   const text = para.replace(/[ \s]+/g, " ").trim()
   if (text.length < 40 || text.length > 6000) return
-  if (
-    !/\d|clock|past|to |quarter|half|noon|midnight|midday|till|after|before|of /i.test(
-      text
-    )
-  )
-    return
+  if (!HAS_TIME_WORD.test(text)) return
   const txt = meta.fmt === "txt" || meta.fmt === "pdf"
-  for (const p of patterns) {
-    if (txt && !p.txtOk) continue
+  const candidates: Candidate[] = []
+  patterns.forEach((p, i) => {
+    if (txt && !p.txtOk) return
     p.re.lastIndex = 0
     let m: RegExpExecArray | null
     while ((m = p.re.exec(text))) {
       const raw = p.fn(m, text)
-      if (!raw) continue
-      const [ms, me] = raw.T
-      const ex = excerptFor(text, ms, me)
-      if (!ex) continue
-      const exText = ex.before + ex.time + ex.after
-      const r = resolve(raw, exText, ex.before.length + ex.time.length)
-      if (!r) continue
-      out.push({
-        m: r.minutes,
-        conf: r.conf,
-        strong: raw.strong,
-        ...ex,
-        ...meta,
-      })
+      if (raw) candidates.push({ raw, priority: PRIORITY[i] })
     }
+  })
+  const overlaps = (a: Raw, b: Raw) => a.T[0] < b.T[1] && b.T[0] < a.T[1]
+  const span = (c: Candidate) => c.raw.T[1] - c.raw.T[0]
+  const kept = candidates.filter(
+    (c) =>
+      !candidates.some(
+        (o) =>
+          o !== c &&
+          overlaps(o.raw, c.raw) &&
+          (o.priority > c.priority ||
+            (o.priority === c.priority && span(o) > span(c)))
+      )
+  )
+  for (const { raw } of kept) {
+    const [ms, me] = raw.T
+    const ex = excerptFor(text, ms, me)
+    if (!ex) continue
+    const exText = ex.before + ex.time + ex.after
+    const r = resolve(raw, exText, ex.before.length + ex.time.length)
+    if (!r) continue
+    out.push({
+      m: r.minutes,
+      conf: r.conf,
+      strong: raw.strong,
+      ...ex,
+      ...meta,
+    })
   }
 }
 
@@ -614,13 +634,19 @@ for (const rel of mine) {
   }
   const out: Hit[] = []
   try {
-    const timeout = new Promise<never>((_, rej) =>
-      setTimeout(() => rej(new Error("timeout")), 120000).unref()
-    )
     if (ext === "epub") readEpub(full, meta, out)
     else if (ext === "txt") readTxt(full, meta, out)
-    else if (ext === "pdf")
-      await Promise.race([readPdf(full, meta, out), timeout])
+    else if (ext === "pdf") {
+      let timer: ReturnType<typeof setTimeout> | undefined
+      const timeout = new Promise<never>((_, rej) => {
+        timer = setTimeout(() => rej(new Error("timeout")), 120000)
+      })
+      try {
+        await Promise.race([readPdf(full, meta, out), timeout])
+      } finally {
+        clearTimeout(timer)
+      }
+    }
     if (out.length)
       appendFileSync(
         `${outDir}/shard-${shard}.jsonl`,

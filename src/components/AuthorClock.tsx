@@ -15,21 +15,27 @@ const STEP_CQW = 0.25
 
 const hourCache = new Map<number, HourQuotes>()
 const hourLoads = new Map<number, Promise<void>>()
+const hourFailed = new Set<number>()
+const FETCH_TIMEOUT_MS = 5000
 
 function loadHour(hour: number): Promise<void> {
   const pending = hourLoads.get(hour)
   if (pending) return pending
-  const load = fetch(`/quotes/${String(hour).padStart(2, "0")}.json`)
+  const load = fetch(`/quotes/${String(hour).padStart(2, "0")}.json`, {
+    signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+  })
     .then((response) => {
       if (!response.ok) throw new Error(`HTTP ${response.status}`)
       return response.json() as Promise<HourQuotes>
     })
-    .catch((error: unknown) => {
-      console.error(`Quotes for hour ${hour} failed to load`, error)
-      return {} as HourQuotes
-    })
     .then((quotes) => {
       hourCache.set(hour, quotes)
+      hourFailed.delete(hour)
+    })
+    .catch((error: unknown) => {
+      console.error(`Quotes for hour ${hour} failed to load`, error)
+      hourFailed.add(hour)
+      hourLoads.delete(hour)
     })
   hourLoads.set(hour, load)
   return load
@@ -64,6 +70,7 @@ export function AuthorClock() {
   }, [])
 
   const hour = now?.getHours()
+  const minute = now?.getMinutes()
 
   useEffect(() => {
     if (hour === undefined) return
@@ -77,7 +84,7 @@ export function AuthorClock() {
     return () => {
       active = false
     }
-  }, [hour])
+  }, [hour, minute])
 
   const hourQuotes = hour === undefined ? undefined : hourCache.get(hour)
   const day = now
@@ -86,7 +93,7 @@ export function AuthorClock() {
       )
     : 0
   const quote =
-    now && hourQuotes
+    now && (hourQuotes || hourFailed.has(now.getHours()))
       ? quoteAt(hourQuotes, now.getHours(), now.getMinutes(), day)
       : null
 
