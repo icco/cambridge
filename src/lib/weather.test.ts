@@ -6,6 +6,7 @@ import {
   describeWeather,
   hourLabel,
   nextHours,
+  toWeather,
   weatherIcon,
 } from "./weather.ts"
 
@@ -61,6 +62,50 @@ describe("nextHours", () => {
     assert.deepEqual(
       nextHours(hours, 1_800_000, 2).map((h) => h.time),
       [3_600_000, 7_200_000]
+    )
+  })
+})
+
+describe("toWeather", () => {
+  const variable = (value: number, array: number[] = []) => ({
+    value: () => value,
+    valuesArray: () => Float32Array.from(array),
+  })
+  const response = (hourlyCodes: number[]) => ({
+    current: () => ({
+      time: () => 1_795_000_000n,
+      interval: () => 0,
+      variables: (i: number) => [variable(46.5), variable(2), variable(1)][i],
+    }),
+    hourly: () => ({
+      time: () => 1_794_999_600n,
+      interval: () => 3600,
+      variables: (i: number) =>
+        [
+          variable(0, [47, 45, 44]),
+          variable(0, hourlyCodes),
+          variable(0, [1, 1, 0]),
+        ][i],
+    }),
+  })
+
+  it("maps current and hourly readings", () => {
+    const weather = toWeather(response([3, 61, 0]))
+    assert.equal(weather.time, 1_795_000_000_000)
+    assert.equal(weather.temperature, 46.5)
+    assert.equal(weather.description, "Partly cloudy")
+    assert.equal(weather.day, true)
+    assert.deepEqual(weather.hours, [
+      { time: 1_794_999_600_000, temperature: 47, code: 3, day: true },
+      { time: 1_795_003_200_000, temperature: 45, code: 61, day: true },
+      { time: 1_795_006_800_000, temperature: 44, code: 0, day: false },
+    ])
+  })
+
+  it("rejects unknown hourly codes", () => {
+    assert.throws(
+      () => toWeather(response([3, 42, 0])),
+      /unknown WMO weather code 42/
     )
   })
 })

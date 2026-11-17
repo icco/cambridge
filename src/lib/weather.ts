@@ -90,6 +90,58 @@ export function celsius(fahrenheit: number): string {
   return `${Math.round(((fahrenheit - 32) * 5) / 9)}°C`
 }
 
+type Variable = {
+  value(): number
+  valuesArray(): Float32Array | null
+}
+
+type Series = {
+  time(): bigint
+  interval(): number
+  variables(index: number): Variable | null
+}
+
+export type ForecastResponse = {
+  current(): Series | null
+  hourly(): Series | null
+}
+
+function values(series: Series, index: number): Float32Array {
+  const array = series.variables(index)?.valuesArray()
+  if (!array) throw new Error(`open-meteo returned no hourly variable ${index}`)
+  return array
+}
+
+export function toWeather(response: ForecastResponse): Weather {
+  const current = response.current()
+  const hourly = response.hourly()
+  if (!current || !hourly) {
+    throw new Error("open-meteo returned no current or hourly conditions")
+  }
+  const temperatures = values(hourly, 0)
+  const codes = values(hourly, 1)
+  const days = values(hourly, 2)
+  const start = Number(hourly.time())
+  const hours = Array.from(temperatures, (temperature, i) => {
+    describeWeather(codes[i])
+    return {
+      time: (start + i * hourly.interval()) * 1000,
+      temperature,
+      code: codes[i],
+      day: days[i] === 1,
+    }
+  })
+  const code = current.variables(1)!.value()
+  return {
+    time: Number(current.time()) * 1000,
+    temperature: current.variables(0)!.value(),
+    code,
+    day: current.variables(2)!.value() === 1,
+    description: describeWeather(code),
+    hours,
+  }
+}
+
 export async function fetchWeather(
   latitude: number,
   longitude: number
@@ -105,28 +157,5 @@ export async function fetchWeather(
       temperature_unit: "fahrenheit",
     }
   )
-  const current = response.current()
-  const hourly = response.hourly()
-  if (!current || !hourly) {
-    throw new Error("open-meteo returned no current or hourly conditions")
-  }
-  const temperatures = hourly.variables(0)!.valuesArray()!
-  const codes = hourly.variables(1)!.valuesArray()!
-  const days = hourly.variables(2)!.valuesArray()!
-  const start = Number(hourly.time())
-  const hours = Array.from(temperatures, (temperature, i) => ({
-    time: (start + i * hourly.interval()) * 1000,
-    temperature,
-    code: codes[i],
-    day: days[i] === 1,
-  }))
-  const code = current.variables(1)!.value()
-  return {
-    time: Number(current.time()) * 1000,
-    temperature: current.variables(0)!.value(),
-    code,
-    day: current.variables(2)!.value() === 1,
-    description: describeWeather(code),
-    hours,
-  }
+  return toWeather(response)
 }
