@@ -31,7 +31,8 @@ describe("weatherIcon", () => {
   it("groups precipitation", () => {
     assert.equal(weatherIcon(3, true), "cloud")
     assert.equal(weatherIcon(48, true), "fog")
-    assert.equal(weatherIcon(53, true), "rain")
+    assert.equal(weatherIcon(53, true), "drizzle")
+    assert.equal(weatherIcon(63, true), "rain")
     assert.equal(weatherIcon(81, false), "rain")
     assert.equal(weatherIcon(66, true), "sleet")
     assert.equal(weatherIcon(86, true), "snow")
