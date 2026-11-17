@@ -2,7 +2,7 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react"
 
-import { quoteFor } from "@/lib/quotes"
+import { type HourQuotes, quoteAt } from "@/lib/quotes"
 import { msUntilNextMinute } from "@/lib/time"
 
 import styles from "./AuthorClock.module.css"
@@ -13,8 +13,37 @@ const START_CQW = 9
 const MIN_CQW = 3
 const STEP_CQW = 0.25
 
+const hourCache = new Map<number, HourQuotes>()
+const hourLoads = new Map<number, Promise<void>>()
+const hourFailed = new Set<number>()
+const FETCH_TIMEOUT_MS = 5000
+
+function loadHour(hour: number): Promise<void> {
+  const pending = hourLoads.get(hour)
+  if (pending) return pending
+  const load = fetch(`/quotes/${String(hour).padStart(2, "0")}.json`, {
+    signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+  })
+    .then((response) => {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`)
+      return response.json() as Promise<HourQuotes>
+    })
+    .then((quotes) => {
+      hourCache.set(hour, quotes)
+      hourFailed.delete(hour)
+    })
+    .catch((error: unknown) => {
+      console.error(`Quotes for hour ${hour} failed to load`, error)
+      hourFailed.add(hour)
+      hourLoads.delete(hour)
+    })
+  hourLoads.set(hour, load)
+  return load
+}
+
 export function AuthorClock() {
   const [now, setNow] = useState<Date | null>(null)
+  const [, setLoaded] = useState(0)
   const frame = useRef<HTMLDivElement>(null)
   const content = useRef<HTMLDivElement>(null)
 
@@ -40,7 +69,33 @@ export function AuthorClock() {
     return () => clearTimeout(timer)
   }, [])
 
-  const quote = now ? quoteFor(now.getHours(), now.getMinutes()) : null
+  const hour = now?.getHours()
+  const minute = now?.getMinutes()
+
+  useEffect(() => {
+    if (hour === undefined) return
+    let active = true
+    const wanted = [hour, (hour + 1) % 24]
+    for (const h of wanted) {
+      void loadHour(h).then(() => {
+        if (active) setLoaded((n) => n + 1)
+      })
+    }
+    return () => {
+      active = false
+    }
+  }, [hour, minute])
+
+  const hourQuotes = hour === undefined ? undefined : hourCache.get(hour)
+  const day = now
+    ? Math.floor(
+        (now.getTime() - now.getTimezoneOffset() * 60_000) / 86_400_000
+      )
+    : 0
+  const quote =
+    now && (hourQuotes || hourFailed.has(now.getHours()))
+      ? quoteAt(hourQuotes, now.getHours(), now.getMinutes(), day)
+      : null
 
   useLayoutEffect(() => {
     const box = frame.current
