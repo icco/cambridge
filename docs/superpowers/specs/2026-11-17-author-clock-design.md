@@ -7,7 +7,7 @@ A second Cambridge page for its own 10" portrait kiosk. Each minute it shows a l
 ## Goals
 
 - `/author` route in the existing Next app, portrait, quote filling the screen.
-- Aged-paper look: warm tan page, fibre noise, darker vignette at the edges, oxblood italic time phrase, small-caps citation, book serif.
+- Aged-paper look: warm tan page, fibre noise, darker vignette at the edges, semibold italic time phrase in body ink over a soft tan underline band, small-caps citation, book serif.
 - Tells the screen's local time (the kiosk browser's time zone), not London.
 - Every minute of the day has a quote.
 

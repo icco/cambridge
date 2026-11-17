@@ -20,8 +20,11 @@
 }
 
 .time {
-  color: #8a2b1d;
+  padding: 0 0.1em;
+  background: linear-gradient(transparent 55%, #c9a46a99 55%);
+  box-decoration-break: clone;
   font-style: italic;
+  font-weight: 600;
 }
 
 .rule {
