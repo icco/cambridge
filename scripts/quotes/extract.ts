@@ -4,6 +4,8 @@ import { posix } from "node:path"
 import { unzipSync } from "fflate"
 import { Parser } from "htmlparser2"
 
+import { isWholeSentence, sentences, stripFootnote } from "./sentence.ts"
+
 const ROOT = "/media/brook/Books"
 const [listFile, outDir, shardArg, shardsArg] = process.argv.slice(2)
 const shard = Number(shardArg)
@@ -308,14 +310,12 @@ function resolve(
   return { minutes: [toM(pm)], conf }
 }
 
-const seg = new Intl.Segmenter("en", { granularity: "sentence" })
-
 function excerptFor(
   text: string,
   ms: number,
   me: number
 ): { before: string; time: string; after: string } | null {
-  const segs = [...seg.segment(text)]
+  const segs = sentences(text)
   const i = segs.findIndex(
     (s) => ms >= s.index && ms < s.index + s.segment.length
   )
@@ -340,9 +340,15 @@ function excerptFor(
   const end = segs[b].index + segs[b].segment.length
   if (me > end) return null
   const before = text.slice(start, ms).replace(/^\s+/, "")
-  const after = text.slice(me, end).replace(/\s+$/, "")
-  if (before.length + after.length + (me - ms) < 45) return null
-  return { before, time: text.slice(ms, me), after }
+  const time = text.slice(ms, me)
+  const raw = text.slice(me, end).replace(/\s+$/, "")
+  const full = before + time + raw
+  const cut = full.length - stripFootnote(full).length
+  if (cut > raw.length) return null
+  const after = raw.slice(0, raw.length - cut)
+  if (before.length + after.length + time.length < 45) return null
+  if (!isWholeSentence(before + time + after)) return null
+  return { before, time, after }
 }
 
 type Hit = {

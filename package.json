@@ -22,7 +22,7 @@
     "format:check": "prettier --check .",
     "check": "pnpm lint && pnpm type-check && pnpm format:check",
     "test:smoke": "node scripts/smoke.mjs",
-    "test": "node --test \"src/**/*.test.ts\"",
+    "test": "node --test \"src/**/*.test.ts\" \"scripts/**/*.test.ts\"",
     "test:e2e": "playwright test"
   },
   "dependencies": {
