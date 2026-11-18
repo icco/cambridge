@@ -21,6 +21,15 @@ describe("sentences", () => {
     )
   })
 
+  it("does not split after a page abbreviation or an initial", () => {
+    assert.deepEqual(
+      sentences(
+        "See Vol. II, pp. 4-5. Officer Thomas G. Hale came at 6:22."
+      ).map((s) => s.segment),
+      ["See Vol. II, pp. 4-5. ", "Officer Thomas G. Hale came at 6:22."]
+    )
+  })
+
   it("keeps offsets into the original text", () => {
     const text = "Mr. Smith left. Then he slept."
     for (const s of sentences(text))
@@ -36,6 +45,8 @@ describe("isWholeSentence", () => {
     "Is it really four?",
     "(She finished around 3:50.)",
     "Tell him to be ready at one-fourteen——",
+    "He left at 9:10 A.M.",
+    "She said it was a quarter past I.",
   ]
   const partial = [
     "He staggers back, looks wildly at the clock. It reads 3:18, as we",
@@ -44,6 +55,10 @@ describe("isWholeSentence", () => {
     "but he looks at the ground at five to four.",
     "Before he left the house at eight-seventeen a.m.; viz",
     "At 9:13, Dr.",
+    "Transcript, “11:10 A.M. to Katharine Graham,” TPR, Vol. II, pp.",
+    "Micki Maynard, Twitter post, 2:45 p.m., Jan.",
+    "Mrs. White was found in her bed, and the investigating officer, Thomas G.",
+    "18, 2011; Twitter post, 2:45 p.m. on a Monday.",
     "Open 9pm-1am Mon-Wed, to 1am Thu & Fri, 1pm-midnight Sun)",
   ]
   for (const s of whole) it(`accepts ${s}`, () => assert.ok(isWholeSentence(s)))

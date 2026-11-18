@@ -1,18 +1,18 @@
 const seg = new Intl.Segmenter("en", { granularity: "sentence" })
 
-const HONORIFIC =
-  /\b(?:Mr|Mrs|Ms|Mx|Dr|St|Mt|Jr|Sr|Prof|Rev|Gen|Col|Capt|Lt|Sgt|Gov|Sen|Rep|Vol|vs)\.\s*$/
+const ABBREVIATION =
+  /(?:\b(?:Mr|Mrs|Ms|Mx|Dr|St|Mt|Jr|Sr|Prof|Rev|Gen|Col|Capt|Lt|Sgt|Gov|Sen|Rep|Vol|vol|vs|p|pp|ch|ed|eds|fig|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)|(?<![\p{L}.])(?!I\.)\p{Lu})\.\s*$/u
 
 export type Sentence = { index: number; segment: string }
 
-// Intl.Segmenter breaks after "?”" before a lowercase attribution and after honorifics.
+// Intl.Segmenter breaks after "?”" before a lowercase attribution and after abbreviations.
 export function sentences(text: string): Sentence[] {
   const out: Sentence[] = []
   for (const { index, segment } of seg.segment(text)) {
     const prev = out.at(-1)
     if (
       prev &&
-      (/^[“"‘'(\s]*\p{Ll}/u.test(segment) || HONORIFIC.test(prev.segment))
+      (/^[“"‘'(\s]*\p{Ll}/u.test(segment) || ABBREVIATION.test(prev.segment))
     ) {
       prev.segment += segment
       continue
@@ -31,6 +31,7 @@ export function isWholeSentence(s: string): boolean {
   return (
     /^[“"‘'(\[]*[\p{Lu}\d]/u.test(t) &&
     /[.!?…—]["”’')\]]*$/u.test(t) &&
-    !HONORIFIC.test(t)
+    !ABBREVIATION.test(t) &&
+    !/^\d{1,2}, /.test(t)
   )
 }
