@@ -4,6 +4,7 @@ import { posix } from "node:path"
 import { unzipSync } from "fflate"
 import { Parser } from "htmlparser2"
 
+import { bookMeta, meridiemAfter, notATime } from "./context.ts"
 import { isWholeSentence, sentences, stripFootnote } from "./sentence.ts"
 
 const ROOT = "/media/brook/Books"
@@ -112,7 +113,7 @@ const patterns: {
       if (h > 23) return null
       if (!GATE.test(text.slice(Math.max(0, m.index - 30), m.index)))
         return null
-      if (h === 0 || h >= 13)
+      if (h === 0 || h >= 13 || m.groups!.h.startsWith("0"))
         return { T, hour: "h24", h24: h, min, strong: true }
       return { T, hour: h, min, strong: false }
     },
@@ -196,10 +197,14 @@ const patterns: {
       "gid"
     ),
     txtOk: false,
-    fn: (m) => {
+    fn: (m, text) => {
       const h = NUM[m.groups!.h.toLowerCase()]
       const mmw = m.groups!.mm.toLowerCase()
       const oh = /^o/.test(mmw)
+      const after = text.slice(m.index + m[0].length)
+      if (notATime(after)) return null
+      // "-oh-" forms are usually room numbers or prices unless a.m. or p.m. follows.
+      if (oh && !meridiemAfter(after)) return null
       const min = oh ? NUM[mmw.split(/[- ]/)[1]] : wordNum(mmw)
       if (!(min >= 0 && min <= 59)) return null
       return { T: m.indices!.groups!.T, hour: h, min, strong: false }
@@ -261,8 +266,9 @@ function resolve(
   const near = excerpt.slice(tOff, tOff + 60)
   let pm: boolean | undefined
   let conf = 0
-  if (raw.ampm) {
-    pm = raw.ampm === "pm"
+  const suffix = raw.ampm ?? meridiemAfter(near)
+  if (suffix) {
+    pm = suffix === "pm"
     conf = 2
   } else if (
     /^[^.]{0,12}\b(?:in the morning|of the morning|at dawn|in the early morning)\b/i.test(
@@ -556,8 +562,13 @@ function readEpub(
     const dir = posix.dirname(opfPath)
     const t = /<dc:title[^>]*>([^<]+)</i.exec(opf)?.[1]
     const c = /<dc:creator[^>]*>([^<]+)</i.exec(opf)?.[1]
-    if (t) meta.title = unescapeXml(t).trim()
-    meta.author = cleanAuthor(c, meta.author)
+    Object.assign(
+      meta,
+      bookMeta(meta.src.split("/"), {
+        title: t && unescapeXml(t).trim(),
+        author: c && cleanAuthor(c, meta.author),
+      })
+    )
     const items = new Map<string, string>()
     for (const it of opf.match(/<item\b[^>]*>/gi) ?? []) {
       const id = attr(it, "id")
