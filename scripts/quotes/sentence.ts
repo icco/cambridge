@@ -1,7 +1,7 @@
 const seg = new Intl.Segmenter("en", { granularity: "sentence" })
 
 const HONORIFIC =
-  /\b(?:Mr|Mrs|Ms|Mx|Dr|St|Mt|Jr|Sr|Prof|Rev|Gen|Col|Capt|Lt|Sgt|Gov|Sen|Rep|No|Vol|vs)\.\s*$/
+  /\b(?:Mr|Mrs|Ms|Mx|Dr|St|Mt|Jr|Sr|Prof|Rev|Gen|Col|Capt|Lt|Sgt|Gov|Sen|Rep|Vol|vs)\.\s*$/
 
 export type Sentence = { index: number; segment: string }
 
@@ -28,5 +28,9 @@ export function stripFootnote(s: string): string {
 
 export function isWholeSentence(s: string): boolean {
   const t = s.trim()
-  return /^[“"‘'(\[]*[\p{Lu}\d]/u.test(t) && /[.!?…—)\]]["”’']*$/u.test(t)
+  return (
+    /^[“"‘'(\[]*[\p{Lu}\d]/u.test(t) &&
+    /[.!?…—]["”’')\]]*$/u.test(t) &&
+    !HONORIFIC.test(t)
+  )
 }

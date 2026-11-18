@@ -43,6 +43,8 @@ describe("isWholeSentence", () => {
     "she said. “Exactly fourteen minutes past five.”",
     "but he looks at the ground at five to four.",
     "Before he left the house at eight-seventeen a.m.; viz",
+    "At 9:13, Dr.",
+    "Open 9pm-1am Mon-Wed, to 1am Thu & Fri, 1pm-midnight Sun)",
   ]
   for (const s of whole) it(`accepts ${s}`, () => assert.ok(isWholeSentence(s)))
   for (const s of partial)
