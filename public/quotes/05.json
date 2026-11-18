@@ -18,7 +18,7 @@
       "b": "At ",
       "t": "5:10 a.m.",
       "a": ", the voice of Sam Allison, the Chicago physicist, boomed across a loudspeaker outside the control center, “It is now zero minus twenty minutes.”",
-      "title": "American Prometheus",
+      "title": "American Prometheus - The Triumph and Tragedy of J. Robert Oppenheimer",
       "author": "Kai Bird"
     },
     {
@@ -36,6 +36,13 @@
       "author": "J.K. Rowling"
     },
     {
+      "b": "At ",
+      "t": "05:10",
+      "a": " the morning after her departure, Chira was Homed to ODEC #2 uninjured.",
+      "title": "The Rise and Fall of D.O.D.O.: A Novel",
+      "author": "Neal Stephenson"
+    },
+    {
       "b": "By the time Ike returned to Gettysburg, the news was out that a delegation from the German government had crossed the French lines on the way to Foch’s headquarters at Compiègne.f At ",
       "t": "5:10 a.m.",
       "a": ", November 11 (11:10 p.m. on the tenth in Gettysburg), the Germans signed the armistice agreement.",
@@ -46,15 +53,8 @@
       "b": "“My plane landed at ",
       "t": "5:10 a.m.",
       "a": "” She emphasizes the a.m. part with arched eyebrows.",
-      "title": "Wild At Heart: A Novel",
+      "title": "Wild at Heart",
       "author": "K.A. Tucker"
-    },
-    {
-      "b": "Horsey had retired at ",
-      "t": "ten minutes past five",
-      "a": " that morning, full of warm emotional experience and two quarts, give or take a pint, of Old White Stagg Blended Kentucky Bourbon.",
-      "title": "M*A*S*H Goes to New Orleans",
-      "author": "Richard Hooker"
     }
   ],
   "11": [
@@ -62,7 +62,7 @@
       "b": "Specifically, when the Colonel picked up his microphone to announce that Air Force One was thirty minutes out of Orly, it was five minutes past five in the morning. Air Force One touched down at Orly at ",
       "t": "5:11 A.M.",
       "a": ", followed at 5:12 by Cheavux Petroleum Number Three.",
-      "title": "M*A*S*H Goes to Paris",
+      "title": "MASH Goes to Paris",
       "author": "Richard Hooker"
     },
     {
@@ -113,28 +113,28 @@
       "b": "“It is ",
       "t": "5:12 a.m.",
       "a": ",” the bot’s electronic female voice replied.",
-      "title": "Aeon Rising: The Apocalypse Begins",
+      "title": "Aeon Rising - The Apocalypse Begins",
       "author": "Matthew Mather"
     },
     {
       "b": "At ",
       "t": "5:12",
       "a": " in the morning on April 18, 1906, about a minute of seismic shaking tore up San Francisco, toppling buildings, particularly those on landfill and swampy ground, cracking and shifting others, collapsing chimneys, breaking water mains and gas lines, twisting streetcar tracks, even tipping headstones in the cemeteries.",
-      "title": "A Paradise Built in Hell",
+      "title": "UC_A Paradise Built in Hell",
       "author": "Rebecca Solnit"
     },
     {
       "b": "Specifically, when the Colonel picked up his microphone to announce that Air Force One was thirty minutes out of Orly, it was five minutes past five in the morning. Air Force One touched down at Orly at 5:11 A.M., followed at ",
       "t": "5:12",
       "a": " by Cheavux Petroleum Number Three.",
-      "title": "M*A*S*H Goes to Paris",
+      "title": "MASH Goes to Paris",
       "author": "Richard Hooker"
     },
     {
       "b": "A temperature sensor in one of the three orbiter main engines had failed three minutes after launch. A second one failed at ",
       "t": "5:12",
       "a": ", followed by shutdown of one of the engines.",
-      "title": "The Astronaut Maker",
+      "title": "The Astronaut Maker - How One Mysterious Engineer Ran Human Spaceflight for a Generation",
       "author": "Michael Cassutt"
     }
   ],
@@ -150,7 +150,7 @@
       "b": "“I am a peaceful person”: Steve Bannon, host, “‘We Are at War’: Naomi Wolf Breaks Down the WHO’s Plan to Seize Power,” War Room: Pandemic (podcast), May 12, 2022, at ",
       "t": "5:13",
       "a": ", posted on Rumble.",
-      "title": "Doppelganger",
+      "title": "Doppelganger - A Trip into the Mirror World",
       "author": "Naomi Klein"
     },
     {
@@ -194,7 +194,7 @@
       "b": "Doctors worked for three hours to try to resuscitate the president but he was declared dead at ",
       "t": "five-fourteen",
       "a": " this morning.",
-      "title": "The Revolution Trade (Merchant Princes Omnibus 3)",
+      "title": "The Revolution Trade - Merchant Princes Omnibus",
       "author": "Charles Stross"
     },
     {
@@ -217,7 +217,7 @@
       "b": "It was ",
       "t": "5:15 a.m.",
       "a": " when, weak and retching, radioactive water squelching in his shoes, Dyatlov finally staggered down the steps into the bunker to report to Director Brukhanov.",
-      "title": "Midnight in Chernobyl: The Untold Story of the World's Greatest Nuclear Disaster",
+      "title": "Midnight in Chernobyl - The Untold Story of the World's Greatest Nuclear Disaster",
       "author": "Adam Higginbotham"
     },
     {
@@ -259,7 +259,7 @@
       "b": "Eventually, Meir gave her consent. At ",
       "t": "5:15 A.M.",
       "a": ", the order was given for Sayeret Matkal to break into the school.",
-      "title": "Rise and Kill First",
+      "title": "Rise and Kill First - The Secret History of Israel's Targeted Assassinations",
       "author": "Ronen Bergman"
     },
     {
@@ -275,7 +275,7 @@
       "b": "Instead, while the Israeli negotiator stalled for time, a Sayeret Matkal force plotted a rescue operation. At ",
       "t": "5:16 A.M.",
       "a": ", forty-four commandos stormed the hotel.",
-      "title": "Rise and Kill First",
+      "title": "Rise and Kill First - The Secret History of Israel's Targeted Assassinations",
       "author": "Ronen Bergman"
     },
     {
@@ -302,10 +302,17 @@
       "author": "John Steinbeck"
     },
     {
+      "b": "“If you find yourself lost, go to the southwest quadrant of the Administrative Center on Khersath at ",
+      "t": "05:17",
+      "a": " standard time.",
+      "title": "Sacrificial Pieces",
+      "author": "Cosimo Yap"
+    },
+    {
       "b": "It’s ",
       "t": "5:17 A.M.",
       "a": " right now & the radio says McGov is calling Nixon a liar in re: Vietnam … a fearful surprise, eh?",
-      "title": "Fear and Loathing in America",
+      "title": "Fear & Loathing in America - The Brutal Odyssey of an Outlaw Journalist",
       "author": "Hunter S. Thompson"
     },
     {
@@ -319,7 +326,7 @@
       "b": "And now here I am, standing in Pearson International at ",
       "t": "5:17 a.m.",
       "a": ", gripping my phone that holds three boarding passes for three flights that will close the thirty-four-hundred-mile distance between me and Jonah’s arms, because it’s the only way I’ll ever know where this can lead.",
-      "title": "Wild At Heart: A Novel",
+      "title": "Wild at Heart",
       "author": "K.A. Tucker"
     },
     {
@@ -328,13 +335,6 @@
       "a": ", according to Frankie’s digital watch, which he’d gotten for his birthday in August.",
       "title": "My Dog's a Scaredy-Cat",
       "author": "Henry Winkler"
-    },
-    {
-      "b": "“If you find yourself lost, go to the southwest quadrant of the Administrative Center on Khersath at ",
-      "t": "05:17",
-      "a": " standard time.",
-      "title": "Sacrificial Pieces",
-      "author": "Cosimo Yap"
     },
     {
       "b": "Megumi looked up to see the pendulum wall clock directly in her line of vision. The hands, which were at ",
@@ -349,7 +349,7 @@
       "b": "It is now ",
       "t": "5:18 A.M.",
       "a": " on a Wed. morning and I’m trying to finish my annual reject/effort for Playboy.",
-      "title": "Fear and Loathing in America",
+      "title": "Fear & Loathing in America - The Brutal Odyssey of an Outlaw Journalist",
       "author": "Hunter S. Thompson"
     },
     {
@@ -377,7 +377,7 @@
       "b": "It was ",
       "t": "5:18",
       "a": ", and the pope had just kissed a little girl and was handing her back to her mother when an assassin’s bullet struck him in his stomach, penetrating his small intestine.",
-      "title": "Surprise, Kill, Vanish : An Uncensored History of CIA Covert Action from Assassination to Targeted Killing (9780316452885)",
+      "title": "Phenomena - The Secret History of the U.S. Government's Investigations into Extrasensory Perception and Psychokinesis Kindle Edition",
       "author": "Annie Jacobsen"
     },
     {
@@ -407,7 +407,7 @@
       "b": "Eddie called back at ",
       "t": "5:19",
       "a": ". I jumped on the phone.",
-      "title": "The Enchanters: A novel",
+      "title": "The Enchanters",
       "author": "James Ellroy"
     }
   ],
@@ -423,7 +423,7 @@
       "b": "At ",
       "t": "5:20 a.m.",
       "a": ", it was go time. The personnel equipment sergeant strapped Powers into the cockpit of the U-2.",
-      "title": "Area 51",
+      "title": "Area 51 - An Uncensored History of America's Top Secret Military Base",
       "author": "Annie Jacobsen"
     },
     {
@@ -437,7 +437,7 @@
       "b": "He'd arrive at ",
       "t": "5:20 A.M.",
       "a": " two days from now due to the vagaries of the equator and the International Dateline, with his body clock probably more scrambled than the eggs he had for breakfast.",
-      "title": "Jack Ryan [09] - Rainbow Six",
+      "title": "Rainbow Six",
       "author": "Tom Clancy"
     },
     {
@@ -458,7 +458,7 @@
       "b": "And so, on the fifth day of the conference, I awake yet again to a knock at ",
       "t": "5:20 a.m.",
       "a": "; stumble around in the dark until I find my bathing suit; throw a water bottle, sunscreen, and a notepad in a backpack; and rush out to my rental car before Schnöller starts honking and threatening to leave me behind.",
-      "title": "Deep",
+      "title": "Deep - Freediving, Renegade Science, and What the Ocean Tells Us about Ourselves",
       "author": "James Nestor"
     },
     {
@@ -488,7 +488,7 @@
       "b": "‘On the morning of the ninth instant, that is to say, yesterday, at ",
       "t": "twenty-one minutes past five",
       "a": " o’clock in the morning, P.C.",
-      "title": "To Hold the Bridge",
+      "title": "To Hold the Bridge - A tale of the Old Kingdom and other stories",
       "author": "Garth Nix"
     },
     {
@@ -511,7 +511,7 @@
       "b": "It was ",
       "t": "5:22 a.m.",
       "a": "—more than half an hour before my alarm was set to go off, which was entirely unreasonable of the universe.",
-      "title": "Indexing (Kindle Serial)",
+      "title": "Indexing",
       "author": "Seanan McGuire"
     },
     {
@@ -546,7 +546,7 @@
       "b": "She looks at her watch and sees it’s ",
       "t": "5:22",
       "a": ". First things first; it’s time to collect her famous employer and go to the Mingo.",
-      "title": "Never Flinch",
+      "title": "Afterlife",
       "author": "Stephen King"
     },
     {
@@ -612,13 +612,13 @@
       "t": "twenty-three minutes after five",
       "a": ".",
       "title": "The Best American Noir of the Century",
-      "author": "Otto Penzler (ed)"
+      "author": "James Ellroy"
     },
     {
       "b": "There’s something … I look at my watch. It’s ",
       "t": "5:23",
       "a": ". My mind pulls a thousand pieces together, tries to make them fit.",
-      "title": "Melancholy: Book Two of The Cure (Omnibus Edition)",
+      "title": "Melancholy",
       "author": "Charlotte McConaghy"
     }
   ],
@@ -643,14 +643,14 @@
       "b": "It was the aftermath of Hurricane Maria, and Trump was on Twitter giving favourable reports on his own progress. At ",
       "t": "5:25am",
       "a": " he’d tweeted: ‘A great day in Puerto Rico yesterday.",
-      "title": "Everybody",
+      "title": "Everybody - A Book About Freedom",
       "author": "Olivia Laing"
     },
     {
       "b": "At ",
       "t": "5:25 a.m.",
       "a": " the next day, the incident responders had managed to restore one channel, and others soon followed.",
-      "title": "Active Measures",
+      "title": "Active Measures - The Secret History of Disinformation and Political Warfare",
       "author": "Thomas Rid"
     },
     {
@@ -685,8 +685,8 @@
       "b": "Bus 120 ‘Aeroporto/Parque Nacional’ runs to the Brazilian side of the waterfalls from Foz do Iguaçu’s TTU bus station every 22 to 30 minutes from ",
       "t": "5:25am",
       "a": " to midnight (R$3.55).",
-      "title": "Lonely Planet Best of South America",
-      "author": "Lonely Planet;Regis St Louis;Alex Egerton;Anthony Ham;Brian Kluepfel;Tom Masters;Carolyn McCart..."
+      "title": "South America",
+      "author": "Lonely Planet"
     },
     {
       "b": "Now let’s say, at random, that on that fatal dawn the Pendulum is near the boundary of the southeast quadrant. If it were a clock, we’d say that the hour hand is at ",
@@ -726,14 +726,14 @@
       "b": "Ambulances appeared and took the trooper to Pocono Hospital in East Stroudsburg, Pennsylvania, where he was pronounced dead at ",
       "t": "5:28",
       "a": ".",
-      "title": "Days of Rage",
+      "title": "Days of Rage - America's Radical Underground, the FBI, and the Forgotten Age of Revolutionary Violence",
       "author": "Bryan Burrough"
     },
     {
       "b": "I pulled into the Aoyama supermarket parking garage at ",
       "t": "five-twenty-eight",
       "a": ". The sky to the east was getting light.",
-      "title": "Hard-Boilded Wonderland & the End of the World",
+      "title": "Hard-Boiled Wonderland and the End of the World",
       "author": "Haruki Murakami"
     },
     {
@@ -747,7 +747,7 @@
       "b": "Behind me, on the bed, my waterproof Sony says, “It’s ",
       "t": "5:28",
       "a": " right now in Miami….” Then Rod Stewart’s9 hoarse screech: “Mother don’t you recognize your son …?”",
-      "title": "Fear and Loathing in America",
+      "title": "Fear & Loathing in America - The Brutal Odyssey of an Outlaw Journalist",
       "author": "Hunter S. Thompson"
     },
     {
@@ -770,7 +770,7 @@
       "b": "When Andre called 911 at ",
       "t": "5:29am",
       "a": ", he said to the operator: ‘My wife is an artist and I am an artist, and we had a quarrel about the fact that I was more, uh, exposed to the public than she was and she went to the bedroom and I went after her and she went out the window.’",
-      "title": "Everybody",
+      "title": "Everybody - A Book About Freedom",
       "author": "Olivia Laing"
     },
     {
@@ -794,13 +794,13 @@
       "t": "5:30am",
       "a": ", starting back at 2pm (one-way/round trip Q30/50).",
       "title": "Lonely Planet Guatemala",
-      "author": "Lonely Planet;Paul Clammer;Ray Bartlett;Celeste Brash"
+      "author": "Lonely Planet"
     },
     {
       "b": "The time between 5 a.m. and ",
       "t": "5:30 a.m.",
       "a": " was precious to her, she said in the interviews. That was when she felt Lenk’s spirit so close she could almost hear his voice.",
-      "title": "The Future",
+      "title": "The Future - The electric new novel from the Women’s Prize-winning, bestselling author of The Power",
       "author": "Naomi Alderman"
     },
     {
@@ -808,7 +808,7 @@
       "t": "5:30 a.m.",
       "a": " and I hated it. I dragged myself to the tiny bathroom and stared at myself in the mirror, grimacing at my sleep-lined face.",
       "title": "Burn",
-      "author": "TJ Klune"
+      "author": "T.J. Klune"
     },
     {
       "b": "The idea was to watch what happened to the pigs he’d been feeding for the Young Farmers Club. Such misery at ",
@@ -851,7 +851,7 @@
       "b": "As she reaches the doors, she risks a glance at her watch and sees it’s ",
       "t": "5:31",
       "a": ". What if she’s too late?",
-      "title": "Never Flinch",
+      "title": "Afterlife",
       "author": "Stephen King"
     },
     {
@@ -865,7 +865,7 @@
       "b": "At ",
       "t": "5:31",
       "a": ", he logged onto AOL again. “Welcome!” the voice told him, and then, “You’ve got mail!”",
-      "title": "The Time Traveler's Almanac",
+      "title": "The Time Traveler's Almanac - A Time Travel Anthology",
       "author": "Ann VanderMeer"
     },
     {
@@ -895,16 +895,23 @@
       "b": "The number of blockaded accounts is mind-boggling,” Twitter, August 11, 2016, ",
       "t": "5:32 A.M.",
       "a": ", https://twitter.com/MahirZeynalov/status/763714666040291328.",
-      "title": "Likewar: The Weaponization of Social Media",
-      "author": "P. W. Singer"
+      "title": "Likewar - The Weaponization of Social Media",
+      "author": "P.W. Singer"
     }
   ],
   "33": [
     {
+      "b": "He waits me now, sniffing the wind, pacing to and fro before our door. The sun will rise at ",
+      "t": "05:33",
+      "a": ".8 today, and already the horned lords bugle from their hilltops.",
+      "title": "Endangered Species",
+      "author": "Gene Wolfe"
+    },
+    {
       "b": "I betook myself again to my nap, and at length a second time awoke, when, to my utter amazement, it still wanted ",
       "t": "twenty-seven minutes of six",
       "a": ".",
-      "title": "The Works of Edgar Allan Poe — Volume 4",
+      "title": "The Works of Edgar Allan Poe Volume 4",
       "author": "Edgar Allan Poe"
     },
     {
@@ -913,13 +920,6 @@
       "a": ", a twenty-fivish male Caucasian walked out, got into green Ford coupé GX 1167 and drove away.",
       "title": "The Big Nowhere",
       "author": "James Ellroy"
-    },
-    {
-      "b": "He waits me now, sniffing the wind, pacing to and fro before our door. The sun will rise at ",
-      "t": "05:33",
-      "a": ".8 today, and already the horned lords bugle from their hilltops.",
-      "title": "Endangered Species",
-      "author": "Gene Wolfe"
     }
   ],
   "34": [
@@ -950,13 +950,6 @@
       "a": ",\" and she'd glance at her wrist-watch and say, \"Hey!",
       "title": "The Things They Carried",
       "author": "Tim O'Brien"
-    },
-    {
-      "b": "At ",
-      "t": "five thirty-four",
-      "a": " p.m., the woman took her jacket off the hook again and bid her remaining colleagues farewell.",
-      "title": "Beautiful World, Where Are You",
-      "author": "Sally Rooney"
     }
   ],
   "35": [
@@ -978,8 +971,8 @@
       "b": "Many such cases!,” Twitter, March 28, 2014, ",
       "t": "5:35 A.M.",
       "a": ", https://twitter.com/realdonaldtrump/status/449525268529815552?lang=en.",
-      "title": "Likewar: The Weaponization of Social Media",
-      "author": "P. W. Singer"
+      "title": "Likewar - The Weaponization of Social Media",
+      "author": "P.W. Singer"
     },
     {
       "b": "At exactly ",
@@ -1061,7 +1054,7 @@
       "b": "The Southwest Chief stops daily (westbound at 7:50pm, eastbound at ",
       "t": "5:39am",
       "a": ") at La Posada (303 E 2nd St), which serves as the Winslow Amtrak station.",
-      "title": "Southwest USA",
+      "title": "Southwest USA 7",
       "author": "Lonely Planet"
     },
     {
@@ -1084,7 +1077,7 @@
       "b": "Dr. Edward Ventura was waiting for Cassandra in the lab, as she had asked him to be, when she arrived at ",
       "t": "twenty minutes to six",
       "a": " in the morning with Colonel Shaw and Director of Media Relations Shephard in tow.",
-      "title": "Perfect Dark: Second Front",
+      "title": "Perfect Dark - Second Front",
       "author": "Greg Rucka"
     },
     {
@@ -1098,7 +1091,7 @@
       "b": "On June 20, the dawn broke at ",
       "t": "5:40 a.m.",
       "a": " As the sun crept over the sea, a lookout shouted that he’d seen something far to the southeast.",
-      "title": "The Wager",
+      "title": "The Wager - A Tale of Shipwreck, Mutiny and Murder",
       "author": "David Grann"
     },
     {
@@ -1130,11 +1123,11 @@
       "author": "James Clavell"
     },
     {
-      "b": "Christ, it’s ",
-      "t": "5:40 a.m.",
-      "a": " and I just heard the dogs barking so I went outside and, goddamn, there was a huge white truck backing into my driveway with about 100 twenty-foot strips of pure California redwood—a whole truckload of wood that I had to help unload.",
-      "title": "Fear and Loathing in America",
-      "author": "Hunter S. Thompson"
+      "b": "Walter noticed with satisfaction that the French firing slackened off immediately, indicating that the German guns were hitting their targets. The barrage was short, in line with the new thinking, and at ",
+      "t": "five forty",
+      "a": " A.M. it stopped.",
+      "title": "Fall of Giants",
+      "author": "Ken Follett"
     }
   ],
   "41": [
@@ -1153,18 +1146,18 @@
       "author": "Ernest Cline"
     },
     {
+      "b": "26774) AND LUCZAKS (ROBERT C. AND AMRITA D.) ARRIVED TO CONFIRM INFANT'S IDENTITY AT ",
+      "t": "05:41",
+      "a": "/21.7.77.",
+      "title": "Song of Kali",
+      "author": "Dan Simmons"
+    },
+    {
       "b": "Or that he was expert with the thing. It took Inigo until ",
       "t": "5:41",
       "a": " before he actually cornered the Count.",
       "title": "The Princess Bride",
       "author": "William Goldman"
-    },
-    {
-      "b": "AND AMRITA D.) ARRIVED TO CONFIRM INFANT'S IDENTITY AT ",
-      "t": "05:41",
-      "a": "/21.7.77. INFANT WAS POSITIVELY IDENTIFIED AS VICTORIA CAROLYN LUCZAK b.",
-      "title": "Song of Kali",
-      "author": "Dan Simmons"
     }
   ],
   "42": [
@@ -1270,13 +1263,13 @@
       "t": "5:45 a.m.",
       "a": " in our dorm is very much like trying to get down the aisle of an airplane.",
       "title": "The Best American Science Fiction and Fantasy 2020",
-      "author": "John Joseph Adams"
+      "author": "Diana Gabaldon"
     },
     {
       "b": "They rolled into Ouray from the north at a ",
       "t": "quarter to six",
       "a": " in the morning, the still-dark streets of the town all but empty.",
-      "title": "The Breach - Ghost Country - Deep Sky",
+      "title": "[(Deep Sky)] [By (author) Patrick Lee] published on",
       "author": "Patrick Lee"
     },
     {
@@ -1297,7 +1290,7 @@
       "b": "Keyhole service server redirected to new Google servers at ",
       "t": "5:45 a.m.",
       "a": ", check. New website pushed live by Patricia Wahl at 5:55 a.m.",
-      "title": "Never Lost Again",
+      "title": "Never Lost Again - The Google Mapping Revolution That Sparked New Industries and Augmented Our Reality",
       "author": "Bill Kilday"
     },
     {
@@ -1320,7 +1313,7 @@
       "b": "Hit-and-run, four down, no suspect-vehicle make. First broadcast: ",
       "t": "5:47 a.m.",
       "a": "",
-      "title": "Perfidia",
+      "title": "[Perfidia] (By - James Ellroy) [published - September, 2014]",
       "author": "James Ellroy"
     },
     {
@@ -1351,7 +1344,7 @@
       "t": "0548 hours",
       "a": ". “Sir.",
       "title": "Alliance Rising",
-      "author": "C. J. Cherryh"
+      "author": "C.J. Cherryh"
     },
     {
       "b": "BY ",
@@ -1373,7 +1366,7 @@
       "b": "On the morning of Wednesday, January 25 at ",
       "t": "5:49 a.m.",
       "a": ", the phone rang. My husband gave a sleepy grunt and handed it to me.",
-      "title": "Stories of My Life (9781101620656)",
+      "title": "Stories of My Life",
       "author": "Katherine Paterson"
     },
     {
@@ -1428,10 +1421,17 @@
       "author": "Diana Wynne Jones"
     },
     {
+      "b": "John Clark stepped off the bus in Arlington, Virginia, at ",
+      "t": "five-fifty",
+      "a": " a.m. He kept the hood of his jacket over his head as he walked up North Pershing into a neighborhood that was still asleep.",
+      "title": "Locked On",
+      "author": "Tom Clancy"
+    },
+    {
       "b": "What could they look like to her? What could any two strangers look like at ",
       "t": "5:50",
       "a": " in the morning?",
-      "title": "The Breach - Ghost Country - Deep Sky",
+      "title": "[(Deep Sky)] [By (author) Patrick Lee] published on",
       "author": "Patrick Lee"
     },
     {
@@ -1454,13 +1454,6 @@
       "a": ",” I say diffidently. “Another ten minutes and an orangoutang in a blue suit will come round and lock you in for the night.",
       "title": "The Atrocity Archives",
       "author": "Charles Stross"
-    },
-    {
-      "b": "He looked in the cabin and the brass clock showed that it was ",
-      "t": "ten minutes to six",
-      "a": ". The sea looked different to him now that he was so close to it, and looking at it from the shade and from David’s bent rod, the white line slanted into the dark water and the rod lowered and rose steadily.",
-      "title": "The Collected Works of Ernest Hemingway",
-      "author": "Ernest Hemingway"
     }
   ],
   "51": [
@@ -1498,7 +1491,7 @@
       "b": "Beverly’s eyes dropped to her desk. A moment later she said, “Satellites EE23 and EEO8 both went off line at ",
       "t": "five fifty-two",
       "a": " local.",
-      "title": "Achilles choice",
+      "title": "Achilles' Choice",
       "author": "Larry Niven"
     },
     {
@@ -1542,7 +1535,7 @@
       "b": "At ",
       "t": "5:53",
       "a": ", nine minutes after the first warning, a pair of Flite-Rite rockets streaked from the street, shattering a front window and exploding in Christine Johnson’s living room.",
-      "title": "Days of Rage",
+      "title": "Days of Rage - America's Radical Underground, the FBI, and the Forgotten Age of Revolutionary Violence",
       "author": "Bryan Burrough"
     },
     {
@@ -1565,7 +1558,7 @@
       "b": "By the time the sun came up at ",
       "t": "5:54",
       "a": ", all the mysteries of the morning were sealed away in a box, giving Freedom full latitude to think about his fortune and all the things it could buy him.",
-      "title": "The War of the Givens",
+      "title": "The Flight of the Silvers",
       "author": "Daniel Price"
     },
     {
@@ -1586,8 +1579,8 @@
       "b": "The smiling moons shone like plates of gold. It was ",
       "t": "six minutes to six",
       "a": ".",
-      "title": "The Prince Of Mist",
-      "author": "Carlos Ruiz Zafon"
+      "title": "The Prince of Mist",
+      "author": "Carlos Ruiz Zafón"
     },
     {
       "b": "It was ",
@@ -1602,7 +1595,7 @@
       "b": "Keyhole service server redirected to new Google servers at 5:45 a.m., check. New website pushed live by Patricia Wahl at ",
       "t": "5:55 a.m.",
       "a": "",
-      "title": "Never Lost Again",
+      "title": "Never Lost Again - The Google Mapping Revolution That Sparked New Industries and Augmented Our Reality",
       "author": "Bill Kilday"
     },
     {
@@ -1616,15 +1609,22 @@
       "b": "Thomas Frank, an entrepreneur in Boulder, Colorado: Thomas Frank, “How Buffer Forces Me to Wake Up at ",
       "t": "5:55 AM",
       "a": " Every Day,” College Info Geek, July 2, 2014, https://collegeinfogeek.com/early-waking-with-buffer/.",
-      "title": "Atomic Habits: Tiny Changes, Remarkable Results",
+      "title": "Atomic Habits",
       "author": "James Clear"
     },
     {
       "b": "It is ",
       "t": "five minutes before six",
       "a": " in the morning and I need to get some sleep, so I’ll end this letter now and take it around to my friend who plans to deliver it to you.",
-      "title": "Fear and Loathing in America",
+      "title": "Fear & Loathing in America - The Brutal Odyssey of an Outlaw Journalist",
       "author": "Hunter S. Thompson"
+    },
+    {
+      "b": "It was ",
+      "t": "five fifty-five",
+      "a": " am on Monday, five minutes before the week’s first bids opened, and the place was packed.",
+      "title": "Part-Time Gods",
+      "author": "Rachel Aaron"
     },
     {
       "b": "Claire’s phone had rung at ",
@@ -1646,13 +1646,6 @@
       "a": "! Read to Young Sam!”",
       "title": "Thud!",
       "author": "Terry Pratchett"
-    },
-    {
-      "b": "I weave my sleek black car up the pothole-riddled driveway. It’s ",
-      "t": "five minutes to six",
-      "a": ", and my palms are sweating.",
-      "title": "Save Me (The Wolf Hotel Mermaid Beach Book 2)",
-      "author": "K.A. Tucker"
     }
   ],
   "56": [
@@ -1668,7 +1661,7 @@
       "t": "Four minutes till six",
       "a": ". “I doubt it, Sheriff.",
       "title": "The Best American Noir of the Century",
-      "author": "Otto Penzler (ed)"
+      "author": "James Ellroy"
     }
   ],
   "57": [
@@ -1676,7 +1669,7 @@
       "b": "(Cazart! It’s ",
       "t": "5:57 A.M.",
       "a": " now & the Aspen FM station is howling “White Rabbit”—a good omen, eh?)",
-      "title": "Fear and Loathing in America",
+      "title": "Fear & Loathing in America - The Brutal Odyssey of an Outlaw Journalist",
       "author": "Hunter S. Thompson"
     },
     {
@@ -1691,13 +1684,13 @@
       "t": "five fifty-seven",
       "a": " he said goodbye to his profession and plunged the blade into his heart.",
       "title": "The Best American Noir of the Century",
-      "author": "Otto Penzler (ed)"
+      "author": "James Ellroy"
     },
     {
       "b": "At ",
       "t": "three minutes to six",
       "a": " we began to taxi out of the olive grove on to the field.",
-      "title": "Over to You",
+      "title": "Over to You - Ten Stories of Flyers and Flying",
       "author": "Roald Dahl"
     }
   ],
@@ -1706,7 +1699,7 @@
       "b": "At ",
       "t": "5:58 a.m.",
       "a": " on April 14—a gestation, according to Morgan Berry’s dates, of 635 days—Belle delivered a male calf in good health, after an hour of active labor.",
-      "title": "Violation",
+      "title": "Violation - Collected Essays",
       "author": "Sallie Tisdale"
     },
     {
@@ -1714,7 +1707,7 @@
       "t": "0558 hours",
       "a": " shower.",
       "title": "Tripoint",
-      "author": "C. J. Cherryh"
+      "author": "C.J. Cherryh"
     },
     {
       "b": "Annika Giannini woke with a start. She saw that it was ",
@@ -1771,7 +1764,7 @@
       "b": "Fortunately, Gibson and Bolden had trained for landings at the Cape or Edwards, day or night. And they put Columbia down on runway 33 at ",
       "t": "5:59 AM",
       "a": " (PST), predawn.",
-      "title": "The Astronaut Maker",
+      "title": "The Astronaut Maker - How One Mysterious Engineer Ran Human Spaceflight for a Generation",
       "author": "Michael Cassutt"
     },
     {
@@ -1815,7 +1808,7 @@
       "b": "‘What is true is that McGee did see them in King Tuts. McGee phoned us up at ",
       "t": "5 a.m.",
       "a": ", to rant about them full-on down the phone.’",
-      "title": "How Soon is Now?: The Madmen and Mavericks who made Independent Music 1975-2005",
+      "title": "How Soon Is Now! The Madmen and Mavericks Who Made Independent Music",
       "author": "Richard King"
     },
     {
@@ -1829,7 +1822,7 @@
       "b": "A Trains run from around ",
       "t": "5am",
       "a": " to midnight – check timetables for your line. They run a little later at weekends.",
-      "title": "Lonely Planet East Coast Australia (2022)",
+      "title": "East Coast Australia",
       "author": "Lonely Planet"
     },
     {
@@ -1837,7 +1830,7 @@
       "t": "5am",
       "a": ") and finish near lunchtime, cost a minimum of about E£50 per person.",
       "title": "Africa",
-      "author": "Anthony Ham"
+      "author": "Lonely Planet"
     },
     {
       "b": "Not the planted palm trees or the chandeliers. Not the eerie quiet of ",
@@ -1863,25 +1856,11 @@
   ],
   "01": [
     {
-      "b": "“The yuppie’s goin’ dark side!” one of the tweakers called to the guard. “The dude is ",
-      "t": "five-oh-one",
-      "a": ", he’s doin’ voices like wuuuuh.”",
-      "title": "Spaceland",
-      "author": "Rudy Rucker"
-    },
-    {
       "b": "By five A.M., our morning prep was done. At ",
       "t": "5:01",
       "a": ", our first customer rapped on the glass door, and Christina walked over to officially unlock it.",
-      "title": "Let It Snow",
+      "title": "Let it Snow",
       "author": "John Green"
-    },
-    {
-      "b": "In the middle of a line of code, if need be. Save your work, shut down, and leave this place dark at ",
-      "t": "five oh one",
-      "a": ".",
-      "title": "Lost Boys",
-      "author": "Orson Scott Card"
     },
     {
       "b": "The framed needlepoint behind the desk says, Questions Answered Here. The clock says ",
@@ -1903,13 +1882,6 @@
       "a": ". The largest takeover bid in corporate history was late.",
       "title": "Barbarians at the Gate",
       "author": "Bryan Burrough"
-    },
-    {
-      "b": "Then she was hilarious. One of those people who keeps it all inside until ",
-      "t": "five oh one",
-      "a": ", I guess.”",
-      "title": "Sleeper Beach",
-      "author": "Nick Harkaway"
     }
   ],
   "02": [
@@ -1924,7 +1896,7 @@
       "b": "The grab went down at ",
       "t": "5:02",
       "a": ". Three Fed sleds/six agents total.",
-      "title": "The Enchanters: A novel",
+      "title": "The Enchanters",
       "author": "James Ellroy"
     },
     {
@@ -1936,6 +1908,13 @@
     }
   ],
   "03": [
+    {
+      "b": "Official news of the Sovereign’s death came at ",
+      "t": "05:03",
+      "a": ", Sergeant Thompson waking the women of the cabin via loudspeaker shortly after morning bell.",
+      "title": "An Unkindness of Ghosts",
+      "author": "Rivers Solomon"
+    },
     {
       "b": "Some ideas never made it to daylight. Some he liked well enough to bequeath to friends, in emails with time stamps such as 4:15 or ",
       "t": "5:03 A.M.",
@@ -1963,13 +1942,6 @@
       "a": " in the morning. Only bad news came at this hour.",
       "title": "Fly Away",
       "author": "Kristin Hannah"
-    },
-    {
-      "b": "Official news of the Sovereign’s death came at ",
-      "t": "05:03",
-      "a": ", Sergeant Thompson waking the women of the cabin via loudspeaker shortly after morning bell.",
-      "title": "An Unkindness of Ghosts",
-      "author": "Rivers Solomon"
     },
     {
       "b": "After that, I wound up the tiny watch and set it to the correct time. It was ",
@@ -2014,14 +1986,14 @@
       "b": "It is ",
       "t": "5:05 AM",
       "a": " the following morning, and Frank Mankiewicz is calling the Secretary of State, getting him out of bed to protest what he gently but repeatedly refers to as “these fantastic irregularities” in the vote-counting procedure.",
-      "title": "Fear and Loathing at Rolling Stone",
+      "title": "Fear and Loathing at Rolling Stone - The Essential Writing of Hunter S. Thompson",
       "author": "Hunter S. Thompson"
     },
     {
       "b": "Specifically, when the Colonel picked up his microphone to announce that Air Force One was thirty minutes out of Orly, it was ",
       "t": "five minutes past five",
       "a": " in the morning.",
-      "title": "M*A*S*H Goes to Paris",
+      "title": "MASH Goes to Paris",
       "author": "Richard Hooker"
     },
     {
@@ -2035,7 +2007,7 @@
       "b": "At ",
       "t": "five past five",
       "a": ", as the first hints of dawn began to creep above the tenements, a man’s throaty cough yanked Freedom out of his thoughts.",
-      "title": "The War of the Givens",
+      "title": "The Flight of the Silvers",
       "author": "Daniel Price"
     },
     {
@@ -2065,7 +2037,7 @@
       "b": "“Speaking as a tech CEO”: “Watch Dr Naomi Wolf Discuss ‘Why Vaccine Passports Equal Slavery Forever,’” at ",
       "t": "5:06",
       "a": "; Hains, “Naomi Wolf: Mandatory Vaccine Passport,” at 2:01.",
-      "title": "Doppelganger",
+      "title": "Doppelganger - A Trip into the Mirror World",
       "author": "Naomi Klein"
     },
     {
@@ -2081,15 +2053,15 @@
       "b": "Boricio looked at the clock beside his bed: ",
       "t": "5:07 a.m.",
       "a": " He longed for the morning sun and maybe some answers that would come when he could talk to Rose, or even Luca again.",
-      "title": "Yesterday's Gone (Season 5): Episodes 25-30",
+      "title": "Yesterday's Gone - Episode 2",
       "author": "Sean Platt"
     },
     {
       "b": "215 “I need peace”: Bana Alabed (@AlabedBana), “I need peace,” Twitter, September 24, 2016, ",
       "t": "5:07 A.M.",
       "a": ", https://twitter.com/AlabedBana/status/779653424145113088.",
-      "title": "Likewar: The Weaponization of Social Media",
-      "author": "P. W. Singer"
+      "title": "Likewar - The Weaponization of Social Media",
+      "author": "P.W. Singer"
     },
     {
       "b": "“No you haven’t; it’s ",
@@ -2103,7 +2075,7 @@
       "t": "seven minutes past five",
       "a": ".”",
       "title": "Rocket Ship Galileo",
-      "author": "Robert A Heinlein"
+      "author": "Robert A. Heinlein"
     },
     {
       "b": "At ",
@@ -2126,7 +2098,7 @@
       "t": "eight minutes after five",
       "a": " the entire time it took Paulie to run through the connection to hyperbolic equations.",
       "title": "The Best American Science Fiction and Fantasy 2022",
-      "author": "John Joseph Adams"
+      "author": "Rebecca Roanhorse"
     },
     {
       "b": "The sun had sunk behind the church’s roofline but was still shining on the bank clock, which showed ",
