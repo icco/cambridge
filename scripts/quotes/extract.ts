@@ -4,7 +4,7 @@ import { posix } from "node:path"
 import { unzipSync } from "fflate"
 import { Parser } from "htmlparser2"
 
-import { bookMeta, meridiemAfter, notATime } from "./context.ts"
+import { bookMeta, isGutenberg, meridiemAfter, notATime } from "./context.ts"
 import { isWholeSentence, sentences, stripFootnote } from "./sentence.ts"
 
 const ROOT = "/media/brook/Books"
@@ -558,6 +558,7 @@ function readEpub(
     : undefined
   const opf = opfPath ? get(opfPath) : undefined
   let order: string[] = []
+  if (opf && isGutenberg(opf)) meta.fmt = "gutenberg"
   if (opf && opfPath) {
     const dir = posix.dirname(opfPath)
     const t = /<dc:title[^>]*>([^<]+)</i.exec(opf)?.[1]
