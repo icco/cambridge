@@ -1,5 +1,7 @@
 import { mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs"
 
+import { isWholeSentence, stripFootnote } from "./sentence.ts"
+
 const [dir, outDir, perArg] = process.argv.slice(2)
 const PER = Number(perArg ?? 8)
 
@@ -30,6 +32,11 @@ for (const f of readdirSync(dir).filter((x) => x.endsWith(".jsonl"))) {
   for (const line of readFileSync(`${dir}/${f}`, "utf8").split("\n")) {
     if (!line) continue
     const h: Hit = JSON.parse(line)
+    const full = h.before + h.time + h.after
+    const cut = full.length - stripFootnote(full).length
+    if (cut > h.after.length) continue
+    h.after = h.after.slice(0, h.after.length - cut)
+    if (!isWholeSentence(h.before + h.time + h.after)) continue
     const key = [
       norm(h.before),
       norm(h.time),
