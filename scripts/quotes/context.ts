@@ -11,6 +11,10 @@ export function notATime(after: string): boolean {
   )
 }
 
+export function isGutenberg(opf: string): boolean {
+  return /<dc:identifier[^>]*>[^<]*gutenberg\.org/i.test(opf)
+}
+
 export function bookMeta(
   parts: string[],
   opf: { title?: string; author?: string }

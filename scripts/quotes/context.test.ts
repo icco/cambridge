@@ -1,7 +1,7 @@
 import assert from "node:assert/strict"
 import { describe, it } from "node:test"
 
-import { bookMeta, meridiemAfter, notATime } from "./context.ts"
+import { bookMeta, isGutenberg, meridiemAfter, notATime } from "./context.ts"
 
 describe("meridiemAfter", () => {
   it("reads a suffix after a spelled-out time", () => {
@@ -26,6 +26,19 @@ describe("notATime", () => {
   it("keeps ordinary continuations", () => {
     assert.ok(!notATime(" when I pulled up in front of the library."))
     assert.ok(!notATime(". The sky to the east was getting light."))
+  })
+})
+
+describe("isGutenberg", () => {
+  it("spots Project Gutenberg epubs by identifier", () => {
+    assert.ok(
+      isGutenberg(
+        '<dc:identifier opf:scheme="URI" id="id">http://www.gutenberg.org/84</dc:identifier>'
+      )
+    )
+    assert.ok(
+      !isGutenberg('<dc:identifier id="isbn">9780000000000</dc:identifier>')
+    )
   })
 })
 
