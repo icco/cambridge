@@ -134,8 +134,8 @@
       "b": "It was ",
       "t": "twelve minutes past one",
       "a": " by the stamping clock on the end of the desk in the lobby of the Casa de Oro.",
-      "title": "The Collected Raymond Chandler",
-      "author": "Raymond Chandler"
+      "title": "Collected Stories of Raymond Chandler",
+      "author": "Raymond Chandler & John Bayley"
     },
     {
       "b": "Captain Hara remained in radio contact with Princess ‘Akusita until ",
@@ -152,11 +152,11 @@
       "author": "Bryan Burrough"
     },
     {
-      "b": "I told him it was all right with me, and gave him my card. It was ",
-      "t": "twelve minutes past one",
-      "a": " as he took the corner.",
-      "title": "Finger Man",
-      "author": "Raymond Chandler"
+      "b": "He rolled at ",
+      "t": "1:12",
+      "a": ". He padlocked Stage 22 and remote-controlled the north gate.",
+      "title": "The Enchanters: A novel",
+      "author": "James Ellroy"
     }
   ],
   "13": [
@@ -245,6 +245,13 @@
       "a": " EST.",
       "title": "Active Measures",
       "author": "Thomas Rid"
+    },
+    {
+      "b": "He squinted at the radium dial of his watch. It was ",
+      "t": "fourteen minutes past one",
+      "a": "; he started running back up the path.",
+      "title": "The Bourne Identity",
+      "author": "Robert Ludlum"
     }
   ],
   "15": [
@@ -270,13 +277,6 @@
       "author": "Stuart Turton"
     },
     {
-      "b": "Snyder genuinely believed that Ike was suffering from indigestion.g Not until roughly ",
-      "t": "1:15 p.m.",
-      "a": " did Snyder realize that Eisenhower’s symptoms more closely resembled those of someone suffering a heart attack rather than a digestive upset.",
-      "title": "Eisenhower in War and Peace",
-      "author": "Jean Edward Smith"
-    },
-    {
       "b": "The first one was taken in Hedestad during the Children’s Day parade. The same photographer took it around ",
       "t": "1:15 p.m.",
       "a": ", and Harriet is there in it.”",
@@ -296,6 +296,13 @@
       "a": " in the afternoon and of course he was there. The phone rang only once.",
       "title": "The Tokyo-Montana Express",
       "author": "Richard Brautigan"
+    },
+    {
+      "b": "Dr. Snyder genuinely believed that Ike was suffering from indigestion.g Not until roughly ",
+      "t": "1:15 p.m.",
+      "a": " did Snyder realize that Eisenhower’s symptoms more closely resembled those of someone suffering a heart attack rather than a digestive upset.",
+      "title": "Eisenhower in War and Peace",
+      "author": "Jean Edward Smith"
     },
     {
       "b": "On this ambiguous conclusion, the committee adjourned at ",
@@ -319,6 +326,13 @@
       "a": ", which was 17 minutes later.",
       "title": "The Curious Incident of the Dog in the Night-Time",
       "author": "Mark Haddon"
+    },
+    {
+      "b": "AT THE HOSPITAL: ",
+      "t": "1:16 P.M.",
+      "a": " “Good morning, Dr. Lanoire.",
+      "title": "Whirlwind",
+      "author": "James Clavell"
     },
     {
       "b": "33 Bret Stephens (@BretStephensNYT), “The right to offend is […],” Twitter, January 7, 2015, ",
@@ -370,6 +384,13 @@
       "a": ", when his car pulled up to the door.”",
       "title": "Fear and Loathing on the Campaign Trail '72",
       "author": "Hunter S. Thompson"
+    },
+    {
+      "b": "“I hope”; “Well, I want to tell you”; “That Harry Byrd”; “You make them”: Transcripts, “",
+      "t": "1:17 P.M.",
+      "a": " to Harry Byrd,” “Late afternoon from Harry Byrd to White House operator,” “5:40 P.M. to Harry Byrd,” TPR, Vol. III, pp.",
+      "title": "The Passage of Power",
+      "author": "Robert A. Caro"
     },
     {
       "b": "“Miss Chestnut, at ",
@@ -437,18 +458,18 @@
       "author": "Kate Stayman-London"
     },
     {
-      "b": "Underwood spoke up. “They’re right up yonder in the Colored balcony—been there since precisely ",
-      "t": "one-eighteen",
-      "a": " P.M.”",
-      "title": "To Kill a Mockingbird",
-      "author": "Harper Lee"
-    },
-    {
       "b": "A Boeing 707 with thirty-eight passengers, twelve of them Israelis, and ten Israeli crew members, the aircraft was scheduled to land in Tel Aviv at ",
       "t": "1:18",
       "a": ".",
       "title": "Rise and Kill First",
       "author": "Ronen Bergman"
+    },
+    {
+      "b": "Mr. Underwood spoke up. “They’re right up yonder in the Colored balcony—been there since precisely ",
+      "t": "one-eighteen",
+      "a": " P.M.”",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee"
     },
     {
       "b": "The hour is precisely ",
@@ -472,6 +493,13 @@
       "a": ", EDT, to be exact. She had just reached the curb on the downtown side of the street.",
       "title": "Song of Susannah",
       "author": "Stephen King"
+    },
+    {
+      "b": "Tim [",
+      "t": "1:19pm",
+      "a": "]: This is bullshit. I’m getting some ribs.",
+      "title": "One to Watch",
+      "author": "Kate Stayman-London"
     },
     {
       "b": "Spero, quick and wiry, wrestled varsity at ",
@@ -537,6 +565,13 @@
       "a": " The temperature was up in the mid-9os.",
       "title": "My Dark Places",
       "author": "James Ellroy"
+    },
+    {
+      "b": "The First Zoo Watch: Monday, 5 June 1967 @ ",
+      "t": "1:20 p.m.",
+      "a": "",
+      "title": "Setting Free the Bears",
+      "author": "John Irving"
     }
   ],
   "21": [
@@ -846,7 +881,7 @@
     {
       "b": "101–08. “We’re going”: Transcript, “",
       "t": "1:29 P.M.",
-      "a": " to Dave McDonald,” TPR, Vol. I, pp.",
+      "a": " to Dave McDonald,” TPR, Vol. I, pp. 263–65.",
       "title": "The Passage of Power",
       "author": "Robert A. Caro"
     }
@@ -1022,6 +1057,13 @@
       "a": ", when he climbed the 110 steps to his room, he was already calculating the minutes until he could come back downstairs for a drink.",
       "title": "A Gentleman in Moscow",
       "author": "Amor Towles"
+    },
+    {
+      "b": "After he stopped growing, he was five-eight, but only if he stood on his toes—and he competed better at ",
+      "t": "one-thirty-five",
+      "a": " than he did at one-forty.",
+      "title": "(2005) Until I Find You",
+      "author": "John Irving"
     }
   ],
   "37": [
@@ -1133,8 +1175,15 @@
       "b": "There was not a soul in sight. The time was ",
       "t": "twenty minutes before two",
       "a": " in the afternoon, and the temperature inside the car was 106°.",
-      "title": "The Best of Roald Dahl",
+      "title": "Switch Bitch",
       "author": "Roald Dahl"
+    },
+    {
+      "b": "131. “Whether”: Transcript, “",
+      "t": "1:40 P.M.",
+      "a": ", from J. Edgar Hoover,” Nov.",
+      "title": "The Passage of Power",
+      "author": "Robert A. Caro"
     }
   ],
   "42": [
@@ -1176,7 +1225,7 @@
       "author": "Richard Matheson"
     },
     {
-      "b": "Naomi Wolf Reveals Dangers of Vaccine Passports,” War Room: Pandemic (podcast), episode 874, April 14, 2021, at ",
+      "b": "“I spent years thinking you were the devil”: Steve Bannon, host, “Not Science Fiction … Dr. Naomi Wolf Reveals Dangers of Vaccine Passports,” War Room: Pandemic (podcast), episode 874, April 14, 2021, at ",
       "t": "13:43",
       "a": "–14:03, posted on Rumble.",
       "title": "Doppelganger",
@@ -1191,6 +1240,13 @@
     }
   ],
   "44": [
+    {
+      "b": "23. “You’re wonderful”: Transcript, “",
+      "t": "1:44 P.M.",
+      "a": ", from Ralph Yarborough,” Nov. 23, TPR, Vol. I, p.",
+      "title": "The Passage of Power",
+      "author": "Robert A. Caro"
+    },
     {
       "b": "At ",
       "t": "1:44",
@@ -1354,6 +1410,13 @@
       "a": "]: Are you at the townhouse yet? How’s everything going?",
       "title": "Fang Fiction",
       "author": "Kate Stayman-London"
+    },
+    {
+      "b": "It was ",
+      "t": "1:49",
+      "a": ". She had to be with Dr. Villalobos in eleven minutes.",
+      "title": "The Circle",
+      "author": "Dave Eggers"
     }
   ],
   "50": [
@@ -1370,6 +1433,13 @@
       "a": "), there’s another minor tangle when some TV journalists try to drive a car through the crowd.",
       "title": "Direct Action",
       "author": "David Graeber"
+    },
+    {
+      "b": "“Mike, these people”: Transcript, “",
+      "t": "1:50 P.M.",
+      "a": " to Mike Mansfield,” April 1, 1964, TPR, Vol. V, pp.",
+      "title": "The Passage of Power",
+      "author": "Robert A. Caro"
     },
     {
       "b": "",
@@ -1485,6 +1555,13 @@
       "author": "Paulo Coelho"
     },
     {
+      "b": "The President had: Transcript, “",
+      "t": "1:55 P.M.",
+      "a": " to Jack Valenti, et al.,” Dec. 25, 1963, TPR, Vol. II, pp.",
+      "title": "The Passage of Power",
+      "author": "Robert A. Caro"
+    },
+    {
       "b": "",
       "t": "1:55 P.M.",
       "a": " Word kept coming to Jim Forman, \"People won't leave the line to get something to eat.",
@@ -1518,6 +1595,13 @@
       "a": " every afternoon there was a small two-legged elephant trumpeting under my window.",
       "title": "Dragonhaven",
       "author": "Robin McKinley"
+    },
+    {
+      "b": "The kid in the white t-shirt sat down at the end of the bar and talked to the guy who had bought me the beer. At ",
+      "t": "five minutes to two",
+      "a": ", I got up slowly and walked out.",
+      "title": "Hot Water Music",
+      "author": "Charles Bukowski"
     }
   ],
   "56": [
@@ -1675,6 +1759,13 @@
       "a": " in the afternoon and the banks are open till three.",
       "title": "Life",
       "author": "Keith Richards"
+    },
+    {
+      "b": "The post office (map; Calle 3; h8am-3pm Mon-Fri, to ",
+      "t": "1pm",
+      "a": " Sat) is in the town hall overlooking Parque Simón Bolívar from the north.",
+      "title": "Lonely Planet Panama",
+      "author": "Lonely Planet;Steve Fallon;Carolyn McCarthy;Regis St Louis"
     }
   ],
   "01": [
@@ -1700,6 +1791,15 @@
       "a": " ten or eleven?” I could count in binary when I was angry, but counting in ternary—base three—took too much concentration.",
       "title": "Homeland",
       "author": "Cory Doctorow"
+    }
+  ],
+  "03": [
+    {
+      "b": "(",
+      "t": "1:03 p.m.",
+      "a": ") Dr. Grint: “If you keep eating those Big Montanas like you do, you’re going to turn into one.”",
+      "title": "Burnt Tongues",
+      "author": "Palahniuk, Chuck; Thomas, Richard; Widmyer, Dennis"
     }
   ],
   "04": [
@@ -1741,18 +1841,18 @@
   ],
   "05": [
     {
+      "b": "“Where did the Post get its story on Bobby?” he demanded of Bundy. (Transcript, “",
+      "t": "1:05 P.M.",
+      "a": " to McGeorge Bundy,” Jan.",
+      "title": "The Passage of Power",
+      "author": "Robert A. Caro"
+    },
+    {
       "b": "The German ultimatum to France expired at one p.m. on August 1. At ",
       "t": "1:05 p.m.",
       "a": " the German Ambassador, Baron von Schoen, inquired at the Quai d'Orsay for France's reply.",
       "title": "Dreadnought, Britain, Germany and the Coming of the Great War",
       "author": "Robert K. Massie"
-    },
-    {
-      "b": "His solution would require; Anderson, Ribicoff, Hartke telephone calls: Transcripts, “",
-      "t": "1:05 P.M.",
-      "a": " to Clinton Anderson,” “1:11 P.M. to Vance Hartke,” “1:14 P.M. to Abraham Ribicoff,” all Jan.",
-      "title": "The Passage of Power",
-      "author": "Robert A. Caro"
     },
     {
       "b": "The lunch bell rang at ",
@@ -1771,7 +1871,7 @@
     {
       "b": "54 “Go away helicopter”: Sohaib Athar (@ReallyVirtual), “Go away helicopter—before I take out my giant swatter :-/,” Twitter, May 1, 2011, ",
       "t": "1:05 P.M.",
-      "a": ", https://twitter.com/reallyvirtual/status/64782523485528065?",
+      "a": ", https://twitter.com/reallyvirtual/status/64782523485528065?lang=en.",
       "title": "Likewar: The Weaponization of Social Media",
       "author": "P. W. Singer"
     },
@@ -1827,13 +1927,6 @@
       "author": "Jodi Picoult"
     },
     {
-      "b": "Taking off in a continuous carousel: Footage of the helicopters lifting and transporting these loads can be see at around ",
-      "t": "1:06",
-      "a": " in Chernobyl: A Warning [Чернобыль: Предупреждение], a 1987 Russian state television documentary, available online at www.youtube.com/watch?",
-      "title": "Midnight in Chernobyl: The Untold Story of the World's Greatest Nuclear Disaster",
-      "author": "Adam Higginbotham"
-    },
-    {
       "b": "I felt vaguely guilty for some reason, but just then a roar went up from the crowd as Bautista Heguy, a small, speedy man sporting dreadlocks and riding a tiny horse, burst out of the pack and scored a goal for White Birch, putting them ahead 7–6 with just ",
       "t": "1:06",
       "a": " on the clock.",
@@ -1846,6 +1939,13 @@
       "a": ". Is that right?”",
       "title": "Barbarians at the Gate",
       "author": "Bryan Burrough"
+    },
+    {
+      "b": "Taking off in a continuous carousel: Footage of the helicopters lifting and transporting these loads can be see at around ",
+      "t": "1:06",
+      "a": " in Chernobyl: A Warning [Чернобыль: Предупреждение], a 1987 Russian state television documentary, available online at www.youtube.com/watch?v=mwxbS_ChNNk (accessed May 2018).",
+      "title": "Midnight in Chernobyl: The Untold Story of the World's Greatest Nuclear Disaster",
+      "author": "Adam Higginbotham"
     }
   ],
   "07": [

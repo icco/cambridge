@@ -92,7 +92,7 @@
       "b": "At last, at ",
       "t": "7:12",
       "a": ", Emma began to fuss over the monitor, and Susan smiled, as always, at the sound of her daughter’s sweet morning noises.",
-      "title": "The Bonus Room",
+      "title": "Bedbugs",
       "author": "Ben H. Winters"
     }
   ],
@@ -230,13 +230,6 @@
   ],
   "16": [
     {
-      "b": "Basil’s. It is now ",
-      "t": "7:16 a.m.",
-      "a": ", which leaves five hours and forty-four minutes to kill. I throw on jeans and a skanky old flannel shirt and high-tops and creep as quietly as possible downstairs seeking coffee.",
-      "title": "The Time Traveler's Wife",
-      "author": "Audrey Niffenegger"
-    },
-    {
       "b": "He put on Smile #45 (Greeting from a Strange Window Washer in August, 1956, in Perth at ",
       "t": "7:16 a.m.",
       "a": "), ducked out from behind the escalator, and thrust his hand forward in greeting.",
@@ -249,6 +242,13 @@
       "a": "—the moment the flames took hold.",
       "title": "From Here to Eternity",
       "author": "Caitlin Doughty"
+    },
+    {
+      "b": "HENRY: The ceremony is at 2:00 p.m. and it will take me about half an hour to dress and twenty minutes for us to drive over to St. Basil’s. It is now ",
+      "t": "7:16 a.m.",
+      "a": ", which leaves five hours and forty-four minutes to kill.",
+      "title": "The Time Traveler's Wife",
+      "author": "Audrey Niffenegger"
     },
     {
       "b": "People of social media just know: IT’S FACETUNE, you’re beautiful, don’t compare yourself to people ok,” Twitter, February 12, 2018, ",
@@ -480,7 +480,7 @@
       "author": "Lily King"
     },
     {
-      "b": "Lincoln had so much vitality,” doctors reported, that for nine hours after sustaining the wound that “would have killed most men instantly,” he continued to struggle. At ",
+      "b": "“Mr. Lincoln had so much vitality,” doctors reported, that for nine hours after sustaining the wound that “would have killed most men instantly,” he continued to struggle. At ",
       "t": "7:22",
       "a": " the following morning, that struggle came to an end.",
       "title": "Leadership",
@@ -552,7 +552,7 @@
       "b": "I do this every morning. At exactly ",
       "t": "7:25",
       "a": ", the Dauntless prove their bravery by jumping from a moving train.",
-      "title": "Divergent",
+      "title": "Free Four",
       "author": "Veronica Roth"
     },
     {
@@ -580,7 +580,7 @@
       "b": "Alex declined breakfast and hurried out, unsmiling, at ",
       "t": "7:25",
       "a": "; an hour and a half later, Emma was gone, too, on her way down the steps with Marni, crying bitterly that she didn’t want to leave mommy, a performance she hadn’t put on in many months.",
-      "title": "The Bonus Room",
+      "title": "Bedbugs",
       "author": "Ben H. Winters"
     },
     {
@@ -894,7 +894,7 @@
       "b": "I looked at the clock and groggily muttered, “It’s ",
       "t": "seven thirty-six",
       "a": ".”",
-      "title": "Looking for Alaska",
+      "title": "The John Green Collection",
       "author": "John Green"
     }
   ],
@@ -1332,13 +1332,6 @@
   ],
   "52": [
     {
-      "b": "Louis took to the sky, there was no cheering—just an uneasy quiet at how close Lindbergh had come to those wires and how alone he now was in that small fabric-covered plane. The time of takeoff was officially recorded as ",
-      "t": "7:52 a.m.",
-      "a": "",
-      "title": "One Summer",
-      "author": "Bill Bryson"
-    },
-    {
       "b": "Pushed it all aside and accelerated. At ",
       "t": "7:52 a.m.",
       "a": ", his wheels lifted off the ground, with just twenty feet of runway to spare.",
@@ -1358,6 +1351,13 @@
       "a": ", http://twitter.com/LulzSec/status/68116303004708864.",
       "title": "Hacker, Hoaxer, Whistleblower, Spy",
       "author": "Gabriella Coleman"
+    },
+    {
+      "b": "As the Spirit of St. Louis took to the sky, there was no cheering—just an uneasy quiet at how close Lindbergh had come to those wires and how alone he now was in that small fabric-covered plane. The time of takeoff was officially recorded as ",
+      "t": "7:52 a.m.",
+      "a": "",
+      "title": "One Summer",
+      "author": "Bill Bryson"
     },
     {
       "b": "He was generally a twenty-four-bar person, as are many rappers, but this was clearly a pop song, which meant that it made sense to shorten him up to sixteen bars. Formatting was done at ",
@@ -1427,18 +1427,18 @@
       "author": "Tom Clancy"
     },
     {
-      "b": "The first bombs fell on Pearl Harbor at ",
-      "t": "7:55 a.m.",
-      "a": " Eight hours later—before the United States had even declared war—Hawai‘i governor Joseph Poindexter suspended the writ of habeas corpus and turned over all effective power in the territory to the army.",
-      "title": "How to Hide an Empire",
-      "author": "Daniel Immerwahr"
-    },
-    {
       "b": "Like Broder betting $500 with me on Humphrey against McGovern in the ’72 California primary…. Yes, and it’s now ",
       "t": "7:55 a.m.",
       "a": " in Woody Creek and my plane leaves at 10:00, and I haven’t even started packing.",
       "title": "Fear and Loathing in America",
       "author": "Hunter S. Thompson"
+    },
+    {
+      "b": "The first bombs fell on Pearl Harbor at ",
+      "t": "7:55 a.m.",
+      "a": " Eight hours later—before the United States had even declared war—Hawai‘i governor Joseph Poindexter suspended the writ of habeas corpus and turned over all effective power in the territory to the army.",
+      "title": "How to Hide an Empire",
+      "author": "Daniel Immerwahr"
     },
     {
       "b": "Lewis checked in at his desk in the sheriff’s office at ",
@@ -1485,7 +1485,7 @@
       "author": "Greg Rucka"
     },
     {
-      "b": "Joseph entering the embassy at ",
+      "b": "Nor did he recognize his face, which he now saw in the grainy pictures of Mr. Joseph entering the embassy at ",
       "t": "7:56 a.m.",
       "a": " and departing again at 11:45 a.m., probably for lunch, then heading back for the afternoon before clocking out for the day at 6:48 p.m.",
       "title": "Damascus Station",
@@ -1634,8 +1634,8 @@
       "b": "At precisely ",
       "t": "one minute to eight",
       "a": " by the drugstore clock the phone rang sharply in the booth.",
-      "title": "The Collected Raymond Chandler",
-      "author": "Raymond Chandler"
+      "title": "Collected Stories of Raymond Chandler",
+      "author": "Raymond Chandler & John Bayley"
     },
     {
       "b": "The clock strikes ",
@@ -1743,8 +1743,8 @@
       "b": "At ",
       "t": "one minute past seven",
       "a": " Pete Anglich, narcotic squad under-cover man, rolled over on the hard bed and looked at the cheap strap watch on his left wrist.",
-      "title": "The Collected Raymond Chandler",
-      "author": "Raymond Chandler"
+      "title": "Collected Stories of Raymond Chandler",
+      "author": "Raymond Chandler & John Bayley"
     },
     {
       "b": "“You’re late,” Alayna said when she spotted him in the doorway. The clock on the wall read ",
@@ -1886,18 +1886,18 @@
       "author": "Sally Rooney"
     },
     {
-      "b": "Partry collected the chymical Notes and departed for the Tatler-Lock at ",
-      "t": "7:04",
-      "a": ", saying he should be back shortly.",
-      "title": "The Baroque Cycle Collection",
-      "author": "Neal Stephenson"
-    },
-    {
       "b": "“If I start back to work now, I can leave at six fifty-three,” I say. “There is a train leaving from the campus station at ",
       "t": "seven-oh-four",
       "a": ", and if I hurry I can make it.”",
       "title": "The Speed of Dark",
       "author": "Elizabeth Moon"
+    },
+    {
+      "b": "Mr. Partry collected the chymical Notes and departed for the Tatler-Lock at ",
+      "t": "7:04",
+      "a": ", saying he should be back shortly.",
+      "title": "The Baroque Cycle Collection",
+      "author": "Neal Stephenson"
     },
     {
       "b": "Then he spotted an untraceable call routed through the cell serving Jede’s flat at ",

@@ -144,7 +144,7 @@
     {
       "b": "Elon Musk (@elonmusk), Twitter, June 31, 2021, ",
       "t": "12:14 a.m.",
-      "a": ", accessed April 11, 2022, https://twitter.com/elonmusk/status/1289051795763769345?",
+      "a": ", accessed April 11, 2022, https://twitter.com/elonmusk/status/1289051795763769345?lang=en.",
       "title": "Starry Messenger",
       "author": "Neil deGrasse Tyson"
     },
@@ -495,8 +495,8 @@
     {
       "b": "By ",
       "t": "twenty-five minutes after midnight",
-      "a": " reports started coming in that such-and-such points were secured.",
-      "title": "The Puppet Masters",
+      "a": " reports started coming in that such-and-such, points were secured.",
+      "title": "A Heinlein Trio",
       "author": "Robert A. Heinlein"
     },
     {
@@ -533,6 +533,13 @@
       "a": ".",
       "title": "Children of the Night",
       "author": "Dan Simmons"
+    },
+    {
+      "b": "Look, you can see by the kitchen clock! ",
+      "t": "Twenty-five past twelve",
+      "a": "!” Mrs. Driver sat down suddenly on a hard chair; her eyes were staring and her face looked white and flabby, as though deflated.",
+      "title": "The Borrowers Collection",
+      "author": "Mary Norton"
     }
   ],
   "26": [
@@ -680,6 +687,13 @@
       "author": "Dan Brown"
     },
     {
+      "b": "The lodge porter makes a note of every car in and out after midnight. Mr. Courtney-Briggs left at ",
+      "t": "twelve thirty-two",
+      "a": " a.m.”",
+      "title": "Shroud for a Nightingale",
+      "author": "P. D. James"
+    },
+    {
       "b": "Diana’s Playground, long touted by its promoters as the greatest amusement enterprise ever undertaken off earth or on, was invaded by the first shipload of tourists at exactly ",
       "t": "twelve thirty-two",
       "a": ", Earth Prime.",
@@ -692,13 +706,6 @@
       "a": " the televisors went out. The enemy had analyzed our frequency variation pattern, matched us and blown every tube in the circuit.",
       "title": "If This Goes On",
       "author": "Robert A. Heinlein"
-    },
-    {
-      "b": "Mr. Courtney-Briggs left at ",
-      "t": "twelve thirty-two",
-      "a": " a.m.”",
-      "title": "Shroud for a Nightingale",
-      "author": "P. D. James"
     }
   ],
   "33": [
@@ -777,6 +784,13 @@
       "author": "Paul Tremblay"
     },
     {
+      "b": "It was almost ",
+      "t": "twenty-five minutes to one",
+      "a": " as he pulled into the small parking lot beside Dr. Arthur Willoughby’s office.",
+      "title": "Ride the Nightmare",
+      "author": "Richard Matheson"
+    },
+    {
       "b": "At ",
       "t": "twelve thirty-five",
       "a": ", I went upstairs to check on Mary and the kids. Everyone was sound asleep.",
@@ -801,7 +815,7 @@
       "b": "‘I bet Black Panther,’ I said. ‘Two separate bets of three pounds each at ",
       "t": "twenty-five to one",
       "a": ".",
-      "title": "The Best of Roald Dahl",
+      "title": "Ah, Sweet Mystery of Life",
       "author": "Roald Dahl"
     }
   ],
@@ -976,18 +990,18 @@
       "author": "Henry Kissinger"
     },
     {
+      "b": "Dr. Thomas Angelo Catanzaro, attending neurosurgeon, had been summoned at ",
+      "t": "12:42",
+      "a": " by the emergency room physicians to find Wesley Keener, Caucasian male, age fourteen, nonresponsive post head trauma.",
+      "title": "The Quiet Boy",
+      "author": "Ben H. Winters"
+    },
+    {
       "b": "There was little time to do it. He hung up the phone with Smathers at ",
       "t": "12:42",
       "a": ". The Finance Committee was scheduled to reconvene at two o’clock.",
       "title": "The Passage of Power",
       "author": "Robert A. Caro"
-    },
-    {
-      "b": "Thomas Angelo Catanzaro, attending neurosurgeon, had been summoned at ",
-      "t": "12:42",
-      "a": " by the emergency room physicians to find Wesley Keener, Caucasian male, age fourteen, nonresponsive post head trauma.",
-      "title": "The Quiet Boy",
-      "author": "Ben H. Winters"
     }
   ],
   "43": [
@@ -995,8 +1009,15 @@
       "b": "The squadron was due over the target at 9:52. It was due home at ",
       "t": "12:43",
       "a": ". As 9:50 comes and passes you have the ships in your mind.",
-      "title": "Once There Was a War",
+      "title": "America and Americans and Selected Nonfiction",
       "author": "John Steinbeck"
+    },
+    {
+      "b": "The waiter was here again. \"Mr. Mannix,\" he said, \"the hospital just called; Mr. Kelvin died at ",
+      "t": "12:43",
+      "a": ".\"",
+      "title": "100 Great Fantasy Short Short Stories",
+      "author": "Isaac Asimov"
     },
     {
       "b": "Lily heard the shot at ",
@@ -1004,13 +1025,6 @@
       "a": ".",
       "title": "Run River",
       "author": "Joan Didion"
-    },
-    {
-      "b": "Mannix,\" he said, \"the hospital just called; Mr. Kelvin died at ",
-      "t": "12:43",
-      "a": ".\"",
-      "title": "100 Great Fantasy Short Short Stories",
-      "author": "Isaac Asimov"
     }
   ],
   "45": [
@@ -1108,6 +1122,13 @@
       "a": " on a Friday in the spring, where the sun was shining, and everything made some sort of sense.",
       "title": "Heat Wave",
       "author": "TJ Klune"
+    },
+    {
+      "b": "At ",
+      "t": "12:47",
+      "a": ", as Stuyvesant was about to open his mouth to say, If he could be of any help…Laura Hurleigh beat him to it, asking Dear Mr. Stuyvesant if he wouldn’t like to help them all out of a pinch and take over the wheel of Richard’s car, just for a few days, until they could find a replacement?",
+      "title": "Touchstone",
+      "author": "Laurie R. King"
     }
   ],
   "48": [
@@ -1165,6 +1186,13 @@
       "author": "Sean Williams"
     },
     {
+      "b": "1510 Ultraprocessed foods like breakfast cereals1511 tend to have the highest profit margins.1512 Remarkably, the cost of packaging may outweigh the cost of ingredients in a cereal box by more than ",
+      "t": "ten to one",
+      "a": ".",
+      "title": "How Not to Diet",
+      "author": "Michael Greger, M.D., FACLM"
+    },
+    {
       "b": "Mamá also said she’d bring a tiny drone to record and broadcast the protest in Madison, and Irene could watch the feed. ",
       "t": "Ten minutes before one",
       "a": " o’clock, she sat on a hay bale and tuned in.",
@@ -1177,13 +1205,6 @@
       "a": ".",
       "title": "The Time Traveler's Almanac",
       "author": "Ann VanderMeer"
-    },
-    {
-      "b": "1510 Ultraprocessed foods like breakfast cereals1511 tend to have the highest profit margins.1512 Remarkably, the cost of packaging may outweigh the cost of ingredients in a cereal box by more than ",
-      "t": "ten to one",
-      "a": ".",
-      "title": "How Not to Diet",
-      "author": "Michael Greger, M.D., FACLM"
     }
   ],
   "51": [
@@ -1197,7 +1218,7 @@
   ],
   "52": [
     {
-      "b": "Francis Hospital in Charleston, South Carolina, Dr. Frank Belgium died on the operating table at ",
+      "b": "At Bon Secours-St. Francis Hospital in Charleston, South Carolina, Dr. Frank Belgium died on the operating table at ",
       "t": "12:52am",
       "a": " from a gunshot wound to the chest.",
       "title": "J.A. Konrath / Jack Kilborn Trilogy - Three Scary Thriller Novels (Origin, The List, Haunted House)",
@@ -1461,8 +1482,8 @@
       "b": "Then there was a quite indescribable stillness in the room, like the silence in the innermost room of a cold-storage warehouse, at ",
       "t": "midnight",
       "a": ".",
-      "title": "The Collected Raymond Chandler",
-      "author": "Raymond Chandler"
+      "title": "Collected Stories of Raymond Chandler",
+      "author": "Raymond Chandler & John Bayley"
     }
   ],
   "01": [
@@ -1528,7 +1549,7 @@
       "b": "He raised himself to his full height, glancing for some reason at his watch as he straightened up. The hands still stood at ",
       "t": "two minutes past midnight",
       "a": ", unmoving, and that he felt must be correct.",
-      "title": "Castle of Days (1992) SSC",
+      "title": "Book of Days",
       "author": "Gene Wolfe"
     },
     {
@@ -1572,6 +1593,13 @@
       "a": "—she hadn’t come. Or maybe she’d seen who was in the garden and decided to hang back.",
       "title": "House of Sky and Breath",
       "author": "Sarah J. Maas"
+    },
+    {
+      "b": "The date palms have died of meet lack, the well filled with dried shit and mosaic of a thousand newspapers: ‘Russia denies … The Home Secretary views with pathic alarm … The trap was sprung at ",
+      "t": "12:02",
+      "a": ".",
+      "title": "Naked Lunch",
+      "author": "William Burroughs"
     }
   ],
   "03": [
@@ -1783,6 +1811,13 @@
       "b": "The motorcade was heading east on Suitland Parkway, back toward Andrews Air Force Base, where she and the others had landed only a few hours earlier. It was ",
       "t": "seven minutes past midnight",
       "a": ".",
+      "title": "Ghost Country",
+      "author": "Patrick Lee"
+    },
+    {
+      "b": "Ruben Ward stepped out of the nearest of the four exits at ",
+      "t": "seven minutes past midnight",
+      "a": ". So close Travis could see the black notebook under his arm.",
       "title": "The Breach - Ghost Country - Deep Sky",
       "author": "Patrick Lee"
     },
@@ -1850,7 +1885,7 @@
       "b": "“It was ",
       "t": "nine minutes after midnight",
       "a": ", East Coast time, when Paige called me,” she said. “And I captured this from CNN about an hour later, when I was already on my way here to find you.”",
-      "title": "The Breach - Ghost Country - Deep Sky",
+      "title": "Ghost Country",
       "author": "Patrick Lee"
     },
     {
@@ -1859,6 +1894,13 @@
       "a": " on the night of November 19–20, 1954.",
       "title": "Turing's Cathedral",
       "author": "George Dyson"
+    },
+    {
+      "b": "202 laughing and crying emojis: Christopher Miller (@ChristopherJM), “Mix of crying & laughing emojis from @lifenews_ru Facebook live viewers of Givi’s Donetsk funeral, https://www.facebook.com/lifenews.ru/?fref=ts . . . ,” Twitter, February 10, 2017, ",
+      "t": "12:09 A.M.",
+      "a": ", https://twitter.com/christopherjm/status/829965418295070720.",
+      "title": "Likewar: The Weaponization of Social Media",
+      "author": "P. W. Singer"
     }
   ]
 }

@@ -48,6 +48,13 @@
       "a": " in the morning of January 7th. At ten past two on January 7th, I am twenty-three years and six minutes old.",
       "title": "Syrup",
       "author": "Maxx Barry"
+    },
+    {
+      "b": "Alejandro was outside, wanting in. It was ",
+      "t": "ten after two",
+      "a": " in the morning. He sat up, pulled on his jeans, socks, sweater.",
+      "title": "Spook Country",
+      "author": "William Gibson"
     }
   ],
   "11": [
@@ -145,7 +152,7 @@
       "b": "She awoke in the middle of the night. Her small display terminal showed the time in green blocky numbers: ",
       "t": "2:14 a.m.",
       "a": "",
-      "title": "Wool",
+      "title": "The Silo Saga Omnibus",
       "author": "Hugh Howey"
     },
     {
@@ -311,7 +318,7 @@
       "author": "Frank Herbert"
     },
     {
-      "b": "Wind-Up Bird, and I’ve been sitting here, writing you this letter. Right now it’s (I look at my clock) exactly ",
+      "b": "To tell you the truth, I woke up an hour ago from a dream about you, Mr. Wind-Up Bird, and I’ve been sitting here, writing you this letter. Right now it’s (I look at my clock) exactly ",
       "t": "2:18 a.m.",
       "a": "",
       "title": "The Wind-Up Bird Chronicle",
@@ -351,6 +358,13 @@
       "a": " you are a mass of attenuated gas. It is so quick and easy a death, it is almost not death.”",
       "title": "The Early Asimov",
       "author": "Isaac Asimov"
+    },
+    {
+      "b": "“At two fifteen p.m., Clodagh O’Malley wrote: ‘Ian Crowley was just acquitted.’ At ",
+      "t": "two eighteen",
+      "a": " p.m., you wrote back: ‘I hope his dogs savage him.",
+      "title": "Trust Her",
+      "author": "Flynn Berry"
     }
   ],
   "19": [
@@ -711,13 +725,6 @@
       "author": "Tom Wolfe"
     },
     {
-      "b": "Mrs. Arthur Pitt arrived here yesterday at ",
-      "t": "2:30 A.M.",
-      "a": " New York time and was signed over to us by the personnel responsible for her safe transit from Europe.",
-      "title": "Vulcan's Hammer",
-      "author": "Philip K. Dick"
-    },
-    {
       "b": "At ",
       "t": "2:30 a.m.",
       "a": ", he was with the night shift underneath a car being moved on a rack watching bolts being installed.",
@@ -744,6 +751,13 @@
       "a": " The Israelis make as much noise as possible.",
       "title": "The Secret War With Iran: The 30-Year Clandestine Struggle Against the World's Most Dangerous Terrorist Power",
       "author": "Ronen Bergman"
+    },
+    {
+      "b": "It was ",
+      "t": "2:30 a.m.",
+      "a": " on Monday when Linder left Fredriksson’s building. She considered letting the matter rest until the next day, but then it occurred to her that if she had been the one involved, she would have wanted to know right away.",
+      "title": "The Girl Who Kicked the Hornet's Nest",
+      "author": "Stieg Larsson"
     }
   ],
   "31": [
@@ -776,10 +790,10 @@
       "author": "Tony Tulathimutte"
     },
     {
-      "b": "Keep it right on this heading, Captain! January, we'll stay at ",
+      "b": "Keep it right on this heading, Captain! January, we’ll stay at ",
       "t": "two thirty-one",
-      "a": ".\"",
-      "title": "The Best of Kim Stanley Robinson",
+      "a": ".”",
+      "title": "The Lucky Strike",
       "author": "Kim Stanley Robinson"
     }
   ],
@@ -829,6 +843,13 @@
       "author": "Frank Herbert"
     },
     {
+      "b": "The westbound Southwest Chief stops at 11:46pm, the eastbound at ",
+      "t": "2:33am.",
+      "a": " There's a train waiting room at the corner of Andy Devine Ave (Route 66) and 4th St. It's not a full station and you cannot buy a ticket here, so book ahead.",
+      "title": "Southwest USA",
+      "author": "Lonely Planet"
+    },
+    {
       "b": "The girls left at ",
       "t": "twenty-seven minutes to three",
       "a": ". They were leaning against each other, Rosette with her arm thrown protectively around Isabel.",
@@ -876,7 +897,7 @@
       "b": "The bedside clock read ",
       "t": "2:34",
       "a": ". Susan rose, stepped into the bathroom, and took the other half of the Ambien.",
-      "title": "The Bonus Room",
+      "title": "Bedbugs",
       "author": "Ben H. Winters"
     },
     {
@@ -936,6 +957,13 @@
       "a": " that morning, between the White House and Foggy Bottom.",
       "title": "State of Terror",
       "author": "Hillary Rodham Clinton and Louise Penny"
+    },
+    {
+      "b": "At this point Tsukuru awoke. The green numbers on his bedside clock read ",
+      "t": "2:35",
+      "a": ". His body was covered in sweat, his heart still beating out the dry cadence of time passing.",
+      "title": "Colorless Tsukuru Tazaki and his Years of Pilgrimage",
+      "author": "Haruki Murakami"
     }
   ],
   "36": [
@@ -1056,6 +1084,13 @@
       "a": ".",
       "title": "A Christmas Carol, the Chimes & the Cricket on the Hearth",
       "author": "Charles Dickens"
+    },
+    {
+      "b": "At ",
+      "t": "two-forty",
+      "a": " by the dial on my watch I heard a man coughing, coming toward me from the direction of the caddy shack.",
+      "title": "Brown's Requiem",
+      "author": "James Ellroy"
     }
   ],
   "41": [
@@ -1125,8 +1160,8 @@
       "b": "At ",
       "t": "sixteen minutes to three",
       "a": " Joe Pettigrew walked down a path in a quiet part of Hollywood Cemetery.",
-      "title": "The Collected Raymond Chandler",
-      "author": "Raymond Chandler"
+      "title": "Collected Stories of Raymond Chandler",
+      "author": "Raymond Chandler & John Bayley"
     },
     {
       "b": "Walter P. Kinnard started groaning—Pete clocked him saddled in at ",
@@ -1213,7 +1248,7 @@
       "b": "WE NEVER KNOW, AT FIRST, if we are headed into a cooker or a smudge. At ",
       "t": "2:46 A.M.",
       "a": " last night, the lights went on upstairs.",
-      "title": "The Jodi Picoult Collection #2",
+      "title": "My Sister's Keeper: A Novel",
       "author": "Jodi Picoult"
     },
     {
@@ -1257,7 +1292,7 @@
       "b": "It was now ",
       "t": "2:47 a.m.",
       "a": " on August 16, 2010. They were traveling to visit Alex’s parents on Labor Day weekend, so on the move-request form Susan had indicated they’d like to move to Brooklyn on September 12, a Sunday.",
-      "title": "The Bonus Room",
+      "title": "Bedbugs",
       "author": "Ben H. Winters"
     },
     {
@@ -1277,7 +1312,7 @@
     {
       "b": "She flashed her human-relations smile. “It’s ",
       "t": "two forty-seven",
-      "a": ", Dr. Fletcher.",
+      "a": ", Dr. Fletcher. I don’t have to tell you that they’re in an awful rush for your program.",
       "title": "Master of Space and Time",
       "author": "Rudy Rucker"
     },
@@ -1317,6 +1352,13 @@
       "a": " that same day—Tuesday, July 30—while Johnson had been slumped down in his seat on the Senate floor listening to Richard Russell rant, John L.",
       "title": "Robert A. Caro",
       "author": "Master of the Senate"
+    },
+    {
+      "b": "There was a clock on the Air India hoarding, the billboard above the building; for two or three days after the bombing, the time was stuck at ",
+      "t": "2:48",
+      "a": "—strangely, Dr. Daruwalla would wonder if Vinod had noticed the time.",
+      "title": "A Son of the Circus",
+      "author": "John Irving"
     },
     {
       "b": "“Dude, seriously,” she’d said. “The qualifying standard is ",
@@ -1477,7 +1519,7 @@
       "b": "She had said twenty-three minutes. That would put her back at the hatch by ",
       "t": "2:52",
       "a": ".",
-      "title": "The Pandora Sequence: The Jesus Incident, the Lazarus Effect, the Ascension Factor",
+      "title": "The Jesus Incident",
       "author": "Frank Herbert"
     }
   ],
@@ -1564,13 +1606,6 @@
       "author": "Bryan Burrough"
     },
     {
-      "b": "‘",
-      "t": "Five minutes to three",
-      "a": ",’ growled Newman, ‘itcan’twantmore by this time; and I had my breakfast at eight O’clock, and such a breakfast!",
-      "title": "Nicholas Nickleby",
-      "author": "Charles Dickens"
-    },
-    {
       "b": "They listened to the whispering breezes in the pines, heard the flapping of bats and owls and perhaps some other night fliers, and little else. Finally it was ",
       "t": "02:55",
       "a": ".",
@@ -1590,6 +1625,13 @@
       "a": ", later than Theo had expected. The road, narrow and deserted, opened palely before them, then slid under the wheels like a strip of torn and soiled linen.",
       "title": "The Children of Men",
       "author": "P. D. James"
+    },
+    {
+      "b": "Presently, he heard the door open and close. He looked at his wristwatch: ",
+      "t": "five minutes to three",
+      "a": " a.m.",
+      "title": "The Santaroga Barrier",
+      "author": "Frank Herbert"
     }
   ],
   "56": [
@@ -1682,18 +1724,18 @@
       "author": "Rupert Holmes"
     },
     {
-      "b": "He strode toward Stephen, then placed his big hands on both sides of Stephen’s desk and leaned over. “Be in my office on Friday, at ",
-      "t": "two minutes before three",
-      "a": " o’clock!”",
-      "title": "Wayside School Beneath the Cloud of Doom",
-      "author": "Louis Sachar"
-    },
-    {
       "b": "Crowley is looking around for the black hound. He looks at the clock – ",
       "t": "two minutes to three",
       "a": ".",
       "title": "The Quite Nice and Fairly Accurate Good Omens Script Book",
       "author": "Neil Gaiman"
+    },
+    {
+      "b": "He strode toward Stephen, then placed his big hands on both sides of Stephen’s desk and leaned over. “Be in my office on Friday, at ",
+      "t": "two minutes before three",
+      "a": " o’clock!” he ordered.",
+      "title": "Wayside School Beneath the Cloud of Doom",
+      "author": "Louis Sachar"
     },
     {
       "b": "Holly’s thirsty, angry, and upset. She glances at her watch at ",
@@ -1789,6 +1831,13 @@
       "a": " when she hoofs it out of Clover Knoll and back down the road toward the valley, toward the town of Maker’s Bell proper.",
       "title": "Bait Dog: An Atlanta Burns Novel",
       "author": "Chuck Wendig"
+    },
+    {
+      "b": "It’s ",
+      "t": "two o’clock",
+      "a": " in the morning; you want to—maybe even need to—sleep some, even if you are our first paid servant; maybe even because of that—You see?",
+      "title": "Requiem for a Nun",
+      "author": "William Faulkner"
     }
   ],
   "01": [
@@ -1911,11 +1960,18 @@
       "author": "Haruki Murakami"
     },
     {
-      "b": "The man in the blue car said to his speaker, “This is ",
+      "b": "The man in the blue car said to his speaker: “This is ",
       "t": "two oh four",
       "a": " twelve forty-three. Subject has returned to his vehicle.",
-      "title": "The Best of Gene Wolfe",
+      "title": "Book of Days",
       "author": "Gene Wolfe"
+    },
+    {
+      "b": "At ",
+      "t": "2:04",
+      "a": ", when Johnson was back on Air Force One, ABC still had to report that “there has been no immediate word on when (or where) Mr. Johnson will take the oath of office.”",
+      "title": "The Passage of Power",
+      "author": "Robert A. Caro"
     },
     {
       "b": "Whose last act on this earth was to send an e-mail at ",
@@ -2015,18 +2071,18 @@
   ],
   "07": [
     {
+      "b": "And I got out of bed at ",
+      "t": "2:07 a.m.",
+      "a": " and I felt scared of Mr. Shears so I went downstairs and out of the front door into Chapter Road.",
+      "title": "The Curious Incident of the Dog in the Night-Time",
+      "author": "Mark Haddon"
+    },
+    {
       "b": "She slept soundly beside him, and Rojas closed his eyes once more, then snapped them open and looked at the clock: ",
       "t": "2:07 a.m.",
       "a": "",
       "title": "Against All Enemies",
       "author": "Tom Clancy"
-    },
-    {
-      "b": "But I couldn't sleep. And I got out of bed at ",
-      "t": "2:07 a.m.",
-      "a": " and I felt scared of Mr. Shears so I went downstairs and out of the front door into Chapter Road.",
-      "title": "The Curious Incident of the Dog in the Night-Time",
-      "author": "Mark Haddon"
     },
     {
       "b": "ONSHORE AT THE RENDEZVOUS: ",

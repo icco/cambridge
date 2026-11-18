@@ -48,6 +48,13 @@
       "a": "",
       "title": "The Cold Six Thousand",
       "author": "James Ellroy"
+    },
+    {
+      "b": "She turned on the light. It was ",
+      "t": "ten minutes after one",
+      "a": ". She got back into bed and lay on her back with her heart still pounding, listening to the noise.",
+      "title": "I Am Charlotte Simmons",
+      "author": "Tom Wolfe"
     }
   ],
   "11": [
@@ -62,7 +69,7 @@
       "b": "(The Lewinsky story had in fact first broken not in the traditional media but on the Internet, in a ",
       "t": "1:11 A.M.",
       "a": "",
-      "title": "Vintage Didion",
+      "title": "Political Fictions",
       "author": "Joan Didion"
     },
     {
@@ -92,7 +99,7 @@
       "b": "The bedside clock read ",
       "t": "1:12 a.m.",
       "a": " when Susan gave up on sleep and went downstairs. In the kitchen she poured herself a tall glass of red wine, drank half in a long swallow, and then refilled it to the brim.",
-      "title": "The Bonus Room",
+      "title": "Bedbugs",
       "author": "Ben H. Winters"
     },
     {
@@ -113,8 +120,8 @@
       "b": "It was ",
       "t": "twelve minutes past one",
       "a": " by the stamping clock on the end of the desk in the lobby of the Casa de Oro.",
-      "title": "The Collected Raymond Chandler",
-      "author": "Raymond Chandler"
+      "title": "Collected Stories of Raymond Chandler",
+      "author": "Raymond Chandler & John Bayley"
     },
     {
       "b": "At ",
@@ -129,13 +136,6 @@
       "a": " when communications broke up and ceased one minute and thirty-five seconds later.",
       "title": "Hopeland",
       "author": "Ian McDonald"
-    },
-    {
-      "b": "I told him it was all right with me, and gave him my card. It was ",
-      "t": "twelve minutes past one",
-      "a": " as he took the corner.",
-      "title": "Finger Man",
-      "author": "Raymond Chandler"
     }
   ],
   "13": [
@@ -374,7 +374,7 @@
   ],
   "18": [
     {
-      "b": "Underwood spoke up. “They’re right up yonder in the Colored balcony—been there since precisely ",
+      "b": "Mr. Underwood spoke up. “They’re right up yonder in the Colored balcony—been there since precisely ",
       "t": "one-eighteen",
       "a": " P.M.”",
       "title": "To Kill a Mockingbird",
@@ -508,6 +508,13 @@
       "author": "Evan Thomas"
     },
     {
+      "b": "“What are you waiting for?” he asked. It was ",
+      "t": "1:22 a.m.",
+      "a": "",
+      "title": "Midnight in Chernobyl: The Untold Story of the World's Greatest Nuclear Disaster",
+      "author": "Adam Higginbotham"
+    },
+    {
       "b": "Among the others aroused by Nixon’s late-night telephoning: Bob Haldeman (seven times), Norman Vincent Peale, Billy Graham, Rose Mary Woods (four times), Bebe Rebozo (twice), reporter Helen Thomas of UPI (at ",
       "t": "1:22 A.M.",
       "a": " and 3:50 A.M.), Nelson Rockefeller (at one A.M.), and Thomas Dewey (at one-thirty A.M.).",
@@ -620,10 +627,10 @@
     },
     {
       "b": "Its number was 815, two doors from the room the girls were in. Trombone music came from it softly—but not softly enough for ",
-      "t": "1:25 A.M.",
+      "t": "1:25 AM.",
       "a": "",
-      "title": "The Collected Raymond Chandler",
-      "author": "Raymond Chandler"
+      "title": "Collected Stories of Raymond Chandler",
+      "author": "Raymond Chandler & John Bayley"
     },
     {
       "b": "They didn’t call anyone’s parents while they were on their way out of the park as their phones were dead, having spent the batteries while using the phones as flashlights. Tommy was not at the Griffin residence upon their return at approximately ",
@@ -936,7 +943,7 @@
       "b": "As soon as he had his back turned, Priyanka held up the flip phone, showing me the time on the screen with a gleeful look on her face. ",
       "t": "1:36 a.m.",
       "a": "",
-      "title": "The Darkest Legacy (Darkest Minds Novel, A)",
+      "title": "The Darkest Legacy",
       "author": "Alexandra Bracken"
     },
     {
@@ -947,10 +954,10 @@
       "author": "Rebecca Yarros"
     },
     {
-      "b": "Of those six, two of them—Ramon Esteban and Scott Kingsley—signed out of the building close together, at one-thirty-five and one-thirty-six this morning. The door openings were at ",
-      "t": "one-thirty-six",
-      "a": " and one-thirty-eight.”",
-      "title": "Cloak",
+      "b": "Of those six, two of them—Ramon Esteban and Scott Kingsley—signed out of the building close together, at one thirty-five and one thirty-six this morning. The door openings were at ",
+      "t": "one thirty-six",
+      "a": " and one thirty-eight.”",
+      "title": "Cloaked Deception",
       "author": "Timothy Zahn"
     }
   ],
@@ -1065,6 +1072,13 @@
       "a": " today.",
       "title": "01 The Big Blowdown",
       "author": "George Pelecanos"
+    },
+    {
+      "b": "Jahns found herself lost in thought, remembering her conversation with Marnes the night before, the idea of Donald living with her more in memory than reality, when she came to the gate at ",
+      "t": "one-forty",
+      "a": ".",
+      "title": "The Silo Saga Omnibus",
+      "author": "Hugh Howey"
     }
   ],
   "42": [
@@ -1233,6 +1247,15 @@
       "author": "Annie Jacobsen"
     }
   ],
+  "49": [
+    {
+      "b": "It was ",
+      "t": "1:49",
+      "a": ". She had to be with Dr. Villalobos in eleven minutes.",
+      "title": "The Circle",
+      "author": "Dave Eggers"
+    }
+  ],
   "50": [
     {
       "b": "I arrived at Andrews Air Force Base at ",
@@ -1353,18 +1376,18 @@
       "author": "Gabrielle Zevin"
     },
     {
-      "b": "At ",
-      "t": "1:55 A.M.",
-      "a": " by my watch, a pair of headlights came toward the crooked house from the county road to the north, bouncing along the dirt-and-gravel driveway just east of my hiding place.",
-      "title": "Rogues",
-      "author": "George R.R. Martin"
-    },
-    {
       "b": "The lifeboat carrying Jack Astor’s young, pregnant wife and her maid was cut loose and hit the water fifteen feet below at ",
       "t": "1:55 a.m.",
       "a": "",
       "title": "Astor",
       "author": "Anderson Cooper"
+    },
+    {
+      "b": "At ",
+      "t": "1:55 A.M.",
+      "a": " by my watch, a pair of headlights came toward the crooked house from the county road to the north, bouncing along the dirt-and-gravel driveway just east of my hiding place.",
+      "title": "Rogues",
+      "author": "George R.R. Martin"
     },
     {
       "b": "“Agitated and uneasy,” as he described himself, he went to the Lincoln Sitting Room and began making phone calls—forty-seven calls between 9:22 P.M. and ",
@@ -1557,6 +1580,13 @@
       "a": "",
       "title": "White Knight/Black Swan",
       "author": "David Gemmell"
+    },
+    {
+      "b": "He goes over the airfield fence at ",
+      "t": "1:00 A.M.",
+      "a": " of a moonless night, belly-crawls for about a mile along the shoulder of a runway, and just barely makes a rendezvous with the crew of the Tipsy Tootsie, a B-24 Liberator bound for Brisbane.",
+      "title": "Cryptonomicon",
+      "author": "Neal Stephenson"
     }
   ],
   "01": [
@@ -1725,13 +1755,6 @@
       "author": "P. D. James"
     },
     {
-      "b": "Taking off in a continuous carousel: Footage of the helicopters lifting and transporting these loads can be see at around ",
-      "t": "1:06",
-      "a": " in Chernobyl: A Warning [Чернобыль: Предупреждение], a 1987 Russian state television documentary, available online at www.youtube.com/watch?",
-      "title": "Midnight in Chernobyl: The Untold Story of the World's Greatest Nuclear Disaster",
-      "author": "Adam Higginbotham"
-    },
-    {
       "b": "I felt vaguely guilty for some reason, but just then a roar went up from the crowd as Bautista Heguy, a small, speedy man sporting dreadlocks and riding a tiny horse, burst out of the pack and scored a goal for White Birch, putting them ahead 7–6 with just ",
       "t": "1:06",
       "a": " on the clock.",
@@ -1751,6 +1774,13 @@
       "a": ". Is that right?”",
       "title": "Barbarians at the Gate",
       "author": "Bryan Burrough"
+    },
+    {
+      "b": "Taking off in a continuous carousel: Footage of the helicopters lifting and transporting these loads can be see at around ",
+      "t": "1:06",
+      "a": " in Chernobyl: A Warning [Чернобыль: Предупреждение], a 1987 Russian state television documentary, available online at www.youtube.com/watch?v=mwxbS_ChNNk (accessed May 2018).",
+      "title": "Midnight in Chernobyl: The Untold Story of the World's Greatest Nuclear Disaster",
+      "author": "Adam Higginbotham"
     }
   ],
   "07": [
