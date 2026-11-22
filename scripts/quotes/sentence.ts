@@ -1,7 +1,9 @@
 const seg = new Intl.Segmenter("en", { granularity: "sentence" })
 
 const ABBREVIATION =
-  /(?:\b(?:Mr|Mrs|Ms|Mx|Dr|St|Mt|Jr|Sr|Prof|Rev|Gen|Col|Capt|Lt|Sgt|Gov|Sen|Rep|Vol|vol|vs|p|pp|ch|ed|eds|fig|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)|(?<![\p{L}.])(?!I\.)\p{Lu})\.\s*$/u
+  /(?:\b(?:Mr|Mrs|Ms|Mx|Dr|St|Mt|Jr|Sr|Prof|Rev|Gen|Col|Capt|Lt|Sgt|Gov|Sen|Rep|Vol|vol|vs|p|pp|ch|ed|eds|[Ff]ig|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)|(?<![\p{L}.])(?!I\.)\p{Lu})\.\s*$/u
+
+const MERIDIEM = /\b[ap]\.\s?m\.\s*$/i
 
 export type Sentence = { index: number; segment: string }
 
@@ -12,7 +14,9 @@ export function sentences(text: string): Sentence[] {
     const prev = out.at(-1)
     if (
       prev &&
-      (/^[“"‘'(\s]*\p{Ll}/u.test(segment) || ABBREVIATION.test(prev.segment))
+      (/^[“"‘'(\s]*\p{Ll}/u.test(segment) ||
+        ABBREVIATION.test(prev.segment) ||
+        MERIDIEM.test(prev.segment))
     ) {
       prev.segment += segment
       continue

@@ -4,7 +4,15 @@ import { posix } from "node:path"
 import { unzipSync } from "fflate"
 import { Parser } from "htmlparser2"
 
-import { bookMeta, isGutenberg, meridiemAfter, notATime } from "./context.ts"
+import {
+  bookMeta,
+  durationBefore,
+  hoursCount,
+  isGutenberg,
+  meridiemAfter,
+  notATime,
+  numericListOrCitation,
+} from "./context.ts"
 import { isWholeSentence, sentences, stripFootnote } from "./sentence.ts"
 
 const ROOT = "/media/brook/Books"
@@ -41,7 +49,7 @@ const NUM: Record<string, number> = {
   forty: 40,
   fifty: 50,
 }
-const AMPM = "(?:a\\.?\\s?m\\.?|p\\.?\\s?m\\.?)"
+const AMPM = "(?:a\\.?\\s?m\\.?|p\\.?\\s?m\\.?)(?![a-z])"
 const NOUN_BAD =
   "(?!\\s+(?:hours?|days?|years?|weeks?|months?|minutes?|seconds?|another|other|each|times?|thousand|hundred|dollars?|miles?|feet|percent|people|men|women|kids|children|inches|of us|of them|of the|odd|or))"
 const GATE =
@@ -111,8 +119,10 @@ const patterns: {
         }
       }
       if (h > 23) return null
-      if (!GATE.test(text.slice(Math.max(0, m.index - 30), m.index)))
-        return null
+      const before = text.slice(Math.max(0, m.index - 60), m.index)
+      if (!GATE.test(before.slice(-30))) return null
+      if (durationBefore(before)) return null
+      if (numericListOrCitation(text, T[0], T[1])) return null
       if (h === 0 || h >= 13 || m.groups!.h.startsWith("0"))
         return { T, hour: "h24", h24: h, min, strong: true }
       return { T, hour: h, min, strong: false }
@@ -169,6 +179,8 @@ const patterns: {
       const T = m.indices!.groups!.T
       const hour = hourFromWord(m.groups!.h)
       const past = p === "past" || p === "after"
+      if (durationBefore(text.slice(Math.max(0, m.index - 60), m.index)))
+        return null
       const gated = GATE.test(text.slice(Math.max(0, m.index - 30), m.index))
       const after = text.slice(
         m.index + m[0].length,
@@ -193,7 +205,7 @@ const patterns: {
   },
   {
     re: new RegExp(
-      `(?<=\\b(?:at|by|until|till|since|before|after|was|is|it’s|it's|exactly|precisely|time|near|nearly|almost|just)\\s+)(?<T>(?<h>${HW})[\\s-](?<mm>(?:(?:twenty|thirty|forty|fifty)(?:[- ](?:${ONES}))?|nineteen|eighteen|seventeen|sixteen|fifteen|fourteen|thirteen|o[h]?[- ](?:${ONES}))))\\b(?![\\s-]+(?:years?|year-old|days?|months?|miles?|feet|dollars?|percent|times|people|men|women|of|pounds?|minutes?|seconds?|hours?|points|cents|thousand|hundred|million|kids|children|years)|-)`,
+      `(?<=\\b(?:at|by|until|till|since|before|after|was|is|it’s|it's|exactly|precisely|time|near|nearly|almost|just)\\s+)(?<T>(?<h>${HW})[\\s-](?<mm>(?:(?:twenty|thirty|forty|fifty)(?:-(?:${ONES})| (?!one\\s+[a-z])(?:${ONES}))?|nineteen|eighteen|seventeen|sixteen|fifteen|fourteen|thirteen|o[h]?[- ](?:${ONES}))))\\b(?![\\s-]+(?:years?|year-old|days?|months?|miles?|feet|dollars?|percent|times|people|men|women|of|pounds?|minutes?|seconds?|hours?|points|cents|thousand|hundred|million|kids|children|years)|-)`,
       "gid"
     ),
     txtOk: false,
@@ -226,13 +238,23 @@ const patterns: {
   {
     re: /(?<![\d\w])(?<T>(?<hh>[01]\d|2[0-3])(?<mm>[0-5]\d)\s+hours)\b/dgi,
     txtOk: true,
-    fn: (m) => ({
-      T: m.indices!.groups!.T,
-      hour: "h24",
-      h24: Number(m.groups!.hh),
-      min: Number(m.groups!.mm),
-      strong: true,
-    }),
+    fn: (m, text) => {
+      const end = m.index + m[0].length
+      if (
+        hoursCount(
+          text.slice(Math.max(0, m.index - 20), m.index),
+          text.slice(end, end + 20)
+        )
+      )
+        return null
+      return {
+        T: m.indices!.groups!.T,
+        hour: "h24",
+        h24: Number(m.groups!.hh),
+        min: Number(m.groups!.mm),
+        strong: true,
+      }
+    },
   },
 ]
 
@@ -385,7 +407,13 @@ function scanParagraph(
   meta: { title: string; author: string; src: string; fmt: string },
   out: Hit[]
 ) {
-  const text = para.replace(/[ \s]+/g, " ").trim()
+  const text = para
+    .replace(/[ \s]+/g, " ")
+    .replace(
+      new RegExp(`\\b(twenty|thirty|forty|fifty)- (${ONES})\\b`, "gi"),
+      "$1-$2"
+    )
+    .trim()
   if (text.length < 40 || text.length > 6000) return
   if (!HAS_TIME_WORD.test(text)) return
   const txt = meta.fmt === "txt" || meta.fmt === "pdf"

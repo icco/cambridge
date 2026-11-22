@@ -21,6 +21,19 @@ describe("sentences", () => {
     )
   })
 
+  it("does not split after a meridiem or a figure reference", () => {
+    assert.deepEqual(
+      sentences(
+        "He was a commuter. At 8:42 A.M. Mr. Hale left (June 1, Fig. 3). Fine."
+      ).map((s) => s.segment),
+      [
+        "He was a commuter. ",
+        "At 8:42 A.M. Mr. Hale left (June 1, Fig. 3). ",
+        "Fine.",
+      ]
+    )
+  })
+
   it("does not split after a page abbreviation or an initial", () => {
     assert.deepEqual(
       sentences(
