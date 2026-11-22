@@ -6,12 +6,13 @@ import { Parser } from "htmlparser2"
 
 import {
   bookMeta,
-  durationBefore,
   hoursCount,
   isGutenberg,
   meridiemAfter,
   notATime,
   numericListOrCitation,
+  raceTime,
+  rangeStart,
 } from "./context.ts"
 import { isWholeSentence, sentences, stripFootnote } from "./sentence.ts"
 
@@ -121,7 +122,7 @@ const patterns: {
       if (h > 23) return null
       const before = text.slice(Math.max(0, m.index - 60), m.index)
       if (!GATE.test(before.slice(-30))) return null
-      if (durationBefore(before)) return null
+      if (raceTime(before)) return null
       if (numericListOrCitation(text, T[0], T[1])) return null
       if (h === 0 || h >= 13 || m.groups!.h.startsWith("0"))
         return { T, hour: "h24", h24: h, min, strong: true }
@@ -179,8 +180,8 @@ const patterns: {
       const T = m.indices!.groups!.T
       const hour = hourFromWord(m.groups!.h)
       const past = p === "past" || p === "after"
-      if (durationBefore(text.slice(Math.max(0, m.index - 60), m.index)))
-        return null
+      const lead = text.slice(Math.max(0, m.index - 60), m.index)
+      if (raceTime(lead) || (p === "to" && rangeStart(lead))) return null
       const gated = GATE.test(text.slice(Math.max(0, m.index - 30), m.index))
       const after = text.slice(
         m.index + m[0].length,

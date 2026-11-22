@@ -3,12 +3,13 @@ import { describe, it } from "node:test"
 
 import {
   bookMeta,
-  durationBefore,
   hoursCount,
   isGutenberg,
   meridiemAfter,
   notATime,
   numericListOrCitation,
+  raceTime,
+  rangeStart,
 } from "./context.ts"
 
 describe("meridiemAfter", () => {
@@ -69,28 +70,38 @@ describe("numericListOrCitation", () => {
 
   it("keeps a lone time", () => {
     assert.ok(!check("The train left at 6:22 and we were on it.", "6:22"))
+    assert.ok(!check("She went in at 8:02. Jo joined her at 8:06.", "8:02"))
   })
 })
 
-describe("durationBefore", () => {
-  it("rejects race times and ranges", () => {
-    assert.ok(durationBefore("The time of the heat was "))
-    assert.ok(durationBefore("Stops ranging in length from "))
+describe("raceTime", () => {
+  it("rejects race results", () => {
+    assert.ok(raceTime("The time of the heat was "))
   })
 
   it("keeps ordinary clock times", () => {
-    assert.ok(!durationBefore("She woke her at "))
+    assert.ok(!raceTime("She woke her at "))
+    assert.ok(!raceTime("Let the record show that at "))
+  })
+})
+
+describe("rangeStart", () => {
+  it("rejects the start of a range", () => {
+    assert.ok(rangeStart("Stops ranging in length from "))
+    assert.ok(!rangeStart("He left at "))
   })
 })
 
 describe("hoursCount", () => {
   it("rejects counts of hours", () => {
-    assert.ok(hoursCount("[A record of ", ""))
+    assert.ok(hoursCount("[A record for ", ""))
+    assert.ok(hoursCount("", " of bright sunshine"))
     assert.ok(hoursCount("", " in the air]"))
   })
 
   it("keeps military times", () => {
     assert.ok(!hoursCount("The attack began at ", ". The"))
+    assert.ok(!hoursCount("As of ", " on October 8th"))
   })
 })
 
