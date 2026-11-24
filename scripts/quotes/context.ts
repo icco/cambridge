@@ -58,6 +58,24 @@ export function isGutenberg(opf: string): boolean {
   return /<dc:identifier[^>]*>[^<]*gutenberg\.org/i.test(opf)
 }
 
+// "Am I a sea" after a verse number is not a meridiem.
+export function isMeridiem(ap: string): boolean {
+  return !/^[AP]m$/.test(ap)
+}
+
+// Almanac passages name sunset and sunrise, which fix the half of the day.
+export function sunEvent(before: string): "set" | "rise" | undefined {
+  if (!/\bsun(?:set|rise)?\b/i.test(before.slice(-80))) return undefined
+  const tail = before.slice(-40)
+  const w = [
+    ...tail.matchAll(
+      /\b(?:sun\s?set|sets?|setting|went down|goes down|sun\s?rise|rises?|rose|rising|came up|comes up)\b/gi
+    ),
+  ].at(-1)
+  if (!w || /[.;]/.test(tail.slice(w.index))) return undefined
+  return /set|down/i.test(w[0]) ? "set" : "rise"
+}
+
 export function bookMeta(
   parts: string[],
   opf: { title?: string; author?: string }
@@ -66,6 +84,6 @@ export function bookMeta(
     return { title: parts[parts.length - 2], author: parts[0] }
   return {
     title: opf.title || parts[parts.length - 1].replace(/\.[^.]+$/, ""),
-    author: opf.author || parts[0],
+    author: opf.author || (/^\d+$/.test(parts[0]) ? "Unknown" : parts[0]),
   }
 }

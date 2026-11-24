@@ -8,11 +8,13 @@ import {
   bookMeta,
   hoursCount,
   isGutenberg,
+  isMeridiem,
   meridiemAfter,
   notATime,
   numericListOrCitation,
   raceTime,
   rangeStart,
+  sunEvent,
 } from "./context.ts"
 import { isWholeSentence, sentences, stripFootnote } from "./sentence.ts"
 
@@ -110,7 +112,7 @@ const patterns: {
       const T = m.indices!.groups!.T
       const ap = m.groups!.ap
       if (ap) {
-        if (h < 1 || h > 12) return null
+        if (h < 1 || h > 12 || !isMeridiem(ap)) return null
         return {
           T,
           hour: h,
@@ -137,7 +139,7 @@ const patterns: {
     txtOk: false,
     fn: (m) => {
       const h = Number(m.groups!.h)
-      if (h < 1 || h > 12) return null
+      if (h < 1 || h > 12 || !isMeridiem(m.groups!.ap)) return null
       return {
         T: m.indices!.groups!.T,
         hour: h,
@@ -290,8 +292,13 @@ function resolve(
   let pm: boolean | undefined
   let conf = 0
   const suffix = raw.ampm ?? meridiemAfter(near)
+  const tStart = tOff - (raw.T[1] - raw.T[0])
+  const sun = sunEvent(excerpt.slice(Math.max(0, tStart - 40), tStart))
   if (suffix) {
     pm = suffix === "pm"
+    conf = 2
+  } else if (sun) {
+    pm = sun === "set"
     conf = 2
   } else if (
     /^[^.]{0,12}\b(?:in the morning|of the morning|at dawn|in the early morning)\b/i.test(

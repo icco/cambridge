@@ -5,11 +5,13 @@ import {
   bookMeta,
   hoursCount,
   isGutenberg,
+  isMeridiem,
   meridiemAfter,
   notATime,
   numericListOrCitation,
   raceTime,
   rangeStart,
+  sunEvent,
 } from "./context.ts"
 
 describe("meridiemAfter", () => {
@@ -105,6 +107,32 @@ describe("hoursCount", () => {
   })
 })
 
+describe("isMeridiem", () => {
+  it("rejects the word Am", () => {
+    assert.ok(!isMeridiem("Am"))
+    assert.ok(isMeridiem("AM"))
+    assert.ok(isMeridiem("am"))
+    assert.ok(isMeridiem("a. m."))
+  })
+})
+
+describe("sunEvent", () => {
+  it("reads sunset and sunrise before a time", () => {
+    assert.equal(sunEvent("The weather was cold. The sun set at "), "set")
+    assert.equal(
+      sunEvent("thirty-three were in sight, and the sun set beautifully, "),
+      "set"
+    )
+    assert.equal(sunEvent("The sun rose at "), "rise")
+    assert.equal(sunEvent("The sun rises at 7:20 and sets at "), "set")
+  })
+
+  it("ignores other passages", () => {
+    assert.equal(sunEvent("She woke her at "), undefined)
+    assert.equal(sunEvent("The sun set. Later, at "), undefined)
+  })
+})
+
 describe("isGutenberg", () => {
   it("spots Project Gutenberg epubs by identifier", () => {
     assert.ok(
@@ -126,6 +154,16 @@ describe("bookMeta", () => {
         author: "The Book of Frank Herbert",
       }),
       { title: "Book of Frank Herbert", author: "Frank Herbert" }
+    )
+  })
+
+  it("does not use a numeric folder as the author", () => {
+    assert.deepEqual(
+      bookMeta(["34031", "pg34031.epub"], { title: "Cartoons" }),
+      {
+        title: "Cartoons",
+        author: "Unknown",
+      }
     )
   })
 
