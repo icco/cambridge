@@ -208,7 +208,7 @@ const patterns: {
   },
   {
     re: new RegExp(
-      `(?<=\\b(?:at|by|until|till|since|before|after|was|is|it’s|it's|exactly|precisely|time|near|nearly|almost|just)\\s+)(?<T>(?<h>${HW})[\\s-](?<mm>(?:(?:twenty|thirty|forty|fifty)(?:-(?:${ONES})| (?!one\\s+[a-z])(?:${ONES}))?|nineteen|eighteen|seventeen|sixteen|fifteen|fourteen|thirteen|o[h]?[- ](?:${ONES}))))\\b(?![\\s-]+(?:years?|year-old|days?|months?|miles?|feet|dollars?|percent|times|people|men|women|of|pounds?|minutes?|seconds?|hours?|points|cents|thousand|hundred|million|kids|children|years)|-)`,
+      `(?<=\\b(?:at|by|until|till|since|before|after|was|is|it’s|it's|exactly|precisely|time|near|nearly|almost|just)\\s+)(?<T>(?<h>${HW})[\\s-](?<mm>(?:(?:twenty|thirty|forty|fifty)(?:-(?:${ONES})| (?!one\\s+(?![ap]\\.?\\s?m(?![a-z]))[a-z])(?:${ONES}))?|nineteen|eighteen|seventeen|sixteen|fifteen|fourteen|thirteen|o[h]?[- ](?:${ONES}))))\\b(?![\\s-]+(?:years?|year-old|days?|months?|miles?|feet|dollars?|percent|times|people|men|women|of|pounds?|minutes?|seconds?|hours?|points|cents|thousand|hundred|million|kids|children|years)|-)`,
       "gid"
     ),
     txtOk: false,
