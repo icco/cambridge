@@ -25,10 +25,10 @@ const hash = (s: string) => {
   return (h >>> 0) / 2 ** 32
 }
 
-const seen = new Set<string>()
-const byMinute: Hit[][] = Array.from({ length: 1440 }, () => [])
-let total = 0
-for (const f of readdirSync(dir).filter((x) => x.endsWith(".jsonl"))) {
+const seen = new Map<string, Hit>()
+for (const f of readdirSync(dir, { recursive: true, encoding: "utf8" }).filter(
+  (x) => x.endsWith(".jsonl")
+)) {
   for (const line of readFileSync(`${dir}/${f}`, "utf8").split("\n")) {
     if (!line) continue
     const h: Hit = JSON.parse(line)
@@ -43,17 +43,22 @@ for (const f of readdirSync(dir).filter((x) => x.endsWith(".jsonl"))) {
       norm(h.after),
       h.m.join(","),
     ].join("|")
-    if (seen.has(key)) continue
-    seen.add(key)
-    total++
-    for (const m of h.m) byMinute[m].push(h)
+    // A library copy of a public-domain book beats the same passage from Gutenberg.
+    const prev = seen.get(key)
+    if (prev && !(prev.fmt === "gutenberg" && h.fmt !== "gutenberg")) continue
+    seen.set(key, h)
   }
 }
+const byMinute: Hit[][] = Array.from({ length: 1440 }, () => [])
+for (const h of seen.values()) for (const m of h.m) byMinute[m].push(h)
+const total = seen.size
 
 const score = (h: Hit, minute: number) => {
   const len = h.before.length + h.time.length + h.after.length
   let s = h.conf === 2 ? 30 : h.conf === 1 ? 15 : 0
   if (h.fmt !== "epub") s -= 15
+  // Public-domain Gutenberg books only fill minutes the library leaves short.
+  if (h.fmt === "gutenberg") s -= 100
   if (h.strong) s += 5
   if (len >= 90 && len <= 240) s += 10
   if (((h.before + h.after).match(/\d/g)?.length ?? 0) > 6) s -= 10
